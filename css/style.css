@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --font-family: "Rajdhani", sans-serif;
+    --second-family: "Roboto", sans-serif;
+    --third-family: "Inter", sans-serif;
+    --font3: "Orbitron", sans-serif;
+    --font4: "Aldrich", sans-serif;
+    --font5: "Lato", sans-serif;
+    --font6: "Alethia Next", sans-serif;
+    --font7: "League Spartan", sans-serif;
+    --font8: "MuseoModerno", sans-serif;
+
+    --white: #fff;
+    --gray: rgba(255, 255, 255, 0.5);
+    --gray-header: rgba(255, 255, 255, 0.6);
+    --green: #0f6;
+    --red: #f00;
+    --blue-text: #2EC5CE;
+    --purple-glossy: rgba(255, 86, 246, 0.51);
+
+    /* Background */
+    --dark-purple: #20083B;
+    --purple-background: #01204c;
+    --pink-background: #FFB1EE;
+    /* Gradient */
+    --pink: #FF56F6;
+    --purple: #B936EE;
+    --blue: #3BACE2;
+    --dark-blue: #406AFF;
+    --light-pink: #FFA6FA;
+    --ocean-blue: #3C79D4;
+}
+
+body {
+    font-family: var(--font-family), serif;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    background: var(--dark-purple);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
