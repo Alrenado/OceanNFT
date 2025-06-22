@@ -1,24 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face {
+    font-family: 'Aldrich-Regular-woff';
+    src: url('../fonts/Aldrich-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face {
+    font-family: 'AlethiaNext-Light-woff';
+    src: url('../fonts/AlethiaNext-Light.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter-ExtraBold-woff';
+    src: url('../fonts/Inter_28pt-ExtraBold.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter-Medium-woff';
+    src: url('../fonts/Inter_28pt-Medium.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter-Regular-woff';
+    src: url('../fonts/Inter_28pt-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LeagueSpartan-SemiBold-woff';
+    src: url('../fonts/LeagueSpartan-SemiBold.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orbitron-Bold-woff';
+    src: url('../fonts/Orbitron-Bold.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani-Bold-woff';
+    src: url('../fonts/Rajdhani-Bold.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani-Medium-woff';
+    src: url('../fonts/Rajdhani-Medium.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani-Regular-woff';
+    src: url('../fonts/Rajdhani-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani-SemiBold-woff';
+    src: url('../fonts/Rajdhani-SemiBold.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto-Medium-woff';
+    src: url('../fonts/Roboto-Medium.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular-woff';
+    src: url('../fonts/Roboto-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
-    --font-family: "Rajdhani", sans-serif;
-    --second-family: "Roboto", sans-serif;
-    --third-family: "Inter", sans-serif;
-    --font3: "Orbitron", sans-serif;
-    --font4: "Aldrich", sans-serif;
-    --font5: "Lato", sans-serif;
-    --font6: "Alethia Next", sans-serif;
-    --font7: "League Spartan", sans-serif;
-    --font8: "MuseoModerno", sans-serif;
-
     --white: #fff;
     --gray: rgba(255, 255, 255, 0.5);
     --gray-header: rgba(255, 255, 255, 0.6);
@@ -41,7 +125,7 @@
 }
 
 body {
-    font-family: var(--font-family), serif;
+    font-family: Roboto-Regular-woff, serif;
     color: var(--white);
     margin: 0;
     padding: 0;
