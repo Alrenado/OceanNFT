@@ -9,21 +9,60 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<section class="header">
-    <nav class="header-navbar">
-        <div class="header-navbar-logo">
-            <div class="header-navbar-logo-item" style="background-image: url('./img/svg/header-logo.svg');"></div>
+<section class="nav">
+    <nav class="nav-navbar">
+        <div class="nav-navbar-logo">
+            <svg class="test" style="width: 7rem; height: 1.404rem;"><use xlink:href="img/svg/sprite.svg#header-logo"></use></svg>
         </div>
-        <div class="header-navbar-menu">
-            <a class="header-navbar-menu-item" href="#">Market</a>
-            <a class="header-navbar-menu-item" href="#">Features</a>
-            <a class="header-navbar-menu-item" href="#">Community</a>
+        <ul class="nav-navbar-menu">
+            <li class="nav-navbar-menu-container">
+                <a class="nav-navbar-menu-container-item" href="#">Market</a>
+            </li>
+            <li class="nav-navbar-menu-container">
+                <a class="nav-navbar-menu-container-item" href="#">Features</a>
+            </li>
+            <li class="nav-navbar-menu-container">
+                <a class="nav-navbar-menu-container-item" href="#">Community</a>
+            </li>
+        </ul>
+        <div class="nav-navbar-icons">
+            <svg class="test" style="width: 1.406rem; height: 1.348rem;"><use xlink:href="img/svg/sprite.svg#cart"></use></svg>
+            <svg class="test" style="width: 1.375rem; height: 1.375rem;"><use xlink:href="img/svg/sprite.svg#profile"></use></svg>
         </div>
-        <div class="header-navbar-icons">
-            <div class="header-navbar-icons-item" style="background-image: url('./img/svg/cart.svg');"></div>
-            <div class="header-navbar-icons-item" style="background-image: url('./img/svg/profile.svg');"></div>
-        </div>
+        <button class="nav-navbar-burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 </section>
+
+<section class="header">
+    <div>
+        <span>Discover, collect, and sell Timeless NFTs</span>
+        <span>The world’s first and largest digital marketplace for crypto collectibles and non- fungible tokens (NFTs)</span>
+        <div>
+            <button class="" id="">Explore</button>
+            <span>Create NFT’s</span>
+        </div>
+        <div>
+            <div>
+                <span>35m+</span>
+                <span>Artwork</span>
+            </div>
+            <div>
+                <span>18m+</span>
+                <span>Auctions</span>
+            </div>
+            <div>
+                <span>500k+</span>
+                <span>Artists</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/form.js"></script>
+
 </body>
 </html>
