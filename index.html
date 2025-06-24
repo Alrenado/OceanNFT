@@ -6,10 +6,16 @@
 
     <title>OceanNFT</title>
     <link rel="icon" href="img/svg/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<section class="nav">
+<picture>
+    <source srcset="img/webp/bg.webp" type="image/webp">
+    <img class="bg" src="img/png/bg.png" alt="background">
+</picture>
+
+<header class="nav">
     <nav class="nav-navbar">
         <div class="nav-navbar-logo">
             <svg class="test" style="width: 7rem; height: 1.404rem;"><use xlink:href="img/svg/sprite.svg#header-logo"></use></svg>
@@ -35,7 +41,7 @@
             <span></span>
         </button>
     </nav>
-</section>
+</header>
 
 <section class="header">
     <div>
@@ -62,7 +68,6 @@
     </div>
 </section>
 
-<script src="js/form.js"></script>
-
 </body>
+<script src="js/form.js"></script>
 </html>
