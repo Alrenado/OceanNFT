@@ -119,6 +119,7 @@
     --pink: #FF56F6;
     --purple: #B936EE;
     --blue: #3BACE2;
+    --blue-light: #43A5E3;
     --dark-blue: #406AFF;
     --light-pink: #FFA6FA;
     --ocean-blue: #3C79D4;
@@ -140,19 +141,6 @@ body {
     background-color: var(--dark-purple);
 }
 
-.bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-    overflow: hidden;
-    object-fit: cover;
-    object-position: center;
-}
-
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -171,10 +159,32 @@ body {
     background-color: var(--white);
 }
 
-a {
-    text-decoration: none;
-    color: var(--white);
+.bg{
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
 }
+
+.bg-img{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bg::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--dark-purple);
+    opacity: 0.75;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
 
 /* Navigation */
 
@@ -282,7 +292,7 @@ a {
 
     .nav-navbar-menu {
         position: absolute;
-        top: 35%;
+        top: 100%;
         left: 0;
         right: 0;
         background: var(--dark-purple);
@@ -310,5 +320,125 @@ a {
 
 }
 
-/* Header */
+/* Discover */
 
+.discover{
+    padding: 12.625rem 6.438rem;
+    display: flex;
+}
+.discover-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.discover-title_main{
+    font-family: LeagueSpartan-SemiBold-woff, serif;
+    font-size: 4.146rem;
+}
+.discover-title_main_gradient{
+    background: linear-gradient(to right, var(--pink), var(--blue-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+.discover-title_sub{
+    font-family: Rajdhani-Regular-woff, serif;
+    font-size: 1.658rem;
+}
+
+.discover-title-form{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.discover-title-form_button{
+    position: relative;
+    padding: 2px;
+    border: none;
+    background: linear-gradient(
+            to right,
+            var(--light-pink), var(--ocean-blue)
+
+    );
+
+    clip-path: polygon(
+            25% 0%,
+            100% 0%,
+            100% 75%,
+            75% 100%,
+            0% 100%,
+            0% 25%
+    );
+
+    cursor: pointer;
+}
+
+.discover-title-form_button-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    font-family: Orbitron-Bold-woff, serif;
+    font-size: 1.25rem;
+
+    color: white;
+    background: linear-gradient(
+            to left,
+            var(--pink), var(--purple), var(--blue), var(--dark-blue),
+            var(--dark-blue), var(--blue), var(--purple), var(--pink)
+    );
+    background-size: 200% 100%;
+    background-position: right center;
+
+    clip-path: polygon(
+            25% 0%,
+            100% 0%,
+            100% 75%,
+            75% 100%,
+            0% 100%,
+            0% 25%
+    );
+
+    transition: background-position 0.5s ease;
+
+}
+
+.discover-title-form_button:hover .discover-title-form_button-container {
+    background-position: left center;
+    color: white;
+
+}
+
+.discover-title-form_sub{
+    font-family: Orbitron-Bold-woff, serif;
+    font-size: 1.25rem;
+    background: linear-gradient(to right, var(--blue-light), var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.discover-title-info{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.discover-title-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.discover-title-info-container_main{
+    font-family: Aldrich-Regular-woff, serif;
+    font-size: 2.5rem;
+}
+.discover-title-info-container_sub{
+    font-family: AlethiaNext-Light-woff, serif;
+    font-size: 1.1rem;
+    color: var(--gray-header);
+}

@@ -10,15 +10,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<picture>
-    <source srcset="img/webp/bg.webp" type="image/webp">
-    <img class="bg" src="img/png/bg.png" alt="background">
-</picture>
+
+<div class="bg">
+    <picture>
+        <source srcset="img/webp/bg.webp" type="image/webp">
+        <img class="bg-img" src="img/png/bg.png" alt="background">
+    </picture>
+</div>
+
 
 <header class="nav">
     <nav class="nav-navbar">
         <div class="nav-navbar-logo">
-            <svg class="test" style="width: 7rem; height: 1.404rem;"><use xlink:href="img/svg/sprite.svg#header-logo"></use></svg>
+            <svg class="test" style="width: 7rem; height: 1.404rem;">
+                <use xlink:href="img/svg/sprite.svg#header-logo"></use>
+            </svg>
         </div>
         <ul class="nav-navbar-menu">
             <li class="nav-navbar-menu-container">
@@ -32,8 +38,12 @@
             </li>
         </ul>
         <div class="nav-navbar-icons">
-            <svg class="test" style="width: 1.406rem; height: 1.348rem;"><use xlink:href="img/svg/sprite.svg#cart"></use></svg>
-            <svg class="test" style="width: 1.375rem; height: 1.375rem;"><use xlink:href="img/svg/sprite.svg#profile"></use></svg>
+            <svg class="test" style="width: 1.406rem; height: 1.348rem;">
+                <use xlink:href="img/svg/sprite.svg#cart"></use>
+            </svg>
+            <svg class="test" style="width: 1.375rem; height: 1.375rem;">
+                <use xlink:href="img/svg/sprite.svg#profile"></use>
+            </svg>
         </div>
         <button class="nav-navbar-burger" id="burger">
             <span></span>
@@ -43,26 +53,96 @@
     </nav>
 </header>
 
-<section class="header">
-    <div>
-        <span>Discover, collect, and sell Timeless NFTs</span>
-        <span>The world’s first and largest digital marketplace for crypto collectibles and non- fungible tokens (NFTs)</span>
-        <div>
-            <button class="" id="">Explore</button>
-            <span>Create NFT’s</span>
+<section class="discover">
+    <div class="discover-title">
+        <span class="discover-title_main">Discover, collect, and <br>sell <span class="discover-title_main_gradient">Timeless NFTs</span> </span>
+        <span class="discover-title_sub">The world’s first and largest digital marketplace for crypto <br>collectibles and non- fungible tokens (NFTs)</span>
+        <div class="discover-title-form">
+            <button class="discover-title-form_button" id="">
+                <div class="discover-title-form_button-container">
+                    <span class="discover-title-form_button-container_text">Explore</span>
+                    <svg class="discover-title-form_button-container_arrow" style="width: 3.248rem; height: 0.968rem;">
+                        <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                    </svg>
+                </div>
+            </button>
+            <span class="discover-title-form_sub">Create NFT’s</span>
         </div>
-        <div>
-            <div>
-                <span>35m+</span>
-                <span>Artwork</span>
+        <div class="discover-title-info">
+            <div class="discover-title-info-container">
+                <span class="discover-title-info-container_main">35m+</span>
+                <span class="discover-title-info-container_sub">Artwork</span>
             </div>
-            <div>
-                <span>18m+</span>
-                <span>Auctions</span>
+            <div class="discover-title-info-container">
+                <span class="discover-title-info-container_main">18m+</span>
+                <span class="discover-title-info-container_sub">Auctions</span>
             </div>
-            <div>
-                <span>500k+</span>
-                <span>Artists</span>
+            <div class="discover-title-info-container">
+                <span class="discover-title-info-container_main">500k+</span>
+                <span class="discover-title-info-container_sub">Artists</span>
+            </div>
+        </div>
+    </div>
+    <div class="discover-img">
+        <picture>
+            <source srcset="img/webp/discover.webp" type="image/webp">
+            <img class="bg-img" src="img/png/discover.png" alt="discover">
+        </picture>
+        <div class="discover-img-container">
+            <div class="discover-img-container-block-first">
+                <div class="discover-img-container-profile">
+                    <span class="discover-img-container-profile_item">3D Abstract Hand</span>
+                    <div class="discover-img-container-profile-name">
+                        <picture>
+                            <source srcset="img/webp/discover-profile.webp" type="image/webp">
+                            <img class="bg-img" src="img/png/discover-profile.png" alt="discover-profile">
+                        </picture>
+                        <span>@jhonartist</span>
+                        <picture>
+                            <source srcset="img/webp/check.webp" type="image/webp">
+                            <img class="bg-img" src="img/png/check.png" alt="check">
+                        </picture>
+                    </div>
+                </div>
+                <div class="discover-img-container-price">
+                    <span class="discover-img-container-price-title">Reserve price</span>
+                    <div class="discover-img-container-price-container">
+                        <svg class="discover-img-container-price-container_logo"
+                             style="width: 3.248rem; height: 0.968rem;">
+                            <use xlink:href="img/svg/sprite.svg#logo-white"></use>
+                        </svg>
+                        <span class="discover-img-container-price-container_main">ETH 9.31</span>
+                        <span class="discover-img-container-price-container_sub">($29,8846)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="discover-img-container-block-second">
+                <div class="discover-img-container-timer">
+                    <span class="discover-img-container-timer_title">Auction Ends in</span>
+                    <div class="discover-img-container-timer-container">
+                        <div class="discover-img-container-timer-container-wrapper">
+                            <span class="discover-img-container-timer-container-wrapper_main">18</span>
+                            <span class="discover-img-container-timer-container-wrapper_sub">Hours</span>
+                        </div>
+                        <div class="discover-img-container-timer-container-wrapper">
+                            <span class="discover-img-container-timer-container-wrapper_main">25</span>
+                            <span class="discover-img-container-timer-container-wrapper_sub">Mins</span>
+                        </div>
+                        <div class="discover-img-container-timer-container-wrapper">
+                            <span class="discover-img-container-timer-container-wrapper_main">44</span>
+                            <span class="discover-img-container-timer-container-wrapper_sub">Secs</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="discover-title-form_button" id="">
+                    <div class="discover-title-form_button-container">
+                        <span class="discover-title-form_button-container_text">Place Bid</span>
+                        <svg class="discover-title-form_button-container_arrow"
+                             style="width: 3.248rem; height: 0.968rem;">
+                            <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                        </svg>
+                    </div>
+                </button>
             </div>
         </div>
     </div>
