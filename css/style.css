@@ -106,6 +106,7 @@
     --white: #fff;
     --gray: rgba(255, 255, 255, 0.5);
     --gray-header: rgba(255, 255, 255, 0.6);
+    --gray-timer: rgba(255, 255, 255, 0.7);
     --green: #0f6;
     --red: #f00;
     --blue-text: #2EC5CE;
@@ -223,7 +224,7 @@ body {
 
 .nav-navbar-menu-container-item:hover{
     color: var(--white);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .nav-navbar-icons{
@@ -236,7 +237,7 @@ body {
 
 .nav-navbar-icons:hover{
     /*stroke: var(--white);*/
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .nav-navbar-burger{
@@ -258,12 +259,12 @@ body {
     width: 1.357rem;
     background: var(--gray-header);
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .nav-navbar-burger:hover span{
     background: var(--white);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .nav-navbar-burger span:nth-child(2) {
@@ -323,13 +324,15 @@ body {
 /* Discover */
 
 .discover{
+    max-width: 100%;
     padding: 12.625rem 6.438rem;
     display: flex;
+    justify-content: center;
+    gap: 18rem;
 }
 .discover-title{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     gap: 1rem;
 }
 
@@ -375,6 +378,19 @@ body {
     );
 
     cursor: pointer;
+    z-index: 1;
+    overflow: visible;
+}
+
+.discover-title-form_button::before {
+    content: '';
+    position: absolute;
+    inset: -30px;
+    background: radial-gradient(circle, var(--white), transparent 70%);
+    filter: blur(30px);
+    opacity: 0.7;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .discover-title-form_button-container {
@@ -385,11 +401,13 @@ body {
     font-family: Orbitron-Bold-woff, serif;
     font-size: 1.25rem;
 
+
+
     color: white;
     background: linear-gradient(
             to left,
-            var(--pink), var(--purple), var(--blue), var(--dark-blue),
-            var(--dark-blue), var(--blue), var(--purple), var(--pink)
+            var(--pink), var(--purple), var(--blue),
+            var(--blue), var(--purple), var(--pink)
     );
     background-size: 200% 100%;
     background-position: right center;
@@ -404,13 +422,11 @@ body {
     );
 
     transition: background-position 0.5s ease;
-
 }
 
 .discover-title-form_button:hover .discover-title-form_button-container {
     background-position: left center;
     color: white;
-
 }
 
 .discover-title-form_sub{
@@ -441,4 +457,240 @@ body {
     font-family: AlethiaNext-Light-woff, serif;
     font-size: 1.1rem;
     color: var(--gray-header);
+}
+
+.discover-img{
+    display: flex;
+    position: relative;
+}
+.discover-img-picture{
+    min-width: 25.125rem;
+    min-height: 29.813rem;
+
+    position: relative;
+    display: block;
+    overflow: visible;
+}
+
+.discover-img-picture::before{
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    bottom: 10px;
+    left: 15px;
+    z-index: -1;
+    background: radial-gradient(
+            circle,
+            rgba(0,0,0,1),
+            rgba(0,0,0,1),
+            transparent 100%
+    );
+    filter: blur(30px);
+    transform: scale(1.1);
+    pointer-events: none;
+    clip-path: polygon(
+            25% 0, 100% 0,
+            100% 50%, 100% 100%,
+            0 100%, 0 15%
+    );
+}
+
+.discover-img-picture-item{
+    display: block;
+    width: 100%;
+    clip-path: polygon(
+            25% 0, 100% 0,
+            100% 50%, 100% 100%,
+            0 100%, 0 15%
+    );
+    border-radius: 20px;
+}
+
+
+
+.discover-img-container{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+
+    padding: 1.731rem 1.313rem 1.25rem 1.451rem;
+    backdrop-filter: blur(15px);
+
+    clip-path: polygon(
+            25% 0, 100% 0,
+            100% 50%, 100% 100%,
+            0 100%, 0 15%
+    );
+}
+
+.discover-img-container::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(
+            circle,
+            rgba(255,255,255,0.3),
+            rgba(255,255,255,0.1),
+            transparent 150%
+    );
+    filter: blur(30px);
+    transform: scale(1.1);
+    pointer-events: none;
+    clip-path: polygon(
+            25% 0, 100% 0,
+            100% 50%, 100% 100%,
+            0 100%, 0 15%
+    );
+}
+
+.discover-img-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+            135deg,
+            rgba(255,255,255,0.6),
+            rgba(255,255,255,0.1)
+    );
+
+    padding: 2px;
+    mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+
+    clip-path: polygon(
+            25% 0, 100% 0,
+            100% 50%, 100% 100%,
+            0 100%, 0 15%
+    );
+
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+.discover-img-container-profile_item{
+    font-family: Rajdhani-Bold-woff, serif;
+    font-size: 1.106rem;
+}
+
+.discover-img-container-profile-name_text{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 0.968rem;
+}
+
+.discover-img-container-block{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.discover-img-container-profile-name{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.discover-img-container-price-container{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.discover-img-container-price-title{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 0.691rem;
+    color: var(--gray-timer);
+}
+
+.discover-img-container-price-container_main{
+    font-family: Orbitron-Bold-woff, serif;
+    font-size: 0.608rem;
+}
+
+.discover-img-container-price-container_sub{
+    font-family: Rajdhani-Regular-woff, serif;
+    font-size: 0.691rem;
+    color: var(--gray-timer);
+}
+
+.discover-img-container-timer-container{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+.discover-img-container-timer-container-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: flex-start;
+}
+
+.discover-img-container-timer_title{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 0.691rem;
+    color: var(--gray-timer);
+}
+
+.discover-img-container-timer-container-wrapper_main{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 1.106rem;
+}
+
+.discover-img-container-timer-container-wrapper_sub{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 0.691rem;
+    color: var(--gray-timer);
+}
+
+.discover-img_button{
+    position: relative;
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(
+            to right,
+            var(--light-pink), var(--ocean-blue)
+    );
+
+
+    cursor: pointer;
+}
+.discover-img_button-container{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.484rem 0.622rem;
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 1.106rem;
+
+    color: white;
+
+    border-radius: 5px;
+    background: linear-gradient(
+            to left,
+            var(--pink), var(--purple), var(--blue),
+            var(--blue), var(--purple), var(--pink)
+    );
+    background-size: 200% 100%;
+    background-position: right center;
+
+    transition: background-position 0.5s ease;
+}
+
+.discover-img_button:hover .discover-img_button-container {
+    background-position: left center;
+    color: white;
 }
