@@ -192,15 +192,15 @@ body {
 .nav{
     position: fixed;
     width: 100%;
-
     background: var(--dark-purple);
     padding: 2.625rem 6.438rem;
 }
 
 .nav-navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 23.5rem;
 }
 
 .nav-navbar-logo{
@@ -318,18 +318,49 @@ body {
     .nav-navbar-burger {
         display: flex;
     }
-
 }
 
 /* Discover */
 
 .discover{
-    max-width: 100%;
+    max-width: 94rem;
     padding: 12.625rem 6.438rem;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    gap: 18rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
+
+.discover-title,
+.discover-img{
+    flex: 1 1 30%;
+    min-width: 300px;
+}
+
+.discover-logos{
+    flex-basis: 100%;
+}
+
+@media (max-width: 808px) {
+    .discover-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .discover-title{
+        order: 1;
+    }
+    .discover-logos{
+        order: 2;
+    }
+    .discover-img{
+        order: 3;
+    }
+}
+
 .discover-title{
     display: flex;
     flex-direction: column;
@@ -462,6 +493,7 @@ body {
 .discover-img{
     display: flex;
     position: relative;
+    justify-content: center;
 }
 .discover-img-picture{
     min-width: 25.125rem;
@@ -512,7 +544,7 @@ body {
 .discover-img-container{
     position: absolute;
     top: 80%;
-    left: 50%;
+    left: 45%;
     display: flex;
     flex-direction: row;
     border-radius: 20px;
@@ -541,11 +573,7 @@ body {
     filter: blur(30px);
     transform: scale(1.1);
     pointer-events: none;
-    clip-path: polygon(
-            25% 0, 100% 0,
-            100% 50%, 100% 100%,
-            0 100%, 0 15%
-    );
+
 }
 
 .discover-img-container::after {
@@ -562,15 +590,9 @@ body {
 
     padding: 2px;
     mask:
-            linear-gradient(#fff 0 0) content-box,
-            linear-gradient(#fff 0 0);
+            linear-gradient(var(--white) 0 0) content-box,
+            linear-gradient(var(--white) 0 0);
     mask-composite: exclude;
-
-    clip-path: polygon(
-            25% 0, 100% 0,
-            100% 50%, 100% 100%,
-            0 100%, 0 15%
-    );
 
     pointer-events: none;
     border-radius: 10px;
@@ -693,4 +715,21 @@ body {
 .discover-img_button:hover .discover-img_button-container {
     background-position: left center;
     color: white;
+}
+
+.discover-logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+
+@media (max-width: 768px) {
+    .discover-logos_item {
+        flex: 1 1 50%;
+        min-width: 300px;
+    }
 }
