@@ -137,7 +137,7 @@ body {
     margin: 0;
     padding: 0;
 
-    overflow: hidden;
+    overflow: auto;
     position: relative;
     background-color: var(--dark-purple);
 }
@@ -147,7 +147,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--white);
+    background-color: var(--dark-purple);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -165,6 +165,8 @@ body {
     inset: 0;
     z-index: -2;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .bg-img{
@@ -194,13 +196,14 @@ body {
     width: 100%;
     background: var(--dark-purple);
     padding: 3.7rem 6.438rem;
+    margin: 0 auto;
 }
 
 .nav-navbar{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 27rem;
+    /*gap: 27rem;*/
 }
 
 .nav-navbar-logo{
@@ -496,11 +499,10 @@ body {
     position: relative;
     justify-content: center;
     padding-top: 1rem;
-    padding-left: 1rem;
+    padding-right: 3rem;
 }
 .discover-img-picture{
-    min-width: 25.125rem;
-    min-height: 29.813rem;
+    min-width: 29rem;
 
     position: relative;
     display: block;
@@ -534,25 +536,31 @@ body {
 .discover-img-picture-item{
     display: block;
     width: 100%;
+    height: 100%;
+
     clip-path: polygon(
             25% 0, 100% 0,
             100% 50%, 100% 100%,
             0 100%, 0 15%
     );
     border-radius: 20px;
+
+
+    object-position: left bottom;
+    object-fit: contain;
 }
 
 
 
 .discover-img-container{
     position: absolute;
-    top: 80%;
-    left: 45%;
+    top: 75%;
+    left: 38%;
     display: flex;
     flex-direction: row;
-    border-radius: 20px;
 
-    padding: 1.731rem 1.313rem 1.25rem 1.451rem;
+
+    padding: 2.7rem 1.5rem;
     backdrop-filter: blur(15px);
 
     clip-path: polygon(
@@ -576,6 +584,8 @@ body {
     filter: blur(30px);
     transform: scale(1.1);
     pointer-events: none;
+
+    gap: 1rem;
 
 }
 
@@ -601,9 +611,18 @@ body {
     border-radius: 10px;
 }
 
+.discover-img-container-profile-name{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+
+    padding-top: 0.8rem;
+}
+
 .discover-img-container-profile_item{
-    font-family: Rajdhani-Bold-woff, serif;
-    font-size: 1.106rem;
+    font-family: Rajdhani-Medium-woff, serif;
+    font-size: 1.3rem;
 }
 
 .discover-img-container-profile-name_text{
@@ -619,11 +638,17 @@ body {
     z-index: 1;
 }
 
-.discover-img-container-profile-name{
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    align-items: center;
+
+
+
+.discover-img-container-price{
+    padding-top: 0.3rem;
+}
+
+.discover-img-container-price-title{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 0.8rem;
+    color: var(--gray-timer);
 }
 
 .discover-img-container-price-container{
@@ -631,12 +656,8 @@ body {
     flex-direction: row;
     gap: 0.5rem;
     align-items: center;
-}
 
-.discover-img-container-price-title{
-    font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: 0.691rem;
-    color: var(--gray-timer);
+    padding-top: 0.8rem;
 }
 
 .discover-img-container-price-container_main{
@@ -726,7 +747,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 12rem;
+    padding-top: 9.3rem;
 }
 
 
