@@ -199,49 +199,49 @@ body {
     margin: 0 auto;
 }
 
-.nav-navbar{
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*gap: 27rem;*/
+    gap: 27rem;
 }
 
-.nav-navbar-logo{
+.navbar__logo{
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.nav-navbar-menu{
+.navbar__menu{
     display: flex;
     align-items: center;
     list-style: none;
     gap: 4rem;
 }
 
-.nav-navbar-menu-container-item{
+.navbar__menu-link{
     font-family: Orbitron-Bold-woff,Roboto-Regular-woff, serif;
     font-size: 1.244rem;
     color: var(--gray-header);
 }
 
-.nav-navbar-menu-container-item:hover{
+.navbar__menu-link:hover{
     color: var(--white);
     transition: all 0.5s ease;
 }
 
-.nav-navbar-icons{
+.navbar__icons{
     display: flex;
     align-items: center;
     cursor: pointer;
     gap: 3.7rem;
 }
 
-.nav-navbar-icons:hover{
+.navbar__icons:hover{
     transition: all 0.5s ease;
 }
 
-.nav-navbar-burger{
+.navbar__burger{
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -254,7 +254,7 @@ body {
     z-index: 10;
 }
 
-.nav-navbar-burger span {
+.navbar__burger span {
     display: block;
     height: 0.176rem;
     width: 1.357rem;
@@ -263,36 +263,27 @@ body {
     transition: all 0.5s ease;
 }
 
-.nav-navbar-burger:hover span{
+.navbar__burger:hover span{
     background: var(--white);
     transition: all 0.5s ease;
 }
 
-.nav-navbar-burger span:nth-child(2) {
+.navbar__burger span:nth-child(2) {
     width: 0.848rem;
 }
 
-.nav-navbar-burger.open span:nth-child(1) {
+.navbar__burger.open span:nth-child(1) {
     transform: rotate(36deg) translate(8px, 5px);
 }
-.nav-navbar-burger.open span:nth-child(2) {
+.navbar__burger.open span:nth-child(2) {
     opacity: 0;
 }
-.nav-navbar-burger.open span:nth-child(3) {
+.navbar__burger.open span:nth-child(3) {
     transform: rotate(-36deg) translate(8px, -5px);
 }
 
 @media (max-width: 768px) {
-
-    .nav-navbar-icons{
-        display: none;
-    }
-
-    .nav-navbar-burger {
-        display: flex;
-    }
-
-    .nav-navbar-menu {
+    .navbar__menu {
         position: absolute;
         top: 100%;
         left: 0;
@@ -306,17 +297,17 @@ body {
         transition: transform 0.4s ease, opacity 0.4s ease;
     }
 
-    .nav-navbar-menu.open {
+    .navbar__menu.open {
         transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
     }
 
-    .nav-navbar-icons {
+    .navbar__icons {
         display: none;
     }
 
-    .nav-navbar-burger {
+    .navbar__burger {
         display: flex;
     }
 }
@@ -325,7 +316,7 @@ body {
 
 .discover{
     max-width: 99rem;
-    padding: 14rem 0.1rem;
+    padding-top: 14rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -333,13 +324,13 @@ body {
     flex-wrap: wrap;
 }
 
-.discover-title,
+.discover__title,
 .discover-img{
     flex: 1 1 auto;
     min-width: 300px;
 }
 
-.discover-logos{
+.discover__logos{
     flex-basis: 100%;
 }
 
@@ -350,10 +341,10 @@ body {
         text-align: center;
     }
 
-    .discover-title{
+    .discover__title{
         order: 1;
     }
-    .discover-logos{
+    .discover__logos{
         order: 2;
     }
     .discover-img{
@@ -361,39 +352,39 @@ body {
     }
 }
 
-.discover-title{
+.discover__title{
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.discover-title_main{
+.discover__title-main{
     font-family: LeagueSpartan-SemiBold-woff, serif;
     font-size: 5.6rem;
     line-height: 1.13;
     letter-spacing: 0.2rem;
 }
-.discover-title_main_gradient{
+.discover__title-main--gradient{
     background: linear-gradient(to right, var(--pink), var(--blue-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
 }
-.discover-title_sub{
+.discover__title-sub{
     font-family: Rajdhani-Regular-woff, serif;
     font-size: 1.88rem;
     line-height: 1.6;
 }
 
-.discover-title-form{
+.discover__form{
     display: flex;
     align-items: center;
     padding-top: 0.9rem;
     gap: 2.6rem;
 }
 
-.discover-title-form_button{
+.discover__form-button{
     position: relative;
     padding: 0.2rem;
     border: none;
@@ -416,7 +407,7 @@ body {
     overflow: visible;
 }
 
-.discover-title-form_button::before {
+.discover__form-button::before {
     content: '';
     position: absolute;
     inset: -30px;
@@ -427,7 +418,7 @@ body {
     pointer-events: none;
 }
 
-.discover-title-form_button-container {
+.discover__form-container {
     display: flex;
     align-items: center;
     gap: 1.2rem;
@@ -456,12 +447,12 @@ body {
     transition: background-position 0.5s ease;
 }
 
-.discover-title-form_button:hover .discover-title-form_button-container {
+.discover__form-button:hover .discover__form-container {
     background-position: left center;
     color: white;
 }
 
-.discover-title-form_sub{
+.discover__form-sub{
     font-family: Orbitron-Bold-woff, serif;
     font-size: 1.28rem;
     letter-spacing: 0.1rem;
@@ -472,36 +463,37 @@ body {
     color: transparent;
 }
 
-.discover-title-info{
+.discover__info{
     display: flex;
     gap: 4.7rem;
     align-items: center;
     padding-top: 3.5rem;
 }
-.discover-title-info-container{
+.discover__info-item{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.4rem;
 }
-.discover-title-info-container_main{
+.discover__info-value{
     font-family: Aldrich-Regular-woff, serif;
     font-size: 2.9rem;
 }
-.discover-title-info-container_sub{
+.discover__info-label{
     font-family: AlethiaNext-Light-woff, serif;
     font-size: 1.1rem;
     color: var(--gray-header);
 }
 
-.discover-img{
+.discover__img{
     display: flex;
     position: relative;
     justify-content: center;
     padding-top: 1rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
-.discover-img-picture{
+.discover__img-picture{
     min-width: 29rem;
 
     position: relative;
@@ -509,7 +501,7 @@ body {
     overflow: visible;
 }
 
-.discover-img-picture::before{
+.discover__img-picture::before{
     content: '';
     position: absolute;
     top: 25px;
@@ -533,7 +525,7 @@ body {
     );
 }
 
-.discover-img-picture-item{
+.discover__img-image{
     display: block;
     width: 100%;
     height: 100%;
@@ -552,12 +544,17 @@ body {
 
 
 
-.discover-img-container{
+.discover__content{
+    max-width: 28rem;
+    width: 100%;
+    box-sizing: border-box;
+
     position: absolute;
     top: 75%;
-    left: 38%;
+    left: 26%;
     display: flex;
     flex-direction: row;
+    gap: 4rem;
 
 
     padding: 2.7rem 1.5rem;
@@ -569,8 +566,7 @@ body {
             0 100%, 0 15%
     );
 }
-
-.discover-img-container::before{
+.discover__content::before{
     content: '';
     position: absolute;
     inset: 0;
@@ -588,8 +584,7 @@ body {
     gap: 1rem;
 
 }
-
-.discover-img-container::after {
+.discover__content::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -611,7 +606,12 @@ body {
     border-radius: 10px;
 }
 
-.discover-img-container-profile-name{
+.profile__title{
+    font-family: Rajdhani-Medium-woff, serif;
+    font-size: 1.3rem;
+}
+
+.profile__author{
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
@@ -620,17 +620,12 @@ body {
     padding-top: 0.8rem;
 }
 
-.discover-img-container-profile_item{
-    font-family: Rajdhani-Medium-woff, serif;
-    font-size: 1.3rem;
-}
-
-.discover-img-container-profile-name_text{
+.author__name{
     font-family: Rajdhani-SemiBold-woff, serif;
     font-size: 0.968rem;
 }
 
-.discover-img-container-block{
+.discover__section{
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -641,17 +636,17 @@ body {
 
 
 
-.discover-img-container-price{
+.discover__price{
     padding-top: 0.3rem;
 }
 
-.discover-img-container-price-title{
+.price__title{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: var(--gray-timer);
 }
 
-.discover-img-container-price-container{
+.price__container{
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
@@ -660,48 +655,49 @@ body {
     padding-top: 0.8rem;
 }
 
-.discover-img-container-price-container_main{
+.price__container-main{
     font-family: Orbitron-Bold-woff, serif;
     font-size: 0.608rem;
 }
 
-.discover-img-container-price-container_sub{
+.price__container-sub{
     font-family: Rajdhani-Regular-woff, serif;
     font-size: 0.691rem;
     color: var(--gray-timer);
 }
 
-.discover-img-container-timer-container{
+.timer__container{
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: center;
+    padding-top: 0.8rem;
 }
-.discover-img-container-timer-container-wrapper{
+.timer__container-item{
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
     align-items: flex-start;
 }
 
-.discover-img-container-timer_title{
+.timer__title{
     font-family: Rajdhani-SemiBold-woff, serif;
     font-size: 0.691rem;
     color: var(--gray-timer);
 }
 
-.discover-img-container-timer-container-wrapper_main{
+.timer__container-value{
     font-family: Rajdhani-SemiBold-woff, serif;
     font-size: 1.106rem;
 }
 
-.discover-img-container-timer-container-wrapper_sub{
+.timer__container-sub{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: 0.691rem;
+    font-size: 0.9rem;
     color: var(--gray-timer);
 }
 
-.discover-img_button{
+.discover__img-button{
     position: relative;
     padding: 2px;
     border: none;
@@ -714,7 +710,7 @@ body {
 
     cursor: pointer;
 }
-.discover-img_button-container{
+.img-button__container{
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -736,12 +732,12 @@ body {
     transition: background-position 0.5s ease;
 }
 
-.discover-img_button:hover .discover-img_button-container {
+.discover__img-button:hover .img-button__container {
     background-position: left center;
     color: white;
 }
 
-.discover-logos{
+.discover__logos{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -753,7 +749,7 @@ body {
 
 
 @media (max-width: 768px) {
-    .discover-logos_item {
+    .logos__item {
         flex: 1 1 50%;
         min-width: 300px;
     }
