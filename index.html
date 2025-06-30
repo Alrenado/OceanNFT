@@ -13,14 +13,14 @@
 
 <div class="bg">
     <picture>
-        <source srcset="img/webp/bg.webp" type="image/webp">
-        <img class="bg-img" src="img/png/bg.png" alt="background">
+        <source srcset="img/webp/bg-mobile.webp" type="image/webp" media="(min-width: 768px)">
+        <img class="bg-img" src="img/webp/bg.webp" alt="background">
     </picture>
 </div>
 
 <header class="header">
     <nav class="navbar">
-        <div class="navbar__logo" style="max-width: 9.5rem; max-height: 1.404rem;">
+        <div class="navbar__logo">
             <svg class="navbar__logo-item">
                 <use xlink:href="img/svg/sprite.svg#header-logo"></use>
             </svg>
@@ -127,11 +127,11 @@
         </ul>
 
         <div class="navbar__icons">
-            <svg class="navbar__icons-item" style="width: 2rem; height: 2rem;">
+            <svg class="navbar__icons-item navbar__icons-cart">
                 <use xlink:href="img/svg/sprite.svg#cart"></use>
             </svg>
 
-            <svg class="navbar__icons-item" style="width: 1.6rem; height: 1.6rem;">
+            <svg class="navbar__icons-item navbar__icons-profile">
                 <use xlink:href="img/svg/sprite.svg#profile"></use>
             </svg>
         </div>
@@ -164,7 +164,7 @@
                 <div class="discover__form-container">
                     <span class="discover__form-text">Explore</span>
 
-                    <svg class="discover__form-icon" style="width: 3.5rem; height: 1.5rem;">
+                    <svg class="discover__form-icon">
                         <use xlink:href="img/svg/sprite.svg#arrow"></use>
                     </svg>
                 </div>
@@ -223,8 +223,7 @@
                     <span class="price__title">Reserve price</span>
 
                     <div class="price__container">
-                        <svg class="price__container-logo"
-                             style="width: 1rem; height: 1rem;">
+                        <svg class="price__container-logo">
                             <use xlink:href="img/svg/sprite.svg#logo-white"></use>
                         </svg>
 
@@ -258,8 +257,7 @@
                     <button class="img-button__container" id="img-button">
                         <span class="img-button__text">Place Bid</span>
 
-                        <svg class="img-button__icon"
-                             style="width: 1.52rem; height: 0.576rem;">
+                        <svg class="img-button__icon">
                             <use xlink:href="img/svg/sprite.svg#arrow"></use>
                         </svg>
                     </button>
@@ -268,20 +266,19 @@
         </div>
     </div>
     <div class="discover__logos">
-        <svg class="logos__item"
-             style="width: 16.582rem; height: 3.316rem;">
+        <svg class="logos__item logos__item-binance">
             <use xlink:href="img/svg/sprite.svg#binance"></use>
         </svg>
 
-        <svg class="logos__item" style="width: 10.64rem; height: 3.316rem;">
+        <svg class="logos__item logos__item-ethereum">
             <use xlink:href="img/svg/sprite.svg#ethereum"></use>
         </svg>
 
-        <svg class="logos__item" style="width: 21.875rem; height: 3.316rem;">
+        <svg class="logos__item logos__item-blockchain">
             <use xlink:href="img/svg/sprite.svg#blockchain"></use>
         </svg>
 
-        <svg class="logos__item" style="width: 12.275rem; height: 1.961rem;">
+        <svg class="logos__item logos__item-bitmex">
             <use xlink:href="img/svg/sprite.svg#bitMEX"></use>
         </svg>
     </div>

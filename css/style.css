@@ -218,6 +218,9 @@ body.no-scroll{
 }
 
 .navbar__logo{
+    max-width: 9.5rem;
+    max-height: 1.404rem;
+
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -250,6 +253,16 @@ body.no-scroll{
 
 .navbar__icons:hover{
     transition: all 0.5s ease;
+}
+
+.navbar__icons-cart{
+    max-width: 2rem;
+    max-height: 2rem;
+}
+
+.navbar__icons-profile{
+    max-width: 1.6rem;
+    max-height: 1.6rem;
 }
 
 .navbar__burger{
@@ -369,8 +382,10 @@ body.no-scroll{
 
 .discover{
     max-width: 99rem;
-    padding-top: 14rem;
     margin: 0 auto;
+
+    padding-top: 14rem;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -380,7 +395,7 @@ body.no-scroll{
 
 
 .discover__title,
-.discover-img{
+.discover__img{
     flex: 1 1 auto;
     min-width: 300px;
 }
@@ -389,21 +404,38 @@ body.no-scroll{
     flex-basis: 100%;
 }
 
-@media (max-width: 808px) {
-    .discover-flex {
-        flex-direction: column;
+@media (max-width: 1024px) {
+    .discover{
+        display: flex;
+        justify-content: center;
         align-items: center;
-        text-align: center;
     }
 
     .discover__title{
         order: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 auto;
+        text-align: left;
+        max-width: 550px;
     }
     .discover__logos{
         order: 2;
     }
-    .discover-img{
+    .discover__img{
         order: 3;
+    }
+}
+
+@media (max-width: 1440px) {
+    .discover{
+        padding-left: 1rem;
+    }
+
+    section .discover__img{
+        padding-right: 1rem;
     }
 }
 
@@ -432,7 +464,7 @@ body.no-scroll{
     display: flex;
     font-family: Rajdhani-Regular-woff, serif;
 
-    font-size: clamp(1rem, 2vw, 1.9rem);
+    font-size: clamp(1.4rem, 2vw, 1.9rem);
     line-height: 1.6;
 }
 
@@ -506,6 +538,11 @@ body.no-scroll{
     transition: background-position 0.5s ease;
 }
 
+.discover__form-icon{
+    max-width: 3.5rem;
+    max-height: 1.5rem;
+}
+
 .discover__form-button:hover .discover__form-container {
     background-position: left center;
     color: white;
@@ -528,6 +565,12 @@ body.no-scroll{
     align-items: center;
     padding-top: 3.3rem;
 }
+
+@media (max-width: 1024px) {
+    .discover__info{
+        justify-content: space-between;
+    }
+}
 .discover__info-item{
     display: flex;
     flex-direction: column;
@@ -536,11 +579,11 @@ body.no-scroll{
 }
 .discover__info-value{
     font-family: Aldrich-Regular-woff, serif;
-    font-size: 2.9rem;
+    font-size: clamp(2rem, 3vw, 3rem);
 }
 .discover__info-label{
     font-family: AlethiaNext-Light-woff, serif;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.1vw, 3.1rem);
     color: var(--gray-header);
 }
 
@@ -709,6 +752,11 @@ body.no-scroll{
     padding-top: 0.8rem;
 }
 
+.price__container-logo{
+    max-width: 1rem;
+    max-height: 1rem;
+}
+
 .price__container-main{
     font-family: Orbitron-Bold-woff, serif;
     font-size: 0.608rem;
@@ -795,6 +843,11 @@ body.no-scroll{
     color: white;
 }
 
+.img-button__icon{
+    max-width: 1.52rem;
+    max-height: 0.576rem;
+}
+
 .discover__logos{
     display: flex;
     flex-direction: row;
@@ -805,10 +858,40 @@ body.no-scroll{
     padding-top: 9.3rem;
 }
 
+.logos__item-binance{
+    max-width: 16rem;
+    max-height: 3rem;
+}
+
+.logos__item-ethereum{
+    max-width: 10rem;
+    max-height: 3rem;
+}
+
+.logos__item-blockchain{
+    max-width: 21rem;
+    max-height: 3rem;
+}
+
+.logos__item-bitmex{
+    max-width: 12rem;
+    max-height: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .discover__logos{
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+    .logos__item {
+        flex: 1 1 30%;
+        max-width: 300px;
+    }
+}
 
 @media (max-width: 768px) {
     .logos__item {
-        flex: 1 1 50%;
-        min-width: 300px;
+        transform: scale(0.8);
     }
 }
