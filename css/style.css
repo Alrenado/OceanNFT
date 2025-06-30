@@ -142,6 +142,11 @@ body {
     background-color: var(--dark-purple);
 }
 
+body.no-scroll{
+    overflow: hidden;
+    touch-action: none;
+}
+
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -163,7 +168,7 @@ body {
 .bg{
     position: absolute;
     inset: 0;
-    z-index: -2;
+    z-index: -999;
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -198,8 +203,9 @@ body {
 
     width: 100%;
     background: var(--dark-purple);
-    padding: 3.7rem 6.438rem;
+    padding: 3.7rem 8rem;
     margin: 0 auto;
+    z-index: 999;
 }
 
 .navbar{
@@ -239,7 +245,7 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    gap: 3.7rem;
+    gap: 3rem;
 }
 
 .navbar__icons:hover{
@@ -309,31 +315,26 @@ body {
     display: none;
 }
 
-@media (max-width: 1024px) {
-    .navbar__menu{
-        gap: 2rem;
-    }
+.navbar__menu {
+    position: absolute;
+    min-height: 100vh;
+    height: calc(100vh - 98%);
+    top: 98%;
+    left: 0;
+    right: 0;
 
-    .navbar__icons{
-        gap: 2rem;
-    }
+    flex-direction: column;
+    padding: 1rem;
+
+    background: var(--dark-purple);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    overflow-y: auto;
 }
 
 @media (max-width: 768px) {
-    .navbar__menu {
-        position: absolute;
-        min-height: 100vh;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--dark-purple);
-        flex-direction: column;
-        padding: 1rem;
-        transform: translateY(-10px);
-        opacity: 0;
-        pointer-events: none;
-        transition: transform 0.4s ease, opacity 0.4s ease;
-    }
 
     .navbar__menu-hidden{
         display: flex;
@@ -354,7 +355,15 @@ body {
     }
 }
 
+@media (max-width: 1024px) {
+    .navbar__menu{
+        gap: 2rem;
+    }
 
+    .navbar__icons{
+        gap: 2rem;
+    }
+}
 
 /* Discover */
 
@@ -367,6 +376,8 @@ body {
     align-items: flex-start;
     flex-wrap: wrap;
 }
+
+
 
 .discover__title,
 .discover-img{
@@ -403,12 +414,14 @@ body {
 }
 
 .discover__title-main{
+    display: block;
     font-family: LeagueSpartan-SemiBold-woff, serif;
-    font-size: 5.6rem;
+    font-size: clamp(3rem, 5vw, 5.6rem);
     line-height: 1.13;
     letter-spacing: 0.2rem;
 }
 .discover__title-main--gradient{
+    display: inline;
     background: linear-gradient(to right, var(--pink), var(--blue-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -416,8 +429,10 @@ body {
     color: transparent;
 }
 .discover__title-sub{
+    display: flex;
     font-family: Rajdhani-Regular-woff, serif;
-    font-size: 1.88rem;
+
+    font-size: clamp(1rem, 2vw, 1.9rem);
     line-height: 1.6;
 }
 
@@ -466,7 +481,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1.2rem;
-    padding: 1.25rem 2.7rem;
+    padding: 1.25rem 3.3rem;
     font-family: Orbitron-Bold-woff, serif;
     font-size: 1.45rem;
 
@@ -509,9 +524,9 @@ body {
 
 .discover__info{
     display: flex;
-    gap: 4.7rem;
+    gap: 3.8rem;
     align-items: center;
-    padding-top: 3.5rem;
+    padding-top: 3.3rem;
 }
 .discover__info-item{
     display: flex;
@@ -589,8 +604,7 @@ body {
 
 
 .discover__content{
-    max-width: 28rem;
-    width: 100%;
+    min-width: 24rem;
     box-sizing: border-box;
 
     position: absolute;
@@ -599,7 +613,6 @@ body {
     display: flex;
     flex-direction: row;
     gap: 4rem;
-
 
     padding: 2rem 1rem;
     backdrop-filter: blur(15px);
@@ -768,8 +781,8 @@ body {
     border-radius: 5px;
     background: linear-gradient(
             to left,
-            var(--pink), var(--purple), var(--blue),
-            var(--blue), var(--purple), var(--pink)
+            var(--blue), var(--purple), var(--pink),
+            var(--pink), var(--purple), var(--blue)
     );
     background-size: 200% 100%;
     background-position: right center;
