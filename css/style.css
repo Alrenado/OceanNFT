@@ -168,21 +168,14 @@ body.no-scroll{
 .bg{
     position: absolute;
     inset: 0;
-    z-index: -999;
+    z-index: -10;
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    height: auto;
 }
 
-.bg-img{
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    object-fit: cover;
-    object-position: center;
-}
-
-.bg::before{
+.bg::after{
     content: '';
     position: absolute;
     inset: 0;
@@ -190,9 +183,63 @@ body.no-scroll{
     opacity: 0.75;
     z-index: 1;
     pointer-events: none;
+
+    filter: blur(80px);
 }
 
+.bg__img{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    object-fit: cover;
+    object-position: center;
+}
 
+.bg__glow-container{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.bg__glow{
+    position: absolute;
+    filter: blur(60px);
+    z-index: 0;
+}
+
+.bg__glow-first {
+    width: 40vh;
+    height: 40vh;
+    top: 40rem;
+    left: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .bg__glow-first {
+        width: 25vh;
+        height: 25vh;
+        top: 30rem;
+        left: 3rem;
+    }
+}
+
+.bg__glow-second {
+    width: 40vh;
+    height: 40vh;
+    top: 33rem;
+    left: 50rem;
+}
+
+@media (max-width: 1024px) {
+    .bg__glow-second {
+        width: 25vh;
+        height: 25vh;
+        top: 10rem;
+        left: 1111111110rem;
+    }
+}
 
 /* Navigation */
 
@@ -205,7 +252,7 @@ body.no-scroll{
     background: var(--dark-purple);
     padding: 3.7rem 8rem;
     margin: 0 auto;
-    z-index: 999;
+    z-index: 10;
 }
 
 @media (max-width: 768px) {
@@ -406,6 +453,7 @@ body.no-scroll{
 @media (max-width: 1440px) {
     .discover{
         padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
@@ -415,20 +463,12 @@ body.no-scroll{
     min-width: 300px;
 }
 
-.discover__img-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    clip-path: none;
-}
-
-@media (max-width: 768px) {
-    .discover__img-image {
-        height: 400px;
-        width: 100%;
-        object-fit: cover;
-        clip-path: inset(0 15% 0 15%);
-    }
+.discover__img{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-left: 2rem;
 }
 
 @media (max-width: 1440px) {
@@ -437,6 +477,69 @@ body.no-scroll{
         padding-right: 1rem;
     }
 }
+
+
+.discover__img-picture{
+    position: relative;
+    display: block;
+
+}
+
+
+.discover__img-picture::before{
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    bottom: 10px;
+    left: 15px;
+    z-index: -1;
+    background: radial-gradient(
+            circle,
+            rgba(0,0,0,1),
+            rgba(0,0,0,1),
+            transparent 100%
+    );
+    filter: blur(30px);
+    transform: scale(1.1);
+    pointer-events: none;
+    clip-path: polygon(
+            25% 0, 100% 0,
+            100% 50%, 100% 100%,
+            0 100%, 0 15%
+    );
+}
+
+@media (max-width: 576px) {
+    .discover__img-picture {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+.discover__img-image{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    clip-path: polygon(
+            25% 0, 100% 0,
+            100% 50%, 100% 100%,
+            0 100%, 0 15%
+    );
+    border-radius: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .discover__img-image {
+        clip-path: polygon(
+                25% 0, 100% 0,
+                100% 50%, 100% 100%,
+                0 100%, 0 15%
+        );
+    }
+}
+
 
 @media (max-width: 1024px) {
 
@@ -458,7 +561,9 @@ body.no-scroll{
     }
 }
 
-
+.discover__profile{
+    padding-top: 1.4rem;
+}
 
 .discover__title{
     display: flex;
@@ -499,10 +604,14 @@ body.no-scroll{
 @media (max-width: 575px) {
     .discover__form{
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
     }
 }
 
 .discover__form-button{
+    border-radius: 0.5rem;
     position: relative;
     padding: 0.2rem;
     border: none;
@@ -525,18 +634,8 @@ body.no-scroll{
     overflow: visible;
 }
 
-.discover__form-button::before {
-    content: '';
-    position: absolute;
-    inset: -30px;
-    background: radial-gradient(circle, var(--white), transparent 70%);
-    filter: blur(30px);
-    opacity: 0.7;
-    z-index: 0;
-    pointer-events: none;
-}
-
 .discover__form-container {
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     gap: 1.2rem;
@@ -649,62 +748,8 @@ body.no-scroll{
     color: var(--gray-header);
 }
 
-.discover__img{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    padding-top: 1rem;
-    padding-left: 2rem;
-    padding-right: 6rem;
-}
-.discover__img-picture{
-    min-width: 29rem;
-
-    position: relative;
-    display: block;
-    overflow: visible;
-}
-
-.discover__img-picture::before{
-    content: '';
-    position: absolute;
-    top: 25px;
-    right: 10px;
-    bottom: 10px;
-    left: 15px;
-    z-index: -1;
-    background: radial-gradient(
-            circle,
-            rgba(0,0,0,1),
-            rgba(0,0,0,1),
-            transparent 100%
-    );
-    filter: blur(30px);
-    transform: scale(1.1);
-    pointer-events: none;
-    clip-path: polygon(
-            25% 0, 100% 0,
-            100% 50%, 100% 100%,
-            0 100%, 0 15%
-    );
-}
-
-.discover__img-image{
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    clip-path: polygon(
-            25% 0, 100% 0,
-            100% 50%, 100% 100%,
-            0 100%, 0 15%
-    );
-    border-radius: 20px;
 
 
-    object-position: left bottom;
-    object-fit: contain;
-}
 
 
 
@@ -719,15 +764,16 @@ body.no-scroll{
     flex-direction: row;
     gap: 4rem;
 
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     backdrop-filter: blur(15px);
 
     clip-path: polygon(
-            25% 0, 100% 0,
+            15% 0, 100% 0,
             100% 50%, 100% 100%,
-            0 100%, 0 15%
+            0 100%, 0 25%
     );
 }
+
 .discover__content::before{
     content: '';
     position: absolute;
@@ -744,8 +790,8 @@ body.no-scroll{
     pointer-events: none;
 
     gap: 1rem;
-
 }
+
 .discover__content::after {
     content: '';
     position: absolute;
@@ -758,7 +804,7 @@ body.no-scroll{
             rgba(255,255,255,0.1)
     );
 
-    padding: 2px;
+    padding: 3px;
     mask:
             linear-gradient(var(--white) 0 0) content-box,
             linear-gradient(var(--white) 0 0);
@@ -766,11 +812,19 @@ body.no-scroll{
 
     pointer-events: none;
     border-radius: 10px;
+
 }
 
 @media  (max-width: 1024px) {
     .discover__content{
         left: auto;
+    }
+}
+
+@media  (max-width: 575px) {
+    .discover__content{
+        gap: 2rem;
+        min-width: 0;
     }
 }
 
@@ -834,6 +888,10 @@ body.no-scroll{
     font-family: Rajdhani-Regular-woff, serif;
     font-size: 0.691rem;
     color: var(--gray-timer);
+}
+
+.discover__timer{
+    padding-top: 1.5rem;
 }
 
 .timer__container{
@@ -962,4 +1020,28 @@ body.no-scroll{
     .logos__item {
         transform: scale(0.8);
     }
+}
+
+/* Swiper */
+
+.swiper {
+    padding-top: 10rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper__track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.swiper__slide {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    box-sizing: border-box;
+    background: #444;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
 }

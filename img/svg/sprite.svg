@@ -172,6 +172,15 @@
 
 <!--  Elements  -->
 
+    <symbol id="bg__glow-first">
+        <circle cx="136.452" cy="136.596" r="135.971" fill="#FF00C8"/>
+    </symbol>
+
+    <symbol id="bg__glow-second">
+        <circle cx="77.2613" cy="76.9075" r="76.8294" fill="#FFB1EE"/>
+    </symbol>
+
+
 
 
 </svg>

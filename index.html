@@ -14,8 +14,17 @@
 <div class="bg">
     <picture>
         <source srcset="img/webp/bg-mobile.webp" type="image/webp" media="(min-width: 768px)">
-        <img class="bg-img" src="img/webp/bg.webp" alt="background">
+        <img class="bg__img" src="img/webp/bg.webp" alt="background">
     </picture>
+    <div class="bg__glow-container">
+        <svg class="bg__glow bg__glow-first">
+            <use xlink:href="img/svg/sprite.svg#bg__glow-first"></use>
+        </svg>
+
+        <svg class="bg__glow bg__glow-second">
+            <use xlink:href="img/svg/sprite.svg#bg__glow-second"></use>
+        </svg>
+    </div>
 </div>
 
 <header class="header">
@@ -284,7 +293,19 @@
     </div>
 </section>
 
+<section class="swiper">
+    <div class="swiper__track" id="swiper-track">
+        <div class="swiper__slide">Card 1</div>
+        <div class="swiper__slide">Card 2</div>
+        <div class="swiper__slide">Card 3</div>
+        <div class="swiper__slide">Card 4</div>
+        <div class="swiper__slide">Card 5</div>
+        <div class="swiper__slide">Card 6</div>
+    </div>
+</section>
+
 <script src="js/form.js"></script>
+
 </body>
 
 </html>
