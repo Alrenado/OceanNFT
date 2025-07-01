@@ -16,67 +16,49 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Swiper
 
-    const track = document.getElementById("swiper-track");
-    const slides = document.querySelectorAll(".swiper__slide");
-    let index = 0;
-    let startX = 0;
+    const track = document.getElementById('track');
+    let currentIndex = 0;
     let isDragging = false;
-    let auto;
+    let startX = 0;
+    let scrollStart = 0;
 
-    function getSlideWidth() {
-        return slides[0].getBoundingClientRect().width;
+    function slideTo(index) {
+        const slide = track.children[index];
+        if (!slide) return;
+
+        const offsetLeft = slide.offsetLeft;
+        track.scrollTo({ left: offsetLeft, behavior: 'smooth' });
+        currentIndex = index;
     }
 
-    function updateSlide() {
-        const slideWidth = getSlideWidth();
-        track.style.transition = "transform 0.5s ease";
-        track.style.transform = `translateX(-${index * slideWidth}px)`;
-    }
+// Автопрокрутка
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % track.children.length;
+        slideTo(currentIndex);
+    }, 4000);
 
-    function nextSlide() {
-        const visibleSlides = 3;
-        const maxIndex = slides.length - visibleSlides;
-
-        index = (index + 1) > maxIndex ? 0 : index + 1;
-        updateSlide();
-    }
-
-    auto = setInterval(nextSlide, 3000);
-
-    // Swipe support
-    track.addEventListener("touchstart", (e) => {
-        clearInterval(auto);
-        startX = e.touches[0].clientX;
+// Свайп пальцем
+    track.addEventListener('touchstart', (e) => {
         isDragging = true;
-        track.style.transition = "none";
+        startX = e.touches[0].clientX;
+        scrollStart = track.scrollLeft;
     });
 
-    track.addEventListener("touchmove", (e) => {
+    track.addEventListener('touchmove', (e) => {
         if (!isDragging) return;
-        const diff = e.touches[0].clientX - startX;
-        const slideWidth = getSlideWidth();
-        track.style.transform = `translateX(-${index * slideWidth - diff}px)`;
+        const deltaX = e.touches[0].clientX - startX;
+        track.scrollLeft = scrollStart - deltaX;
     });
 
-    track.addEventListener("touchend", (e) => {
-        const diff = e.changedTouches[0].clientX - startX;
-        const slideWidth = getSlideWidth();
+    track.addEventListener('touchend', () => {
         isDragging = false;
 
-        if (Math.abs(diff) > slideWidth / 4) {
-            if (diff < 0) index++;
-            else index--;
-        }
-
-        const maxIndex = slides.length - 3;
-        if (index < 0) index = 0;
-        if (index > maxIndex) index = 0;
-
-        updateSlide();
-        auto = setInterval(nextSlide, 3000);
+        // после свайпа выбрать ближайший слайд
+        const slideWidth = track.children[0].offsetWidth + parseFloat(getComputedStyle(track).gap || 0);
+        currentIndex = Math.round(track.scrollLeft / slideWidth);
+        slideTo(currentIndex);
     });
-
-    window.addEventListener("resize", updateSlide);
 
 });

@@ -1025,23 +1025,41 @@ body.no-scroll{
 /* Swiper */
 
 .swiper {
-    padding-top: 10rem;
-    width: 100%;
+    max-width: 99rem;
+    margin: 0 auto;
+    padding-top: 16rem;
     overflow: hidden;
 }
 
-.swiper__track {
+.swiper__title {
     display: flex;
-    transition: transform 0.5s ease;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: Orbitron-Bold-woff, serif;
+    font-size: clamp(1.9rem, 2vh, 2.4rem);
+}
+
+.swiper__title-ico{
+    max-width: 3.5rem;
+    max-height: 1.5rem;
+}
+
+.swiper__track {
+    padding-top: 4rem;
+    display: flex;
+    gap: 2rem;
 }
 
 .swiper__slide {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
-    box-sizing: border-box;
-    background: #444;
-    color: #fff;
-    text-align: center;
+    flex: 0 0 calc((100% - 4rem) / 3); /* 3 карточки в ряд, 2 gap по 1rem */
+    min-height: 12rem;
+    background: #333;
+    color: white;
     font-size: 2rem;
-    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
 }
