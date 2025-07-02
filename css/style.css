@@ -538,7 +538,7 @@ body.no-scroll{
 
 .discover__title,
 .discover__img{
-    flex: 1 1 auto;
+    /*flex: 0 0 40%;*/
     min-width: 300px;
 }
 
@@ -582,11 +582,6 @@ body.no-scroll{
     filter: blur(30px);
     transform: scale(1.1);
     pointer-events: none;
-    clip-path: polygon(
-            25% 0, 100% 0,
-            100% 50%, 100% 100%,
-            0 100%, 0 15%
-    );
 }
 
 @media (max-width: 576px) {
@@ -655,7 +650,7 @@ body.no-scroll{
     font-family: LeagueSpartan-SemiBold-woff, serif;
     font-size: clamp(3.6rem, 5vw, 5.6rem);
     line-height: 1.13;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.175rem;
 }
 .discover__title-main--gradient{
     display: inline;
@@ -778,8 +773,10 @@ body.no-scroll{
 
         padding-top: 2rem;
         width: 100%;
+        gap: 0;
     }
 }
+
 .discover__info-item{
     position: relative;
     display: flex;
@@ -808,10 +805,6 @@ body.no-scroll{
 }
 
 @media (max-width: 575px) {
-    .discover__info{
-        flex-direction: column;
-    }
-
     .discover__info-item:not(:last-child)::after{
         display: none;
     }
@@ -834,23 +827,18 @@ body.no-scroll{
 
 .discover__content{
     min-width: 24rem;
+    margin-left: -20rem;
 
-    position: absolute;
-    top: 75%;
-    left: 36%;
-    display: flex;
+    margin-top: 75%;
+    height: fit-content;
+
+    position: relative;
+
+    display: flex
+;
     flex-direction: row;
     gap: 4rem;
-
-    clip-path: polygon(
-            15% 0, 100% 0,
-            100% 50%, 100% 100%,
-            0 100%, 0 25%
-    );
-}
-
-.discover__content::before{
-
+    clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 25%);
 }
 
 .discover__content::after {
@@ -1039,12 +1027,16 @@ body.no-scroll{
     margin: 0 auto;
     padding-top: 16rem;
     overflow: hidden;
+    position: relative;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 @media (max-width: 1440px) {
     .swiper {
         padding-left: 1rem;
         padding-right: 1rem;
+        padding-top: 5rem;
     }
 }
 
@@ -1055,7 +1047,17 @@ body.no-scroll{
     align-items: center;
 
     font-family: Orbitron-Bold-woff, serif;
-    font-size: clamp(1.9rem, 2vh, 2.4rem);
+    font-size: clamp(1rem, 1.5rem, 2.4rem);
+}
+
+@media (max-width: 575px) {
+    .swiper__title {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 1rem;
+    }
 }
 
 .swiper__title-ico{
@@ -1065,14 +1067,14 @@ body.no-scroll{
 
 .swiper__track {
     padding-top: 3.8rem;
+
     display: flex;
     gap: 2rem;
-}
+    will-change: transform;
+    touch-action: pan-y;
 
-@media (max-width: 1024px) {
-    .swiper__track{
-
-    }
+    transition: transform 0.4s ease;
+    cursor: grab;
 }
 
 .swiper__slide {
@@ -1098,11 +1100,27 @@ body.no-scroll{
     }
 }
 
+.slide__img{
+    width: 100%;
+    user-select: none;
+}
+
+.slide__img-picture{
+    width: 100%;
+    user-select: none;
+}
+
 .slide__card{
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 3.1rem 2.5rem 2rem 2.5rem;
+}
+
+@media (max-width: 575px) {
+    .slide__card{
+        padding: 1.3rem 1.3rem;
+    }
 }
 
 .slide__profile{
@@ -1115,7 +1133,7 @@ body.no-scroll{
 
 .swiper__profile-title{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: 1.6rem;
+    font-size: clamp(1rem, 1.5rem, 1.6rem);
 }
 
 .swiper__author{
@@ -1127,7 +1145,7 @@ body.no-scroll{
 
 .swiper__name{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: 1.4rem;
+    font-size: clamp(0.9rem, 1rem, 1.4rem);
 }
 
 .swiper__verified-ico{
@@ -1147,7 +1165,7 @@ body.no-scroll{
 
 .swiper__price-title{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: 0.9rem;
+    font-size: clamp(0.6rem, 0.6rem, 0.9rem);
 }
 
 .swiper__price-container{
@@ -1164,12 +1182,12 @@ body.no-scroll{
 
 .swiper__main{
     font-family: Orbitron-Bold-woff, serif;
-    font-size: 1rem;
+    font-size: clamp(0.7rem, 0.7rem, 1rem);
 }
 
 .swiper__sub{
     font-family: Rajdhani-Regular-woff, serif;
-    font-size: 0.9rem;
+    font-size: clamp(0.7rem, 0.7rem, 1rem);
     color: var(--gray-timer);
 }
 
@@ -1184,7 +1202,7 @@ body.no-scroll{
 
 .slide__timer-tittle{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: 1.1rem;
+    font-size: clamp(0.8rem, 0.8rem, 1rem);
     color: var(--gray-timer);
 }
 
@@ -1230,7 +1248,7 @@ body.no-scroll{
 
 .slide__button-text{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: 1.5rem;
+    font-size: clamp(0.8rem, 1rem, 1.5rem);
 }
 
 .slide__button-ico{
@@ -1238,4 +1256,11 @@ body.no-scroll{
     max-height: 1rem;
 }
 
+/*tabs*/
+
+.tabs{
+    padding-top: 4rem;
+    max-width: 99rem;
+    margin: 0 auto;
+}
 
