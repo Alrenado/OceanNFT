@@ -241,6 +241,85 @@ body.no-scroll{
     }
 }
 
+.button-container{
+    position: relative;
+    border: none;
+    background: linear-gradient(
+            to right,
+            var(--light-pink), var(--ocean-blue)
+    );
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    font-family: Rajdhani-SemiBold-woff, serif;
+    color: var(--white);
+    font-size: 1.106rem;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: linear-gradient(
+            to left,
+            var(--blue), var(--purple), var(--pink),
+            var(--pink), var(--purple), var(--blue)
+    );
+    background-size: 200% 100%;
+    background-position: right center;
+
+    padding: 0.65rem 1.1rem;
+    transition: background-position 0.5s ease;
+}
+
+.button-container:hover .button{
+    background-position: left center;
+}
+
+.card{
+    box-sizing: border-box;
+    padding: 1.5rem 1rem;
+    backdrop-filter: blur(15px);
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(
+            circle,
+            rgba(255,255,255,0.3),
+            rgba(255,255,255,0.1),
+            transparent 150%
+    );
+    filter: blur(30px);
+    transform: scale(1.1);
+    pointer-events: none;
+}
+
+.card::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+            135deg,
+            rgba(255,255,255,0.6),
+            rgba(255,255,255,0.1)
+    );
+
+    padding: 3px;
+    mask:
+            linear-gradient(var(--white) 0 0) content-box,
+            linear-gradient(var(--white) 0 0);
+    mask-composite: exclude;
+
+    pointer-events: none;
+}
+
 /* Navigation */
 
 .header{
@@ -755,7 +834,6 @@ body.no-scroll{
 
 .discover__content{
     min-width: 24rem;
-    box-sizing: border-box;
 
     position: absolute;
     top: 75%;
@@ -763,9 +841,6 @@ body.no-scroll{
     display: flex;
     flex-direction: row;
     gap: 4rem;
-
-    padding: 1.5rem 1rem;
-    backdrop-filter: blur(15px);
 
     clip-path: polygon(
             15% 0, 100% 0,
@@ -775,44 +850,11 @@ body.no-scroll{
 }
 
 .discover__content::before{
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: radial-gradient(
-            circle,
-            rgba(255,255,255,0.3),
-            rgba(255,255,255,0.1),
-            transparent 150%
-    );
-    filter: blur(30px);
-    transform: scale(1.1);
-    pointer-events: none;
 
-    gap: 1rem;
 }
 
 .discover__content::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-
-    background: linear-gradient(
-            135deg,
-            rgba(255,255,255,0.6),
-            rgba(255,255,255,0.1)
-    );
-
-    padding: 3px;
-    mask:
-            linear-gradient(var(--white) 0 0) content-box,
-            linear-gradient(var(--white) 0 0);
-    mask-composite: exclude;
-
-    pointer-events: none;
     border-radius: 10px;
-
 }
 
 @media  (max-width: 1024px) {
@@ -927,47 +969,15 @@ body.no-scroll{
 
 .discover__img-button{
     margin-top: 0.8rem;
-    position: relative;
     padding: 0.15rem;
-    border: none;
     border-radius: 5px;
-    background: linear-gradient(
-            to right,
-            var(--light-pink), var(--ocean-blue)
-    );
-
-
-    cursor: pointer;
 }
 .img-button__container{
-    display: flex;
-    align-items: center;
     gap: 0.5rem;
     padding: 0.65rem 1.1rem;
-    font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: 1.106rem;
-
-    color: white;
-    border: none;
-    outline: none;
-    box-shadow: none;
-
     border-radius: 5px;
-    background: linear-gradient(
-            to left,
-            var(--blue), var(--purple), var(--pink),
-            var(--pink), var(--purple), var(--blue)
-    );
-    background-size: 200% 100%;
-    background-position: right center;
-
-    transition: background-position 0.5s ease;
 }
 
-.discover__img-button:hover .img-button__container {
-    background-position: left center;
-    color: white;
-}
 
 .img-button__icon{
     max-width: 1.52rem;
@@ -1031,6 +1041,13 @@ body.no-scroll{
     overflow: hidden;
 }
 
+@media (max-width: 1440px) {
+    .swiper {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 .swiper__title {
     display: flex;
     flex-direction: row;
@@ -1047,19 +1064,178 @@ body.no-scroll{
 }
 
 .swiper__track {
-    padding-top: 4rem;
+    padding-top: 3.8rem;
     display: flex;
     gap: 2rem;
 }
 
+@media (max-width: 1024px) {
+    .swiper__track{
+
+    }
+}
+
 .swiper__slide {
-    flex: 0 0 calc((100% - 4rem) / 3); /* 3 карточки в ряд, 2 gap по 1rem */
+    flex: 0 0 calc((100% - 4rem) / 3); /* 3 card, 2 gap by 2rem */
     min-height: 12rem;
-    background: #333;
-    color: white;
-    font-size: 2rem;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
 }
+
+@media (max-width: 1024px) {
+    .swiper__slide{
+        flex: 0 0 calc((100% - 2rem) / 2); /* 2 card, 1 gap by 2rem */
+    }
+}
+
+@media (max-width: 575px) {
+    .swiper__slide{
+        flex: 0 0 100%; /* 1 card*/
+    }
+}
+
+.slide__card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3.1rem 2.5rem 2rem 2.5rem;
+}
+
+.slide__profile{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.4rem;
+}
+
+
+.swiper__profile-title{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 1.6rem;
+}
+
+.swiper__author{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.swiper__name{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 1.4rem;
+}
+
+.swiper__verified-ico{
+    min-width: 1rem;
+    min-height: 1rem;
+}
+
+.slide__price{
+    padding-top: 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+
+.swiper__price-title{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 0.9rem;
+}
+
+.swiper__price-container{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.swiper__logo{
+    max-width: 1.8rem;
+    max-height: 2rem;
+}
+
+.swiper__main{
+    font-family: Orbitron-Bold-woff, serif;
+    font-size: 1rem;
+}
+
+.swiper__sub{
+    font-family: Rajdhani-Regular-woff, serif;
+    font-size: 0.9rem;
+    color: var(--gray-timer);
+}
+
+.slide__timer{
+    padding-top: 0.3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.slide__timer-tittle{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 1.1rem;
+    color: var(--gray-timer);
+}
+
+.swiper__timer-container{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.swiper__timer-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.swiper__timer-value{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 1.48rem;
+}
+
+.swiper__timer-sub{
+    font-family: Rajdhani-Medium-woff, serif;
+    font-size: 0.9rem;
+    color: var(--gray-timer);
+}
+
+.slide__button{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+
+    padding: 0.8rem 1.4rem;
+}
+
+.slide__button-container{
+    margin-top: 2.8rem;
+}
+
+.slide__button-text{
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: 1.5rem;
+}
+
+.slide__button-ico{
+    max-width: 2rem;
+    max-height: 1rem;
+}
+
+

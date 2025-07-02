@@ -13,9 +13,15 @@
 
 <div class="bg">
     <picture>
-        <source srcset="img/webp/bg-mobile.webp" type="image/webp" media="(min-width: 768px)">
-        <img class="bg__img" src="img/webp/bg.webp" alt="background">
+        <source srcset="img/webp/bg-mobile.webp"
+                type="image/webp"
+                media="(min-width: 768px)">
+
+        <img class="bg__img"
+             src="img/webp/bg.webp"
+             alt="background">
     </picture>
+
     <div class="bg__glow-container">
         <svg class="bg__glow bg__glow-first">
             <use xlink:href="img/svg/sprite.svg#bg__glow-first"></use>
@@ -153,11 +159,14 @@
     </nav>
 </header>
 
+<!--discover-->
+
 <section class="discover">
     <div class="discover__title">
             <span class="discover__title-main">
                 Discover, collect, and<br>
                 sell
+
                 <span class="discover__title-main discover__title-main--gradient">
                     Timeless NFTs
                 </span>
@@ -206,7 +215,7 @@
             <img class="discover__img-image" src="img/png/discover.png" alt="discover">
         </picture>
 
-        <div class="discover__content">
+        <div class="discover__content card">
             <div class="discover__section">
                 <div class="discover__profile">
                     <span class="profile__title">3D Abstract Hand</span>
@@ -215,14 +224,16 @@
                         <picture class="author__picture">
                             <source srcset="img/webp/discover-profile.webp" type="image/webp">
                             <img class="author__image"
-                                 src="img/png/discover-profile.png" alt="discover-profile">
+                                 src="img/png/discover-profile.png"
+                                 alt="discover-profile">
                         </picture>
 
                         <span class="author__name">@jhonartist</span>
 
                         <picture class="author__verified">
                             <source srcset="img/webp/check.webp" type="image/webp">
-                            <img class="verified__icon" src="img/png/check.png"
+                            <img class="verified__icon"
+                                 src="img/png/check.png"
                                  alt="check">
                         </picture>
                     </div>
@@ -262,8 +273,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="discover__img-button">
-                    <button class="img-button__container" id="img-button">
+                <div class="discover__img-button button-container">
+                    <button class="img-button__container button" id="img-button">
                         <span class="img-button__text">Place Bid</span>
 
                         <svg class="img-button__icon">
@@ -293,6 +304,8 @@
     </div>
 </section>
 
+<!--swiper-->
+
 <section class="swiper" id="swiper">
     <div class="swiper__title">
         <span class="swiper__title-main">Top NFT’s now</span>
@@ -306,11 +319,492 @@
         </div>
     </div>
     <div class="swiper__track" id="track">
-        <div class="swiper__slide">Slide 1</div>
-        <div class="swiper__slide">Slide 2</div>
-        <div class="swiper__slide">Slide 3</div>
-        <div class="swiper__slide">Slide 4</div>
-        <div class="swiper__slide">Slide 5</div>
+        <div class="swiper__slide">
+            <picture class="slide__img">
+                <source srcset="img/webp/slide__img-first.webp"
+                        type="image/webp">
+                <img class="slide__img-picture"
+                     src="img/png/slide__img-first.png"
+                     alt="check">
+            </picture>
+
+            <div class="slide__card card">
+                <div class="slide__section">
+                    <div class="slide__profile">
+                        <span class="swiper__profile-title">Apollo Eth #1289 NFT</span>
+
+                        <div class="swiper__author">
+                            <picture class="swiper__picture">
+                                <source srcset="img/webp/discover-profile.webp"
+                                        type="image/webp">
+                                <img class="swiper__picture-img"
+                                     src="img/png/discover-profile.png"
+                                     alt="discover-profile">
+                            </picture>
+
+                            <span class="swiper__name">@jhonartist</span>
+
+                            <picture class="swiper__verified">
+                                <source srcset="img/webp/check.webp"
+                                        type="image/webp">
+                                <img class="swiper__verified-ico"
+                                     src="img/png/check.png"
+                                     alt="check">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="slide__price">
+                        <span class="swiper__price-title">Reserve price</span>
+                        <div class="swiper__price-container">
+                            <svg class="swiper__logo">
+                                <use xlink:href="img/svg/sprite.svg#logo-white"></use>
+                            </svg>
+
+                            <span class="swiper__main">ETH 9.31</span>
+                            <span class="swiper__sub">($29,8846)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide__section">
+                    <div class="slide__timer">
+                        <span class="slide__timer-tittle ">Auction Ends in</span>
+
+                        <div class="swiper__timer-container">
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">18</span>
+                                <span class="swiper__timer-sub">Hours</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">25</span>
+                                <span class="swiper__timer-sub">Mins</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">44</span>
+                                <span class="swiper__timer-sub">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__button-container button-container">
+                        <button class="slide__button button" id="">
+                            <span class="slide__button-text">Place Bid</span>
+
+                            <svg class="slide__button-ico">
+                                <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper__slide">
+            <picture class="slide__img">
+                <source srcset="img/webp/slide__img-second.webp"
+                        type="image/webp">
+                <img class="slide__img-picture"
+                     src="img/png/slide__img-second.png"
+                     alt="check">
+            </picture>
+
+            <div class="slide__card card">
+                <div class="slide__section">
+                    <div class="slide__profile">
+                        <span class="swiper__profile-title">Apollo Eth #1289 NFT</span>
+
+                        <div class="swiper__author">
+                            <picture class="swiper__picture">
+                                <source srcset="img/webp/discover-profile.webp"
+                                        type="image/webp">
+                                <img class="swiper__picture-img"
+                                     src="img/png/discover-profile.png"
+                                     alt="discover-profile">
+                            </picture>
+
+                            <span class="swiper__name">@jhonartist</span>
+
+                            <picture class="swiper__verified">
+                                <source srcset="img/webp/check.webp"
+                                        type="image/webp">
+                                <img class="swiper__verified-ico"
+                                     src="img/png/check.png"
+                                     alt="check">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="slide__price">
+                        <span class="swiper__price-title">Reserve price</span>
+                        <div class="swiper__price-container">
+                            <svg class="swiper__logo">
+                                <use xlink:href="img/svg/sprite.svg#logo-white"></use>
+                            </svg>
+
+                            <span class="swiper__main">ETH 9.31</span>
+                            <span class="swiper__sub">($29,8846)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide__section">
+                    <div class="slide__timer">
+                        <span class="slide__timer-tittle ">Auction Ends in</span>
+
+                        <div class="swiper__timer-container">
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">18</span>
+                                <span class="swiper__timer-sub">Hours</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">25</span>
+                                <span class="swiper__timer-sub">Mins</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">44</span>
+                                <span class="swiper__timer-sub">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__button-container button-container">
+                        <button class="slide__button button" id="">
+                            <span class="slide__button-text">Place Bid</span>
+
+                            <svg class="slide__button-ico">
+                                <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper__slide">
+            <picture class="slide__img">
+                <source srcset="img/webp/slide__img-third.webp"
+                        type="image/webp">
+                <img class="slide__img-picture"
+                     src="img/png/slide__img-third.png"
+                     alt="check">
+            </picture>
+
+            <div class="slide__card card">
+                <div class="slide__section">
+                    <div class="slide__profile">
+                        <span class="swiper__profile-title">Apollo Eth #1289 NFT</span>
+
+                        <div class="swiper__author">
+                            <picture class="swiper__picture">
+                                <source srcset="img/webp/discover-profile.webp"
+                                        type="image/webp">
+                                <img class="swiper__picture-img"
+                                     src="img/png/discover-profile.png"
+                                     alt="discover-profile">
+                            </picture>
+
+                            <span class="swiper__name">@jhonartist</span>
+
+                            <picture class="swiper__verified">
+                                <source srcset="img/webp/check.webp"
+                                        type="image/webp">
+                                <img class="swiper__verified-ico"
+                                     src="img/png/check.png"
+                                     alt="check">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="slide__price">
+                        <span class="swiper__price-title">Reserve price</span>
+                        <div class="swiper__price-container">
+                            <svg class="swiper__logo">
+                                <use xlink:href="img/svg/sprite.svg#logo-white"></use>
+                            </svg>
+
+                            <span class="swiper__main">ETH 9.31</span>
+                            <span class="swiper__sub">($29,8846)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide__section">
+                    <div class="slide__timer">
+                        <span class="slide__timer-tittle ">Auction Ends in</span>
+
+                        <div class="swiper__timer-container">
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">18</span>
+                                <span class="swiper__timer-sub">Hours</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">25</span>
+                                <span class="swiper__timer-sub">Mins</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">44</span>
+                                <span class="swiper__timer-sub">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__button-container button-container">
+                        <button class="slide__button button" id="">
+                            <span class="slide__button-text">Place Bid</span>
+
+                            <svg class="slide__button-ico">
+                                <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper__slide">
+            <picture class="slide__img">
+                <source srcset="img/webp/slide__img-first.webp"
+                        type="image/webp">
+                <img class="slide__img-picture"
+                     src="img/png/slide__img-first.png"
+                     alt="check">
+            </picture>
+
+            <div class="slide__card card">
+                <div class="slide__section">
+                    <div class="slide__profile">
+                        <span class="swiper__profile-title">Apollo Eth #1289 NFT</span>
+
+                        <div class="swiper__author">
+                            <picture class="swiper__picture">
+                                <source srcset="img/webp/discover-profile.webp"
+                                        type="image/webp">
+                                <img class="swiper__picture-img"
+                                     src="img/png/discover-profile.png"
+                                     alt="discover-profile">
+                            </picture>
+
+                            <span class="swiper__name">@jhonartist</span>
+
+                            <picture class="swiper__verified">
+                                <source srcset="img/webp/check.webp"
+                                        type="image/webp">
+                                <img class="swiper__verified-ico"
+                                     src="img/png/check.png"
+                                     alt="check">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="slide__price">
+                        <span class="swiper__price-title">Reserve price</span>
+                        <div class="swiper__price-container">
+                            <svg class="swiper__logo">
+                                <use xlink:href="img/svg/sprite.svg#logo-white"></use>
+                            </svg>
+
+                            <span class="swiper__main">ETH 9.31</span>
+                            <span class="swiper__sub">($29,8846)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide__section">
+                    <div class="slide__timer">
+                        <span class="slide__timer-tittle ">Auction Ends in</span>
+
+                        <div class="swiper__timer-container">
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">18</span>
+                                <span class="swiper__timer-sub">Hours</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">25</span>
+                                <span class="swiper__timer-sub">Mins</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">44</span>
+                                <span class="swiper__timer-sub">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__button-container button-container">
+                        <button class="slide__button button" id="">
+                            <span class="slide__button-text">Place Bid</span>
+
+                            <svg class="slide__button-ico">
+                                <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper__slide">
+            <picture class="slide__img">
+                <source srcset="img/webp/slide__img-second.webp"
+                        type="image/webp">
+                <img class="slide__img-picture"
+                     src="img/png/slide__img-second.png"
+                     alt="check">
+            </picture>
+
+            <div class="slide__card card">
+                <div class="slide__section">
+                    <div class="slide__profile">
+                        <span class="swiper__profile-title">Apollo Eth #1289 NFT</span>
+
+                        <div class="swiper__author">
+                            <picture class="swiper__picture">
+                                <source srcset="img/webp/discover-profile.webp"
+                                        type="image/webp">
+                                <img class="swiper__picture-img"
+                                     src="img/png/discover-profile.png"
+                                     alt="discover-profile">
+                            </picture>
+
+                            <span class="swiper__name">@jhonartist</span>
+
+                            <picture class="swiper__verified">
+                                <source srcset="img/webp/check.webp"
+                                        type="image/webp">
+                                <img class="swiper__verified-ico"
+                                     src="img/png/check.png"
+                                     alt="check">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="slide__price">
+                        <span class="swiper__price-title">Reserve price</span>
+                        <div class="swiper__price-container">
+                            <svg class="swiper__logo">
+                                <use xlink:href="img/svg/sprite.svg#logo-white"></use>
+                            </svg>
+
+                            <span class="swiper__main">ETH 9.31</span>
+                            <span class="swiper__sub">($29,8846)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide__section">
+                    <div class="slide__timer">
+                        <span class="slide__timer-tittle ">Auction Ends in</span>
+
+                        <div class="swiper__timer-container">
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">18</span>
+                                <span class="swiper__timer-sub">Hours</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">25</span>
+                                <span class="swiper__timer-sub">Mins</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">44</span>
+                                <span class="swiper__timer-sub">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__button-container button-container">
+                        <button class="slide__button button" id="">
+                            <span class="slide__button-text">Place Bid</span>
+
+                            <svg class="slide__button-ico">
+                                <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper__slide">
+            <picture class="slide__img">
+                <source srcset="img/webp/slide__img-third.webp"
+                        type="image/webp">
+                <img class="slide__img-picture"
+                     src="img/png/slide__img-third.png"
+                     alt="check">
+            </picture>
+
+            <div class="slide__card card">
+                <div class="slide__section">
+                    <div class="slide__profile">
+                        <span class="swiper__profile-title">Apollo Eth #1289 NFT</span>
+
+                        <div class="swiper__author">
+                            <picture class="swiper__picture">
+                                <source srcset="img/webp/discover-profile.webp"
+                                        type="image/webp">
+                                <img class="swiper__picture-img"
+                                     src="img/png/discover-profile.png"
+                                     alt="discover-profile">
+                            </picture>
+
+                            <span class="swiper__name">@jhonartist</span>
+
+                            <picture class="swiper__verified">
+                                <source srcset="img/webp/check.webp"
+                                        type="image/webp">
+                                <img class="swiper__verified-ico"
+                                     src="img/png/check.png"
+                                     alt="check">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="slide__price">
+                        <span class="swiper__price-title">Reserve price</span>
+                        <div class="swiper__price-container">
+                            <svg class="swiper__logo">
+                                <use xlink:href="img/svg/sprite.svg#logo-white"></use>
+                            </svg>
+
+                            <span class="swiper__main">ETH 9.31</span>
+                            <span class="swiper__sub">($29,8846)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide__section">
+                    <div class="slide__timer">
+                        <span class="slide__timer-tittle ">Auction Ends in</span>
+
+                        <div class="swiper__timer-container">
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">18</span>
+                                <span class="swiper__timer-sub">Hours</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">25</span>
+                                <span class="swiper__timer-sub">Mins</span>
+                            </div>
+
+                            <div class="swiper__timer-item">
+                                <span class="swiper__timer-value">44</span>
+                                <span class="swiper__timer-sub">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__button-container button-container">
+                        <button class="slide__button button" id="">
+                            <span class="slide__button-text">Place Bid</span>
+
+                            <svg class="slide__button-ico">
+                                <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
