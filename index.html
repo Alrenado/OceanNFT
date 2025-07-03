@@ -330,6 +330,7 @@
             </svg>
         </div>
     </div>
+
     <div class="swiper__track" id="track">
         <div class="swiper__slide">
             <picture class="slide__img">
@@ -818,6 +819,16 @@
             </div>
         </div>
     </div>
+
+    <div class="swiper__button-container">
+        <button class="swiper__button button_transparent" id="swiper-mobile-button">
+            <span class="swiper__button-text">Explore</span>
+
+            <svg class="swiper__title-ico">
+                <use xlink:href="img/svg/sprite.svg#arrow"></use>
+            </svg>
+        </button>
+    </div>
 </section>
 
 <!--tabs-->
@@ -829,49 +840,49 @@
         </span>
         <div class="tabs__container ">
             <div class="tabs__container-button ">
-                <button class="tabs__button " id="photography">
+                <button class="tabs__button button_transparent" id="photography">
                     <span class="tabs__button-text">Photography</span>
                 </button>
             </div>
 
             <div class="tabs__container-button">
-                <button class="tabs__button" id="sports">
+                <button class="tabs__button button_transparent" id="sports">
                     <span class="tabs__button-text">Sports</span>
                 </button>
             </div>
 
             <div class="tabs__container-button">
-                <button class="tabs__button" id="brands">
+                <button class="tabs__button button_transparent" id="brands">
                     <span class="tabs__button-text">Brands</span>
                 </button>
             </div>
 
             <div class="tabs__container-button">
-                <button class="tabs__button" id="collectibles">
+                <button class="tabs__button button_transparent" id="collectibles">
                     <span class="tabs__button-text">Collectibles</span>
                 </button>
             </div>
 
             <div class="tabs__container-button">
-                <button class="tabs__button" id="art">
+                <button class="tabs__button button_transparent" id="art">
                     <span class="tabs__button-text">Art</span>
                 </button>
             </div>
 
             <div class="tabs__container-button">
-                <button class="tabs__button" id="utility">
+                <button class="tabs__button button_transparent" id="utility">
                     <span class="tabs__button-text">Utility</span>
                 </button>
             </div>
 
             <div class="tabs__container-button">
-                <button class="tabs__button" id="item">
+                <button class="tabs__button button_transparent" id="item">
                     <span class="tabs__button-text">Brand</span>
                 </button>
             </div>
 
             <div class="tabs__container-button">
-                <button class="tabs__button" id="item-second">
+                <button class="tabs__button button_transparent" id="item-second">
                     <span class="tabs__button-text">Collectibles</span>
                 </button>
             </div>
@@ -889,7 +900,8 @@
     </div>
     <picture class="tabs__picture">
         <source srcset="img/webp/tabs-first.webp"
-                type="image/webp">
+                type="image/webp"
+                class="tabs__source">
         <img class="tabs__img"
              src="img/png/slide__img-first.png"
              alt="check">

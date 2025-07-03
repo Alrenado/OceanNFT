@@ -146,4 +146,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //     Tabs
 
+    const photography = document.getElementById('photography');
+    const sports = document.getElementById('sports');
+    const brands = document.getElementById('brands');
+    const collectibles = document.getElementById('collectibles');
+    const art = document.getElementById('art');
+    const utility = document.getElementById('utility');
+    const item = document.getElementById('item');
+    const second = document.getElementById('second');
+
+    const tabButton = document.querySelectorAll('.tabs__button');
+
+    const tabPicture = document.querySelectorAll('.tabs__picture');
+    const tabSource = document.querySelectorAll('.tabs__source');
+    const tabImg = document.querySelectorAll('.tabs__img');
+
+    photography.addEventListener("click", () => {
+        // tabPicture.setAttribute('opacity', '0');
+
+        setTimeout(() => {
+            tabSource.srcset = "img/webp/tabs-first.webp";
+            tabImg.src = "img/png/tabs-first.png";
+            // tabPicture.setAttribute('0', '0');
+        }, 300);
+    });
+
+    sports.addEventListener("click", () => {
+        // tabPicture.setAttribute('opacity', '0');
+
+        setTimeout(() => {
+            tabSource.srcset = "img/webp/tabs-first.webp";
+            tabImg.src = "img/png/tabs-first.png";
+            // tabPicture.setAttribute('0', '0');
+        }, 300);
+    });
+
+
+
 });
