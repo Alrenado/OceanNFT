@@ -23,12 +23,24 @@
     </picture>
 
     <div class="bg__glow-container">
-        <svg class="bg__glow bg__glow-first">
+        <svg class="bg__glow">
             <use xlink:href="img/svg/sprite.svg#bg__glow-first"></use>
         </svg>
 
-        <svg class="bg__glow bg__glow-second">
+        <svg class="bg__glow">
             <use xlink:href="img/svg/sprite.svg#bg__glow-second"></use>
+        </svg>
+
+        <svg class="bg__glow">
+            <use xlink:href="img/svg/sprite.svg#bg__glow-second"></use>
+        </svg>
+
+        <svg class="bg__glow">
+            <use xlink:href="img/svg/sprite.svg#bg__glow-first"></use>
+        </svg>
+
+        <svg class="bg__glow">
+            <use xlink:href="img/svg/sprite.svg#bg__glow-first"></use>
         </svg>
     </div>
 </div>
@@ -811,11 +823,81 @@
 <!--tabs-->
 
 <section class="tabs">
-    <div></div>
+    <div class="tabs__section">
+        <span class="tabs__title">
+            Explore Collections
+        </span>
+        <div class="tabs__container ">
+            <div class="tabs__container-button ">
+                <button class="tabs__button " id="photography">
+                    <span class="tabs__button-text">Photography</span>
+                </button>
+            </div>
+
+            <div class="tabs__container-button">
+                <button class="tabs__button" id="sports">
+                    <span class="tabs__button-text">Sports</span>
+                </button>
+            </div>
+
+            <div class="tabs__container-button">
+                <button class="tabs__button" id="brands">
+                    <span class="tabs__button-text">Brands</span>
+                </button>
+            </div>
+
+            <div class="tabs__container-button">
+                <button class="tabs__button" id="collectibles">
+                    <span class="tabs__button-text">Collectibles</span>
+                </button>
+            </div>
+
+            <div class="tabs__container-button">
+                <button class="tabs__button" id="art">
+                    <span class="tabs__button-text">Art</span>
+                </button>
+            </div>
+
+            <div class="tabs__container-button">
+                <button class="tabs__button" id="utility">
+                    <span class="tabs__button-text">Utility</span>
+                </button>
+            </div>
+
+            <div class="tabs__container-button">
+                <button class="tabs__button" id="item">
+                    <span class="tabs__button-text">Brand</span>
+                </button>
+            </div>
+
+            <div class="tabs__container-button">
+                <button class="tabs__button" id="item-second">
+                    <span class="tabs__button-text">Collectibles</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="tabs__sub-container">
+            <a class="tabs__sub">
+                View all
+            </a>
+            <svg class="tabs__sub-ico">
+                <use xlink:href="img/svg/sprite.svg#arrow"></use>
+            </svg>
+        </div>
+
+    </div>
+    <picture class="tabs__picture">
+        <source srcset="img/webp/tabs-first.webp"
+                type="image/webp">
+        <img class="tabs__img"
+             src="img/png/slide__img-first.png"
+             alt="check">
+    </picture>
 </section>
 
 <script src="js/form.js"></script>
 
 </body>
 
-</html>
+</html>`

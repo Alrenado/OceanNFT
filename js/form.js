@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    // Burger
+
     const burger = document.getElementById("burger");
     const menu = document.querySelector(".navbar__menu");
     const body = document.body;
@@ -140,5 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
     track.style.transition = 'transform 0.4s ease';
     slideTo(1, true); // начнем с первого оригинального слайда
     startAutoplay();
+
+//     Tabs
 
 });
