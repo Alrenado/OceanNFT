@@ -21,166 +21,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Swiper
 
-    const track = document.getElementById('track');
-    const swiper = document.querySelector('.swiper');
-
-    let currentIndex = 1; // начинаем со 1, потому что 0 - клон последнего
-    let isDragging = false;
-    let startX = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    let autoplayTimer;
-
-    let animationFrameId = null;
-
-// Клонируем слайды
-    const slides = Array.from(track.children);
-    const slideCount = slides.length;
-
-    const firstClone = slides[0].cloneNode(true);
-    const lastClone = slides[slideCount - 1].cloneNode(true);
-
-    track.appendChild(firstClone);
-    track.insertBefore(lastClone, slides[0]);
-
-    const allSlides = Array.from(track.children);
-    const gap = parseFloat(getComputedStyle(track).gap) || 0;
-
-    function getSlideWidth() {
-        return allSlides[0].offsetWidth + gap;
-    }
-
-    function setPosition() {
-        track.style.transform = `translateX(${currentTranslate}px)`;
-    }
-
-    function slideTo(index, instant = false) {
-        const slideWidth = getSlideWidth();
-        currentIndex = index;
-        currentTranslate = -slideWidth * currentIndex;
-        prevTranslate = currentTranslate;
-
-        if (instant) {
-            track.style.transition = 'none';
-        } else {
-            track.style.transition = 'transform 0.4s ease';
-        }
-        setPosition();
-    }
-
-    function loopCheck() {
-        const slideWidth = getSlideWidth();
-
-        if (currentIndex === 0) {
-            // Переход к последнему оригиналу
-            slideTo(slideCount, true);
-        } else if (currentIndex === allSlides.length - 1) {
-            // Переход к первому оригиналу
-            slideTo(1, true);
-        }
-    }
-
-    function startAutoplay() {
-        autoplayTimer = setInterval(() => {
-            slideTo(currentIndex + 1);
-        }, 4000);
-    }
-
-    function stopAutoplay() {
-        clearInterval(autoplayTimer);
-    }
-
-// Свайп пальцем / мышкой
-    function startDrag(x) {
-        stopAutoplay();
-        isDragging = true;
-        startX = x;
-        track.style.transition = 'none';
-        cancelAnimationFrame(animationFrameId);
-    }
-
-    function dragMove(x) {
-        if (!isDragging) return;
-        const deltaX = x - startX;
-        currentTranslate = prevTranslate + deltaX;
-        setPosition();
-    }
-
-    function endDrag(x) {
-        if (!isDragging) return;
-        isDragging = false;
-
-        const slideWidth = getSlideWidth();
-        const deltaX = x - startX;
-
-        if (deltaX < -slideWidth / 4) {
-            slideTo(currentIndex + 1);
-        } else if (deltaX > slideWidth / 4) {
-            slideTo(currentIndex - 1);
-        } else {
-            slideTo(currentIndex);
-        }
-
-        startAutoplay();
-    }
-
-// Touch Events
-    track.addEventListener('touchstart', e => startDrag(e.touches[0].clientX));
-    track.addEventListener('touchmove', e => dragMove(e.touches[0].clientX));
-    track.addEventListener('touchend', e => {
-        endDrag(e.changedTouches[0].clientX);
+    var swiper = new Swiper(".swiper", {
+        spaceBetween: 30,
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            575: {
+                slidesPerView: 2
+            },
+            1024: {
+                slidesPerView: 3
+            }
+        },
+        // autoplay: {
+        //     delay: 1500,
+        //     disableOnInteraction: false,
+        // },
+        loop: true,
+        mousewheel: true
     });
 
-// Mouse Events
-    track.addEventListener('mousedown', e => startDrag(e.clientX));
-    window.addEventListener('mousemove', e => dragMove(e.clientX));
-    window.addEventListener('mouseup', e => endDrag(e.clientX));
 
-// Бесконечный цикл после анимации
-    track.addEventListener('transitionend', loopCheck);
-
-// Инициализация
-    track.style.transition = 'transform 0.4s ease';
-    slideTo(1, true); // начнем с первого оригинального слайда
-    startAutoplay();
 
 //     Tabs
 
-    const photography = document.getElementById('photography');
-    const sports = document.getElementById('sports');
-    const brands = document.getElementById('brands');
-    const collectibles = document.getElementById('collectibles');
-    const art = document.getElementById('art');
-    const utility = document.getElementById('utility');
-    const item = document.getElementById('item');
-    const second = document.getElementById('second');
-
     const tabButton = document.querySelectorAll('.tabs__button');
 
-    const tabPicture = document.querySelectorAll('.tabs__picture');
-    const tabSource = document.querySelectorAll('.tabs__source');
-    const tabImg = document.querySelectorAll('.tabs__img');
+    const tabPicture = document.querySelector('.tabs__picture');
+    const tabSource = document.querySelector('.tabs__source');
+    const tabImg = document.querySelector('.tabs__img');
 
-    photography.addEventListener("click", () => {
-        // tabPicture.setAttribute('opacity', '0');
+    tabButton.forEach(button => {
+        button.addEventListener('click', () => {
 
-        setTimeout(() => {
-            tabSource.srcset = "img/webp/tabs-first.webp";
-            tabImg.src = "img/png/tabs-first.png";
-            // tabPicture.setAttribute('0', '0');
-        }, 300);
+            tabButton.forEach(btn => btn.classList.remove("clicked"));
+            button.classList.add("clicked");
+
+            console.log(swiper);
+
+            const srcName = button.dataset.src;
+
+            tabPicture.style.opacity = 0;
+            setTimeout(() => {
+                tabImg.style.transform = `translateX(150%)`;
+            }, 300);
+
+            setTimeout(() => {
+                tabSource.srcset = `img/webp/${srcName}.webp`;
+                tabImg.src = `img/png/${srcName}.png`;
+
+                setTimeout(() => {
+                    tabPicture.style.opacity = 1;
+                }, 300);
+
+                tabImg.style.transform = `translateX(0)`;
+
+            }, 800);
+        });
     });
-
-    sports.addEventListener("click", () => {
-        // tabPicture.setAttribute('opacity', '0');
-
-        setTimeout(() => {
-            tabSource.srcset = "img/webp/tabs-first.webp";
-            tabImg.src = "img/png/tabs-first.png";
-            // tabPicture.setAttribute('0', '0');
-        }, 300);
-    });
-
 
 
 });
