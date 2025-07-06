@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Burger
+// Burger
 
     const burger = document.getElementById("burger");
     const menu = document.querySelector(".navbar__menu");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Swiper
+// Swiper
 
     var swiper = new Swiper(".swiper", {
         spaceBetween: 30,
@@ -43,8 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-
-//     Tabs
+// Tabs
 
     const tabButton = document.querySelectorAll('.tabs__button');
 
@@ -77,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 tabImg.style.transform = `translateX(0)`;
 
-            }, 800);
+            }, 750);
         });
     });
 
