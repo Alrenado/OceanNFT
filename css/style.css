@@ -1742,27 +1742,84 @@ section{
 }
 
 .swiper-sellers{
-    padding-top: 22rem;
+    padding-top: 7rem;
 }
 
 .slide__sellers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    background-color: transparent;
+    overflow: hidden;
+
+    padding: 1.5rem;
+}
+
+.slide__sellers::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
+    padding: 3px;
+    mask: linear-gradient(var(--white) 0 0) content-box, linear-gradient(var(--white) 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    border-radius: 2rem;
+}
+
+
+.sellers__picture-img{
+    max-width: 5rem;
+}
+
+.swiper-sellers {
+    height: fit-content;
+}
+
+.sellers__profile{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sellers__value-container{
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sellers__logo{
+    max-width: 1rem;
+    max-height: 1rem;
+}
+
+.sellers__percent-container{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 
-    background-color: transparent;
-    border: 2px solid;
-    border-image: linear-gradient(
-            to right,
-            var(--light-pink),
-            var(--ocean-blue)) 1;
+    background-color: rgba(0, 178, 71, 0.3);
+    padding: 1rem 2rem;
+    border-radius: 200px;
 }
 
-.swiper-sellers {
-    height: 600px;
-}
-
+/*.sellers__percent-container:before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    inset: 0;*/
+/*    z-index: 2;*/
+/*    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));*/
+/*    padding: 3px;*/
+/*    mask: linear-gradient(var(--white) 0 0) content-box, linear-gradient(var(--white) 0 0);*/
+/*    mask-composite: exclude;*/
+/*    pointer-events: none;*/
+/*    border-radius: 200px;*/
+/*}*/
 
 .test{
     padding-top: 100vh;
