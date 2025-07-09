@@ -141,6 +141,8 @@ document.addEventListener("DOMContentLoaded", function () {
             spaceBetween: 30,
             breakpoints: {
                 0: {
+                    direction: "vertical",
+                    rows: 4,
                     slidesPerView: 1
                 },
                 575: {
