@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 0: {
                     slidesPerView: 1
                 },
-                575: {
+                768: {
                     slidesPerView: 2
                 },
                 1024: {
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 0: {
                     slidesPerView: 1
                 },
-                575: {
+                768: {
                     slidesPerView: 2
                 },
                 1024: {
@@ -137,25 +137,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
         new Swiper(".swiper-sellers", {
-            direction: "horizontal",
+            direction: "vertical",
             spaceBetween: 30,
+            height: (120 * 4) + (30 * 3),
+            width: 100,
+            slidesPerView: 4,
+            grid: {
+               fill: "row",
+            },
+
             breakpoints: {
                 0: {
-                    direction: "vertical",
-                    rows: 4,
-                    slidesPerView: 1
+                    grid: {
+                        rows: 1,
+                    },
                 },
-                575: {
-                    slidesPerView: 2
+                768: {
+                    grid: {
+                        rows: 2,
+                    },
                 },
-                1024: {
-                    slidesPerView: 3
+                1440: {
+                    grid: {
+                        rows: 3,
+                    },
                 }
             },
-            grid: {
-                rows: 4,
-                fill: "row"
-            },
+
             loop: true,
 
             mousewheel: true,
