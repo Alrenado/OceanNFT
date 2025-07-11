@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 delay: 1500,
                 disableOnInteraction: false,
             },
-            // loop: true,
+            rewind: true,
 
             mousewheel: true,
         });
