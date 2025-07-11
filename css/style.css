@@ -102,6 +102,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'MuseoModerno-Regular-woff';
+    src: url('../fonts/MuseoModerno-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --white: #fff;
     --gray: rgba(255, 255, 255, 0.5);
@@ -2111,20 +2119,167 @@ footer{
 
 /*footer*/
 
-.footer{}
+.footer{
+    padding-top: 17.9rem;
+    padding-bottom: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 99rem;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
 
 .footer:before{
     content: '';
     position: absolute;
 
     width: 100%;
-    height: 0.3rem;
+    height: 0.2rem;
 
+    background-color: rgba(255,255,255,0.2);
 
-    background-color: rgba(255,255,255,0.3);
+    top: 32%;
+}
+
+.footer-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__title-wrapper{
+    padding-top: 0.7rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 2rem;
+}
+
+.footer__title-logo{
+    max-width: 10rem;
+    width: 100%;
+    max-height: 2.4rem;
+    height: 100%;
+}
+
+.footer__title{
+    color: rgba(217,219,225,1);
+    font-family: Inter-Regular-woff, serif;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: clamp(1.5rem, 2.5vw, 1.9rem);
+}
+
+.footer__title-links{
+    gap: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer__links-item{
+    max-width: 2rem;
+    width: 100%;
+    max-height: 2rem;
+    height: 100%;
+}
+
+.footer__menu{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    gap: 8rem;
+}
+
+.menu__section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menu__title{
+    font-family: Inter-Medium-woff, serif;
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+}
+
+.menu__item-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+}
+
+.menu__item{
+    position: relative;
+    color: rgba(217,219,225,1);
+    font-family: Inter-Regular-woff, serif;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+.menu__item--label:after{
+    position: absolute;
+    /*left: 5rem;*/
+    transform: translate(1rem, -0.3rem);
+    content: 'new';
+    color: var(--blue-text);
+    font-family: MuseoModerno-Regular-woff, serif;
+    font-size: clamp(0.1rem, 2.5vw, 1.5rem);
 }
 
 
-.test{
-    padding-top: 100vh;
+
+
+.footer-sub{
+    position: relative;
+    padding-top: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    color: rgba(217,219,225,1);
+    font-family: Inter-Regular-woff, serif;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: clamp(1.5rem, 2.5vw, 1.9rem);
+}
+
+.footer-sub:before{
+    content: '';
+    position: absolute;
+
+    width: 100%;
+    height: 0.2rem;
+
+
+    background-color: rgba(255,255,255,0.2);
+
+    top: 61%;
+}
+
+.footer__sub-menu{
+    display: flex;
+    align-items: flex-end;
+
+    gap: 2.2rem;
+}
+
+.sub-menu__item{
+    position: relative;
+}
+
+.sub-menu__item:not(:last-child)::after{
+    content: '';
+    position: absolute;
+
+    width: 0.2rem;
+    height: 1.6rem;
+
+    right: -15%;
+
+
+    background-color: rgba(255,255,255,0.3);
 }
