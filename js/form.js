@@ -8,16 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
 
     burger.addEventListener("click", () => {
-        const isOpen = menu.classList.contains("open");
-
         burger.classList.toggle("open");
         menu.classList.toggle("open");
-
-        if (isOpen) {
-            body.classList.remove("no-scroll");
-        } else {
-            body.classList.add("no-scroll");
-        }
+        body.classList.toggle("no-scroll");
     });
 
 // Swiper NFT
@@ -123,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     dropdown.addEventListener("click", () => {
         dropdown.classList.toggle("dropdown-open");
-
     });
 
     document.addEventListener('click', (e) => {
@@ -150,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 0: {
                     grid: {
                         rows: 1,
+                        fill: "",
                     },
                 },
                 768: {
@@ -175,5 +168,28 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (e) {
         console.log(e);
     }
+
+
+// Accordion footer
+
+    let acc = document.querySelectorAll(".accordion");
+
+    acc.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle("open");
+
+            const panel = item.nextElementSibling;
+
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                panel.style.marginTop = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                panel.style.marginTop = "1rem";
+            }
+
+            console.log(panel.style.maxHeight);
+        })
+    })
 
 });
