@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             spaceBetween: 30,
             breakpoints: {
                 0: {
-                    slidesPerView: 1
+                    slidesPerView: 1.1
                 },
                 768: {
                     slidesPerView: 2
@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 3
                 }
             },
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 1500,
+            //     disableOnInteraction: false,
+            // },
             loop: true,
             mousewheel: true
         });
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
             spaceBetween: 30,
             breakpoints: {
                 0: {
-                    slidesPerView: 1
+                    slidesPerView: 1.1
                 },
                 768: {
                     slidesPerView: 2
@@ -91,10 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 3
                 }
             },
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 1500,
+            //     disableOnInteraction: false,
+            // },
             loop: true,
             mousewheel: true
         });
@@ -134,40 +134,40 @@ document.addEventListener("DOMContentLoaded", function () {
             height: (120 * 4) + (30 * 3),
             width: 100,
             slidesPerView: 4,
-            grid: {
-               fill: "row",
-            },
 
             breakpoints: {
                 0: {
-                    grid: {
-                        rows: 1,
-                        fill: "",
-                    },
+                    slidesPerView: 4,
                 },
                 768: {
                     grid: {
                         rows: 2,
+                        fill: "row",
                     },
                 },
                 1440: {
                     grid: {
                         rows: 3,
+                        fill: "row",
                     },
                 }
             },
 
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 1500,
+            //     disableOnInteraction: false,
+            // },
             rewind: true,
+            loopAddBlankSlides: false,
 
             mousewheel: true,
         });
     } catch (e) {
         console.log(e);
     }
+
+
+
 
 
 // Accordion footer

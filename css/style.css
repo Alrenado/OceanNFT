@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'AlethiaNext-Light-woff';
     src: url('../fonts/AlethiaNext-Light.woff2');
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'Inter-ExtraBold-woff';
     src: url('../fonts/Inter_28pt-ExtraBold.woff2');
-    font-weight: 400;
+    font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
@@ -25,7 +25,7 @@
 @font-face {
     font-family: 'Inter-Medium-woff';
     src: url('../fonts/Inter_28pt-Medium.woff2');
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -41,15 +41,32 @@
 @font-face {
     font-family: 'LeagueSpartan-SemiBold-woff';
     src: url('../fonts/LeagueSpartan-SemiBold.woff2');
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
+    font-family: 'Spartan-SemiBold-woff';
+    src: url('../fonts/Spartan-SemiBold.woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato-Bold-woff';
+    src: url('../fonts/Lato-Bold.woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
     font-family: 'Orbitron-Bold-woff';
     src: url('../fonts/Orbitron-Bold.woff2');
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -57,7 +74,7 @@
 @font-face {
     font-family: 'Rajdhani-Bold-woff';
     src: url('../fonts/Rajdhani-Bold.woff2');
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -65,7 +82,7 @@
 @font-face {
     font-family: 'Rajdhani-Medium-woff';
     src: url('../fonts/Rajdhani-Medium.woff2');
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -81,7 +98,7 @@
 @font-face {
     font-family: 'Rajdhani-SemiBold-woff';
     src: url('../fonts/Rajdhani-SemiBold.woff2');
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
@@ -89,7 +106,7 @@
 @font-face {
     font-family: 'Roboto-Medium-woff';
     src: url('../fonts/Roboto-Medium.woff2');
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -307,6 +324,13 @@ section{
     position: relative;
 }
 
+@media (max-width: 1440px) {
+    section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 footer{
     max-width: 99rem;
     width: 100%;
@@ -316,10 +340,23 @@ footer{
 }
 
 
-@media (max-width: 1440px) {
-    section {
-        padding-left: 1rem;
-        padding-right: 1rem;
+.br-mobile{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .br-mobile{
+        display: block;
+    }
+}
+
+.br-desktop{
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .br-desktop{
+        display: none;
     }
 }
 
@@ -367,7 +404,7 @@ footer{
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 2.3rem 6rem;
+    padding: 0.6rem 0.5rem;
 
     background-color: transparent;
     border: 2px solid;
@@ -377,6 +414,7 @@ footer{
             var(--ocean-blue)) 1;
     cursor: pointer;
     transition: all 0.3s ease;
+
 }
 
 .button_transparent:hover{
@@ -391,6 +429,77 @@ footer{
             var(--blue));
     background-size: 200% 100%;
     background-position: right center;
+}
+
+.container__button-mobile{
+    display: none;
+    width: fit-content;
+    cursor: pointer;
+
+    border: none;
+    background: linear-gradient(
+            to right,
+            var(--light-pink),
+            var(--ocean-blue));
+    padding: 1px;
+
+    -webkit-clip-path: polygon(16% 0%, 100% 0, 100% 21%, 100% 72%, 84% 100%, 0 100%, 0% 85%, 0 26%);
+    clip-path: polygon(16% 0%, 100% 0, 100% 21%, 100% 72%, 84% 100%, 0 100%, 0% 85%, 0 26%);
+}
+
+@media (max-width: 768px) {
+    .container__button-mobile{
+        display: flex;
+    }
+}
+
+.button-mobile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+
+    background: rgba(32, 11, 61, 1);
+
+    padding: 0.6rem 1.5rem;
+
+    -webkit-clip-path: polygon(16% 0%, 100% 0, 100% 21%, 100% 72%, 84% 100%, 0 100%, 0% 85%, 0 26%);
+    clip-path: polygon(16% 0%, 100% 0, 100% 21%, 100% 72%, 84% 100%, 0 100%, 0% 85%, 0 26%);
+
+    transition: 0.5s;
+}
+
+
+
+.button-mobile-text{
+    color: var(--white);
+    font-family: Orbitron-Bold-woff, sans-serif;
+    font-size: 12px;
+}
+
+.button-mobile-ico{
+    width: 100%;
+    height: 100%;
+    max-width: 2rem;
+    max-height: 1rem;
+}
+
+.button-mobile:hover{
+    color: var(--white);
+    background-image: linear-gradient(
+            to left,
+            var(--blue),
+            var(--purple),
+            var(--pink),
+            var(--pink),
+            var(--purple),
+            var(--blue));
+    background-size: 200% 100%;
+    background-position: right center;
+}
+
+.swiper-section-topNFT .container__button-mobile{
+    margin-top: 2.5rem;
 }
 
 .clicked{
@@ -453,15 +562,21 @@ footer{
 
 .title{
     font-family: Orbitron-Bold-woff, serif;
-    font-size: clamp(1rem, 1.9rem, 2.4rem);
+    font-size: clamp(16px, 2vw, 26.53px);
+}
+
+.swiper{
+
 }
 
 .swiper__title {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+
 
 @media (max-width: 575px) {
     .swiper__title {
@@ -491,13 +606,14 @@ footer{
 }
 
 .slide__img{
-    width: 100%;
-    height: 100%;
+    width: fit-content;
+    height: fit-content;
     object-fit: cover;
     user-select: none;
 }
 
 .slide__img-picture{
+    height: 100%;
     width: 100%;
     user-select: none;
 }
@@ -506,9 +622,15 @@ footer{
     margin-top: 2.8rem;
 }
 
+@media (max-width: 768px) {
+    .slide__button-container{
+        margin-top: 1.8rem;
+    }
+}
+
 .slide__button-text{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: clamp(0.8rem, 1rem, 1.5rem);
+    font-size: clamp(13.6px, 1.7vw, 23.04px);
 }
 
 .slide__button-ico{
@@ -516,8 +638,15 @@ footer{
     max-height: 1rem;
 }
 
+@media (max-width: 1024px) {
+    .slide__button-ico{
+        max-width: 1.5rem;
+
+    }
+}
+
 .swiper__button-container{
-    padding-top: 2rem;
+    padding-top: 2.3rem;
     display: none;
 }
 
@@ -525,7 +654,7 @@ footer{
     color: var(--white);
     width: fit-content;
     font-family: Orbitron-Bold-woff, serif;
-    font-size: clamp(1rem, 1.7rem, 2.4rem);
+    font-size: 12px;
 
     display: flex;
     justify-content: center;
@@ -533,7 +662,7 @@ footer{
     gap: 1rem;
 }
 
-@media (max-width: 1024px){
+@media (max-width: 575px){
     .swiper__button-container{
         display: flex;
         align-items: center;
@@ -541,16 +670,15 @@ footer{
     }
 }
 
-
 .slide__card{
-    width: 100%;
+    width: calc(100% - 3px);
     display: flex;
     padding: 3.1rem 2.5rem 2rem 2.5rem;
 }
 
 @media (max-width: 575px) {
     .slide__card{
-        padding: 1.3rem 1.3rem;
+        padding: 2rem 1.3rem 1.3rem 2.1rem;
     }
 }
 
@@ -570,7 +698,7 @@ footer{
 
 @media (max-width: 768px) {
     .header{
-        padding: 3.7rem 3rem;
+        padding: 1.9rem 2rem;
     }
 }
 
@@ -745,7 +873,7 @@ footer{
 /* discover */
 
 .discover{
-    padding-top: 14rem;
+    padding-top: 15rem;
 
     display: flex;
     justify-content: space-between;
@@ -755,6 +883,10 @@ footer{
 
 @media (max-width: 1024px) {
     .discover{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 7.8rem;
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -776,8 +908,8 @@ footer{
 
 @media (max-width: 1440px) {
     section .discover__img{
-        padding-top: 2rem;
-        padding-right: 1rem;
+        padding-top: 4rem;
+        padding-left: 0;
     }
 }
 
@@ -785,7 +917,6 @@ footer{
 .discover__img-picture{
     position: relative;
     display: block;
-
 }
 
 
@@ -808,12 +939,6 @@ footer{
     pointer-events: none;
 }
 
-@media (max-width: 576px) {
-    .discover__img-picture {
-        max-width: 100%;
-        padding: 0 1rem;
-    }
-}
 
 .discover__img-image{
     display: block;
@@ -825,17 +950,6 @@ footer{
             0 100%, 0 15%
     );
     border-radius: 20px;
-}
-
-
-@media (max-width: 768px) {
-    .discover__img-image {
-        clip-path: polygon(
-                25% 0, 100% 0,
-                100% 50%, 100% 100%,
-                0 100%, 0 15%
-        );
-    }
 }
 
 
@@ -871,11 +985,18 @@ footer{
 
 .discover__title-main{
     display: block;
-    font-family: LeagueSpartan-SemiBold-woff, serif;
-    font-size: clamp(3.6rem, 5vw, 5.6rem);
-    line-height: 1.13;
-    letter-spacing: 0.175rem;
+    font-family: Spartan-SemiBold-woff, serif;
+    font-size: clamp(42px, 4.1vw, 66.33px);
+
+    line-height: 137%;
 }
+
+@media (max-width: 768px) {
+    .discover__title-main{
+        font-family: Lato-Bold-woff, serif;
+    }
+}
+
 .discover__title-main--gradient{
     display: inline;
     background: linear-gradient(to right, var(--pink), var(--blue-light));
@@ -888,9 +1009,11 @@ footer{
     display: flex;
     font-family: Rajdhani-Regular-woff, serif;
 
-    font-size: clamp(1.4rem, 2vw, 1.9rem);
-    line-height: 1.6;
+    font-size: clamp(14px, 2.2vw, 26.53px);
+    line-height: 137.4%;
 }
+
+
 
 .discover__form{
     display: flex;
@@ -901,10 +1024,12 @@ footer{
 
 @media (max-width: 575px) {
     .discover__form{
-        flex-direction: column;
+        padding-top: 0.6rem;
         align-items: center;
         width: 100%;
         justify-content: center;
+
+        gap: 1.6rem;
     }
 }
 
@@ -932,6 +1057,13 @@ footer{
     overflow: visible;
 }
 
+@media (max-width: 575px) {
+    .discover__form-button{
+        padding: 0.1rem;
+        border-radius: 0.25rem;
+    }
+}
+
 .discover__form-container {
     border-radius: 0.5rem;
     display: flex;
@@ -939,7 +1071,7 @@ footer{
     gap: 1.2rem;
     padding: 1.25rem 3.3rem;
     font-family: Orbitron-Bold-woff, serif;
-    font-size: 1.45rem;
+    font-size: clamp(13px, 1.5vw, 19.9px);
 
     color: var(--white);
     background: linear-gradient(
@@ -962,9 +1094,22 @@ footer{
     transition: background-position 0.5s ease;
 }
 
+@media (max-width: 575px) {
+    .discover__form-container{
+        padding: 0.5rem 1.3rem;
+        border-radius: 0.25rem
+    }
+}
+
 .discover__form-icon{
     max-width: 3.5rem;
     max-height: 1.5rem;
+}
+
+@media (max-width: 575px) {
+    .discover__form-icon{
+        max-width: 1.7rem;
+    }
 }
 
 .discover__form-button:hover .discover__form-container {
@@ -974,7 +1119,7 @@ footer{
 
 .discover__form-sub{
     font-family: Orbitron-Bold-woff, serif;
-    font-size: 1.28rem;
+    font-size: clamp(13px, 1.5vw, 19.9px);
     letter-spacing: 0.1rem;
     background: linear-gradient(to right, var(--blue-light), var(--pink));
     -webkit-background-clip: text;
@@ -995,7 +1140,7 @@ footer{
     .discover__info{
         justify-content: space-between;
 
-        padding-top: 2rem;
+        padding-top: 1rem;
         width: 100%;
         gap: 0;
     }
@@ -1036,7 +1181,7 @@ footer{
 
 .discover__info-value{
     font-family: Aldrich-Regular-woff, serif;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(18px, 3vw, 39.8px);
 }
 
 .discover__info-label{
@@ -1073,8 +1218,10 @@ footer{
 
 @media  (max-width: 575px) {
     .discover__content{
+        width: 100%;
         gap: 2rem;
         min-width: 0;
+        /*max-width: 10rem;*/
     }
 }
 
@@ -1202,9 +1349,26 @@ footer{
     padding-top: 9.3rem;
 }
 
+@media (max-width: 1024px) {
+    .discover__logos{
+        padding-top: 2.5rem;
+        gap: 2rem;
+        flex: 1 1 30%;
+    }
+}
+
+
+
 .logos__item--binance{
     max-width: 16rem;
     max-height: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .logos__item--binance{
+        max-width: 9rem;
+        max-height: 2rem;
+    }
 }
 
 .logos__item--ethereum{
@@ -1212,9 +1376,23 @@ footer{
     max-height: 3rem;
 }
 
+@media (max-width: 1024px) {
+    .logos__item--ethereum{
+        max-width: 6rem;
+        max-height: 3rem;
+    }
+}
+
 .logos__item--blockchain{
     max-width: 21rem;
     max-height: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .logos__item--blockchain{
+        max-width: 12rem;
+        max-height: 2rem;
+    }
 }
 
 .logos__item--bitmex{
@@ -1223,20 +1401,9 @@ footer{
 }
 
 @media (max-width: 1024px) {
-    .discover__logos{
-        padding-top: 3rem;
-        gap: 3rem;
-    }
-
-    .logos__item {
-        flex: 1 1 30%;
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .logos__item {
-        transform: scale(0.8);
+    .logos__item--bitmex{
+        max-width: 7rem;
+        max-height: 2rem;
     }
 }
 
@@ -1244,12 +1411,30 @@ footer{
 
 .swiper-section-topNFT{
     padding-top: 16rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .swiper-section-topNFT{
+        padding-top: 12.5rem;
+    }
 }
 
 .swiper-topNFT{
     margin-top: 4rem;
     width: 100%;
+    overflow: visible;
 
+}
+
+@media (max-width: 1024px) {
+    .swiper-topNFT{
+        margin-top: 2.7rem;
+    }
 }
 
 .swiper-slide-topNFT{
@@ -1272,10 +1457,15 @@ footer{
     gap: 1.4rem;
 }
 
+@media (max-width: 1024px) {
+    .slide__profile{
+        gap: 0.7rem;
+    }
+}
 
 .swiper__profile-title{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: clamp(1rem, 1.5rem, 1.6rem);
+    font-size: clamp(13.6px, 1.7vw, 23.04px);
 }
 
 .swiper__author{
@@ -1285,9 +1475,21 @@ footer{
     text-align: center;
 }
 
+.swiper__picture-img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .swiper__picture-img{
+        max-width: 2rem;
+        max-height: 2rem;
+    }
+}
+
 .swiper__name{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: clamp(0.9rem, 1rem, 1.4rem);
+    font-size: clamp(11.9px, 1.6vw, 20.16px);
 }
 
 .swiper__verified-ico{
@@ -1304,10 +1506,16 @@ footer{
     gap: 1rem;
 }
 
+@media (max-width: 1024px) {
+    .slide__price{
+        padding-top: 1.4rem;
+        gap: 0.3rem;
+    }
+}
 
 .swiper__price-title{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: clamp(0.6rem, 0.6rem, 0.9rem);
+    font-size: clamp(8.5px, 1.1vw, 14.4px);
 }
 
 .swiper__price-container{
@@ -1322,14 +1530,20 @@ footer{
     max-height: 2rem;
 }
 
+@media (max-width: 1024px) {
+    .swiper__logo{
+        max-width: 1.3rem;
+    }
+}
+
 .swiper__main{
     font-family: Orbitron-Bold-woff, serif;
-    font-size: clamp(0.7rem, 0.7rem, 1rem);
+    font-size: clamp(7.47px, 0.9vw, 12.66px);
 }
 
 .swiper__sub{
     font-family: Rajdhani-Regular-woff, serif;
-    font-size: clamp(0.7rem, 0.7rem, 1rem);
+    font-size: clamp(8.5px, 1.1vw, 14.4px);
     color: var(--gray-timer);
 }
 
@@ -1344,7 +1558,7 @@ footer{
 
 .slide__timer-tittle{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: clamp(0.8rem, 0.8rem, 1rem);
+    font-size: clamp(8.5px, 1.1vw, 14.4px);
     color: var(--gray-timer);
 }
 
@@ -1366,12 +1580,12 @@ footer{
 
 .swiper__timer-value{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: 1.48rem;
+    font-size: clamp(13.6px, 1.7vw, 23.04px);
 }
 
 .swiper__timer-sub{
     font-family: Rajdhani-Medium-woff, serif;
-    font-size: 0.9rem;
+    font-size: clamp(8.5px, 1.1vw, 14.4px);
     color: var(--gray-timer);
 }
 
@@ -1384,36 +1598,10 @@ footer{
     padding: 0.8rem 1.4rem;
 }
 
-.slide__button-container{
-    margin-top: 2.8rem;
-}
-
-.slide__button-text{
-    font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: clamp(0.7rem, 1.3rem, 2.5rem);
-}
-
-.slide__button-ico{
-    max-width: 2rem;
-    max-height: 1rem;
-}
-
-.swiper__button-container{
-    padding-top: 2rem;
-    display: none;
-}
-
-.swiper__button{
-    color: var(--white);
-    width: fit-content;
-    font-family: Orbitron-Bold-woff, serif;
-    font-size: clamp(1rem, 1.7rem, 2.4rem);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 1rem;
+@media (max-width: 1024px) {
+    .slide__button{
+        padding: 0.5rem 0.7rem;
+    }
 }
 
 @media (max-width: 1024px){
@@ -1437,6 +1625,8 @@ footer{
 
 @media (max-width: 1024px) {
     .tabs {
+        padding-top: 3.8rem;
+
         justify-content: center;
         align-items: center;
     }
@@ -1463,11 +1653,20 @@ footer{
     gap: 3rem;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 1024px) {
+    .tabs__container{
+        padding-top: 1.5rem;
+        gap: 1.4rem;
+    }
+}
+
+@media (max-width: 325px) {
     .tabs__container{
         grid-template-columns: 1fr;
     }
 }
+
+
 
 .tabs__container-button{
 
@@ -1475,14 +1674,14 @@ footer{
 
 @media (max-width: 1024px) {
     .tabs__button{
-        padding: 1.5rem 2rem;
+        padding: 0.8rem 2rem;
     }
 }
 
 .tabs__button-text{
     font-family: Orbitron-Bold-woff, serif;
     color: var(--gray-timer);
-    font-size: clamp(1rem, 2rem, 2.5rem);
+    font-size: clamp(11px, 2.2vw, 26.53px);
 }
 
 .tabs__sub-container{
@@ -1496,14 +1695,32 @@ footer{
     gap: 1.6rem;
 }
 
+@media (max-width: 1024px) {
+    .tabs__sub-container{
+        padding-top: 1.2rem;
+
+        gap: 1rem;
+    }
+}
+
 .tabs__sub{
     font-family: Orbitron-Bold-woff, serif;
-    font-size: clamp(1rem, 1.3rem, 2rem);
+    font-size: clamp(8.24px, 2.5vw, 26.53px);
 }
 
 .tabs__sub-ico {
     max-width: 3.5rem;
     max-height: 1.5rem;
+
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .tabs__sub-ico{
+        max-width: 1.5rem;
+        max-height: 0.5rem;
+    }
 }
 
 .tabs__picture{
@@ -1521,7 +1738,7 @@ footer{
 
 @media (max-width: 1024px) {
     .tabs__picture{
-        padding-top: 3rem;
+        max-width: 14rem;
     }
 }
 
@@ -1540,8 +1757,21 @@ footer{
     padding-top: 12.5rem;
 }
 
+@media (max-width: 1024px) {
+    .swiper-section-authors{
+        padding-top: 7.3rem;
+    }
+}
+
 .swiper-authors{
     margin-top: 3.5rem;
+    overflow: visible;
+}
+
+@media (max-width: 1024px) {
+    .swiper-authors{
+        margin-top: 2.5rem;
+    }
 }
 
 .swiper-slide-authors{
@@ -1581,12 +1811,12 @@ footer{
 
 .authors__title-main{
     font-family: Rajdhani-Medium-woff, serif;
-    font-size: clamp(1.3rem, 1.7rem, 2rem);
+    font-size: clamp(16.84px, 1.8vw, 24.32px);
 }
 
 .authors__title-sup{
     font-family: Rajdhani-Regular-woff, serif;
-    font-size: clamp(0.7rem, 1rem, 1.3rem);
+    font-size: clamp(14px, 1.5vw, 20.16px);
 }
 
 .authors__title-verified-ico{
@@ -1611,12 +1841,12 @@ footer{
 
 .authors__counter-main{
     font-family: Rajdhani-SemiBold-woff, serif;
-    font-size: clamp(0.7rem, 2.1rem, 2.5rem);
+    font-size: clamp(22px, 2vw, 31.69px);
 }
 
 .authors__counter-sup{
     font-family: Rajdhani-Medium-woff, serif;
-    font-size: clamp(0.7rem, 1.4rem, 10rem);
+    font-size: clamp(13.71px, 1.4vw, 19.81px);
 }
 
 .authors__button-container{
@@ -1641,6 +1871,12 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .sellers{
+        padding-top: 1.4rem;
+    }
 }
 
 .sellers__title{
@@ -1760,6 +1996,7 @@ footer{
 }
 
 .wrapper__sellers{
+    display: flex;
     justify-content: center;
 }
 
