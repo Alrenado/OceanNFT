@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 0: {
                     slidesPerView: 1.1
                 },
+                576: {
+                    slidesPerView: 1.5
+                },
                 768: {
                     slidesPerView: 2
                 },
@@ -84,6 +87,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 0: {
                     slidesPerView: 1.1
                 },
+                576: {
+                    slidesPerView: 1.5
+                },
                 768: {
                     slidesPerView: 2
                 },
@@ -137,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             breakpoints: {
                 0: {
-                    slidesPerView: 4,
+                    height: (90 * 4) + (30 * 3),
                 },
                 768: {
                     grid: {
@@ -165,9 +171,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (e) {
         console.log(e);
     }
-
-
-
 
 
 // Accordion footer

@@ -331,15 +331,6 @@ section{
     }
 }
 
-footer{
-    max-width: 99rem;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-}
-
-
 .br-mobile{
     display: none;
 }
@@ -404,7 +395,7 @@ footer{
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 0.6rem 0.5rem;
+    padding: 2.4rem 6.3rem;
 
     background-color: transparent;
     border: 2px solid;
@@ -414,7 +405,12 @@ footer{
             var(--ocean-blue)) 1;
     cursor: pointer;
     transition: all 0.3s ease;
+}
 
+@media (max-width: 768px) {
+    .button_transparent{
+        padding: 0.6rem 0.5rem;
+    }
 }
 
 .button_transparent:hover{
@@ -502,6 +498,10 @@ footer{
     margin-top: 2.5rem;
 }
 
+.swiper-section-authors .container__button-mobile{
+    margin: 2.7rem auto 0 auto;
+}
+
 .clicked{
     color: var(--white);
     background-image: linear-gradient(
@@ -562,7 +562,7 @@ footer{
 
 .title{
     font-family: Orbitron-Bold-woff, serif;
-    font-size: clamp(16px, 2vw, 26.53px);
+    font-size: clamp(19.23px, 1.9vw, 26.53px);
 }
 
 .swiper{
@@ -606,7 +606,7 @@ footer{
 }
 
 .slide__img{
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     object-fit: cover;
     user-select: none;
@@ -629,6 +629,7 @@ footer{
 }
 
 .slide__button-text{
+    white-space: nowrap;
     font-family: Rajdhani-SemiBold-woff, serif;
     font-size: clamp(13.6px, 1.7vw, 23.04px);
 }
@@ -673,12 +674,18 @@ footer{
 .slide__card{
     width: calc(100% - 3px);
     display: flex;
-    padding: 3.1rem 2.5rem 2rem 2.5rem;
+    padding: 3.18rem 1.7rem 1rem 2.5rem;
 }
 
 @media (max-width: 575px) {
     .slide__card{
         padding: 2rem 1.3rem 1.3rem 2.1rem;
+    }
+}
+
+@media (max-width: 374px) {
+    .slide__card{
+        padding: 1.2rem 1.3rem 1.3rem 1.1rem;
     }
 }
 
@@ -877,8 +884,10 @@ footer{
 
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
+
+
 }
 
 @media (max-width: 1024px) {
@@ -1340,13 +1349,16 @@ footer{
 }
 
 .discover__logos{
+    padding-top: 9.3rem;
+
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 12rem;
-    padding-top: 9.3rem;
+
 }
 
 @media (max-width: 1024px) {
@@ -1410,7 +1422,7 @@ footer{
 /* swiper-slide-topNFT */
 
 .swiper-section-topNFT{
-    padding-top: 16rem;
+    padding-top: 14.3rem;
 
     display: flex;
     flex-direction: column;
@@ -1454,7 +1466,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.4rem;
+    gap: 0.9rem;
 }
 
 @media (max-width: 1024px) {
@@ -1498,7 +1510,7 @@ footer{
 }
 
 .slide__price{
-    padding-top: 2.4rem;
+    padding-top: 2rem;
 
     display: flex;
     flex-direction: column;
@@ -1616,17 +1628,17 @@ footer{
 /*tabs*/
 
 .tabs{
-    padding-top: 10.5rem;
+    padding-top: 6.5rem;
 
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 @media (max-width: 1024px) {
     .tabs {
         padding-top: 3.8rem;
 
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
@@ -1685,7 +1697,7 @@ footer{
 }
 
 .tabs__sub-container{
-    padding-top: 2rem;
+    padding-top: 2.3rem;
     padding-right: 0.5rem;
 
     display: flex;
@@ -1732,7 +1744,7 @@ footer{
     overflow: hidden;
 
     transition: all 0.6s ease-in-out;
-    max-width: 31rem;
+    max-width: 31.3rem;
     width: 100%;
 }
 
@@ -1789,8 +1801,20 @@ footer{
     text-align: center;
 }
 
+@media (max-width: 1024px) {
+    .slide-authors{
+        margin-top: -5.6rem;
+    }
+}
+
 .slide__img-authors{
     max-width: 12rem;
+}
+
+@media (max-width: 1024px) {
+    .slide__img-authors{
+        max-width: 8rem;
+    }
 }
 
 .authors__title{
@@ -1799,6 +1823,13 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+}
+
+@media (max-width: 1024px) {
+    .authors__title{
+        padding-top: 0.6rem;
+        gap: 0.3rem;
+    }
 }
 
 .authors__title-container{
@@ -1833,6 +1864,12 @@ footer{
     align-items: center;
 }
 
+@media (max-width: 1024px) {
+    .authors__counter{
+        padding-top: 1.6rem
+    }
+}
+
 .authors__counter-container{
     display: flex;
     flex-direction: column;
@@ -1853,13 +1890,19 @@ footer{
     margin-top: 2.9rem;
 }
 
+@media (max-width: 1024px) {
+    .authors__button-container{
+        margin-top: 1.9rem;
+    }
+}
+
 .authors__button {
     padding: 1rem 6.5rem;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1024px) {
     .authors__button {
-        padding: 1rem 3rem;
+        padding: 0.5rem 4rem;
     }
 }
 
@@ -1875,7 +1918,7 @@ footer{
 
 @media (max-width: 1024px) {
     .sellers{
-        padding-top: 1.4rem;
+        padding-top: 7.3rem;
     }
 }
 
@@ -1985,14 +2028,26 @@ footer{
     padding-top: 2.2rem;
 
     font-family: Roboto-Regular-woff, serif;
-    font-size: clamp(1.1rem, 1.25rem, 2rem);
+    font-size: clamp(14px, 1.2vw, 17.69px);
     line-height: 140%;
+}
+
+@media (max-width: 1024px) {
+    .sellers__title-sup{
+        padding-top: 1.5rem;
+    }
 }
 
 .swiper-sellers {
     width: 100%;
     margin-top: 4rem;
     height: calc((120px * 4) + (30px * 3)) !important;
+}
+
+@media (max-width: 1024px) {
+    .swiper-sellers{
+        height: calc((90px * 4) + (30px * 3)) !important;
+    }
 }
 
 .wrapper__sellers{
@@ -2017,8 +2072,8 @@ footer{
 @media (max-width: 1440px) {
     .slide__sellers{
         width: calc((100%  / 2 ) - 30px);
+        height: 90px !important;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -2044,7 +2099,7 @@ footer{
 .sellers__id{
     padding-left: 0.3rem;
     font-family: Roboto-Regular-woff, serif;
-    font-size: clamp(1.1rem, 1.25rem, 2rem);
+    font-size: clamp(13.81px, 1.3vw, 19px);
 }
 
 .sellers__picture{
@@ -2066,17 +2121,22 @@ footer{
 
 .seller__name{
     font-family: Roboto-Regular-woff, serif;
-    font-size: clamp(1.1rem, 1.23rem, 2rem);
+    font-size: clamp(13.81px, calc(0.48vw + 11.98px), 19px);
 }
 
 .sellers__value-container{
     align-items: flex-start;
-    justify-content: center;
+    justify-self: center;
 }
 
 .sellers__logo{
     max-width: 1rem;
     max-height: 1rem;
+}
+
+.sellers_value{
+    font-family: Roboto-Medium-woff, serif;
+    font-size: clamp(10px, calc(0.31vw + 8.84px), 13.76px);
 }
 
 .sellers__percent-container{
@@ -2089,7 +2149,11 @@ footer{
     text-align: center;
 
     background-color: rgba(0, 178, 71, 0.3);
+
+    font-family: Roboto-Medium-woff, serif;
+    font-size: clamp(10.66px, 1vw, 14.7px);
     color: var(--green);
+
     padding: 0.7rem 1.5rem;
     border-radius: 200px;
 }
@@ -2143,6 +2207,12 @@ footer{
     overflow: unset;
 }
 
+@media (max-width: 1024px) {
+    .info{
+        margin-top: 7rem;
+    }
+}
+
 .info__bg{
     height: 39.3rem;
     position: absolute;
@@ -2151,6 +2221,12 @@ footer{
     overflow: hidden;
     width: 100%;
     min-height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .info__bg{
+        height: 22rem;
+    }
 }
 
 .info__bg-img{
@@ -2190,7 +2266,9 @@ footer{
 @media (max-width: 1024px) {
     .info__container{
         margin-right: 0;
-        padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+        padding: 2.5rem 2.5rem 1.7rem 2.5rem;
+        transform: translateY(39%);
+        gap: 1rem;
     }
 }
 
@@ -2198,30 +2276,35 @@ footer{
     padding-top: 0.7rem;
 
     display: flex;
-    gap: 1rem;
-}
-
-.info__title{
-    font-family: Inter-ExtraBold-woff, serif;
-    font-size: clamp(2rem, 2.5vw, 3rem);
-    letter-spacing: 0.14rem;
-}
-
-.info__text{
-    font-family: Inter-Regular-woff, serif;
-    font-size: clamp(0.7rem, 2.5vw, 1.4rem);
-    line-height: clamp(1.5rem, 2.5vw, 2.5rem);
-    letter-spacing: 0.07rem;
-}
-
-.info__links{
-    display: flex;
     gap: 2.4rem;
 
     font-family: Inter-Regular-woff, serif;
     font-size: clamp(0.7rem, 2.5vw, 1.4rem);
     line-height: 2.5rem;
     letter-spacing: 0.07rem;
+}
+
+@media (max-width: 1024px) {
+    .info__links{
+        padding-top: 0.2rem;
+    }
+}
+
+.info__title{
+    font-family: Inter-ExtraBold-woff, serif;
+    font-size: clamp(25.87px, calc(1.52vw + 17.19px), 44.51px);
+    line-height: clamp(34.9px, 0.784vw + 31.96px, 44.51px);
+}
+
+.info__text{
+    font-family: Inter-Regular-woff, serif;
+    font-size: clamp(11.64px, 1.5vw, 20px);
+    line-height: clamp(1.5rem, 2.5vw, 2.5rem);
+    letter-spacing: 0.07rem;
+}
+
+.info__links{
+
 
 }
 
@@ -2236,6 +2319,7 @@ footer{
 
 .form{
     padding-top: 26.3rem;
+
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -2245,10 +2329,12 @@ footer{
 
 @media (max-width: 1024px) {
     .form{
+        padding-top: 15.2rem;
 
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 4.2rem;
     }
 }
 
@@ -2267,9 +2353,9 @@ footer{
 
 @media (max-width: 1024px) {
     .form__picture{
-        max-height: 40rem;
+        max-height: 30rem;
         order: 2;
-        padding-top: 2rem;
+        padding-top: 3rem;
 
         display: flex;
         justify-content: center;
@@ -2294,6 +2380,7 @@ footer{
 
 @media (max-width: 1024px) {
     .form__wrapper{
+        gap: 1.5rem;
         order: 1;
         max-height: 25rem;
     }
@@ -2301,33 +2388,30 @@ footer{
 
 .form__title{
     font-family: Orbitron-Bold-woff, serif;
-    font-size: clamp(2rem, 2.84rem, 3.5rem);
+    font-size: clamp(26.27px, calc(1.12vw + 20px), 39.8px);
 }
 
 .form__sub{
     font-family: Inter-Regular-woff, serif;
-    font-size: clamp(0.7rem, 1.4rem, 2rem);
-    line-height: 2.5rem;
+    font-size: clamp(13.14px, 1.4vw, 20px);
+    line-height: clamp(23.4px, 0.98vw + 16.625px, 35.4px);
 }
 
 .form__container{
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     gap: 1rem;
 }
 
 @media (max-width: 575px) {
     .form__container{
-        flex-direction: column;
-        align-items: flex-start;
+        padding-top: 1rem;
         width: 100%;
     }
 }
 
 .form__form{
     font-family: Inter-Regular-woff, serif;
-    font-size: clamp(0.7rem, 1.2rem, 2rem);
+    font-size: clamp(10.22px, 1vw, 15.48px);
 
     padding: 1.2rem 1.1rem;
 
@@ -2336,13 +2420,19 @@ footer{
     border-radius: 0.4rem 0 0 0.4rem;
 }
 
+@media (max-width: 1024px) {
+    .form__form{
+        padding: 0.8rem 1.2rem;
+    }
+}
+
 .form__button-container{
     border-radius: 0 0.4rem 0.4rem 0;
 }
 
 .form__button{
     font-family: Inter-Medium-woff, serif;
-    font-size: clamp(0.7rem, 1.2rem, 2rem);
+    font-size: clamp(10.22px, 1vw, 15.48px);
     padding: 1rem 2.3rem;
     border-radius: 0 0.4rem 0.4rem 0;
 }
@@ -2350,7 +2440,7 @@ footer{
 /*footer*/
 
 .footer{
-    padding-top: 17.9rem;
+    padding-top: 21.9rem;
     padding-bottom: 3rem;
 
     position: relative;
@@ -2358,7 +2448,7 @@ footer{
     flex-direction: column;
     align-items: center;
 
-    max-width: 99rem;
+    max-width: 103rem;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
@@ -2366,8 +2456,16 @@ footer{
 
 @media (max-width: 1440px) {
     .footer {
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        padding-top: 9rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
@@ -2380,7 +2478,7 @@ footer{
 
     background-color: rgba(255,255,255,0.2);
 
-    top: 11.7rem;
+    top: 15.6rem;
 }
 
 @media (max-width: 1440px) {
@@ -2390,7 +2488,14 @@ footer{
     }
 }
 
+@media (max-width: 1024px) {
+    .footer:before {
+        top: 7.6rem;
+    }
+}
+
 .footer-container{
+    padding-right: 10rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -2398,6 +2503,7 @@ footer{
 
 @media (max-width: 1024px) {
     .footer-container{
+        padding-right: 0;
         flex-direction: column;
         justify-content: flex-start;
     }
@@ -2424,8 +2530,8 @@ footer{
 .footer__title{
     color: rgba(217,219,225,1);
     font-family: Inter-Regular-woff, serif;
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-    line-height: clamp(1.5rem, 2.5vw, 1.9rem);
+    font-size: 15.48px;
+    line-height: 26.5px;
 }
 
 .footer__title-links{
@@ -2442,11 +2548,11 @@ footer{
 }
 
 .footer__menu{
-    padding-top: 1rem;
+    padding-top: 0.7rem;
     display: flex;
     justify-content: space-between;
 
-    gap: 7.8vw;
+    gap: 7.2rem;
 }
 
 @media (max-width: 1400px) {
@@ -2457,12 +2563,13 @@ footer{
 
 @media (max-width: 1024px) {
     .footer__menu{
-        padding-top: 2rem;
+        padding-top: 3.4rem;
 
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 4rem;
+
+        gap: 2.4rem;
     }
 }
 
@@ -2470,7 +2577,7 @@ footer{
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.3rem;
 }
 
 @media (max-width: 1024px) {
@@ -2487,7 +2594,7 @@ footer{
 
         width: 100%;
         height: 0.1rem;
-        bottom: -2rem;
+        bottom: -1.1rem;
 
         background-color: rgba(255,255,255,0.3);
     }
@@ -2506,15 +2613,16 @@ footer{
 
 .menu__title{
     font-family: Inter-Medium-woff, serif;
-    font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+    font-size: 19.9px;
+    line-height: 31px;
 }
 
 .accordion-ico{
     display: none;
 
-    max-width: 1.5rem;
+    max-width: 1.2rem;
     width: 100%;
-    max-height: 1.5rem;
+    max-height: 1.2rem;
     height: 100%;
 
     transition: 0.5s ease-in-out;
@@ -2534,7 +2642,7 @@ footer{
 .menu__item-container{
     display: flex;
     flex-direction: column;
-    gap: 1.9rem;
+    gap: 1rem;
 
     overflow: hidden;
     transition: 0.5s ease-in-out;
@@ -2542,6 +2650,7 @@ footer{
 
 @media (max-width: 1024px) {
     .menu__item-container{
+        gap: 1.9rem;
         max-height: 0;
     }
 }
@@ -2551,7 +2660,8 @@ footer{
     position: relative;
     color: rgba(217,219,225,1);
     font-family: Inter-Regular-woff, serif;
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-size: 15.48px;
+    line-height: 26.5px;
 }
 
 .menu__item--label:after{
@@ -2576,8 +2686,8 @@ footer{
 
     color: rgba(217,219,225,1);
     font-family: Inter-Regular-woff, serif;
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-    line-height: clamp(1.5rem, 2.5vw, 1.9rem);
+    font-size: 15.48px;
+    line-height: 26.5px;
 }
 
 .footer-sub:before{
@@ -2595,12 +2705,12 @@ footer{
 
 @media (max-width: 1024px) {
     .footer-sub{
-        padding-top: 4rem;
+        padding-top: 3rem;
         flex-direction: column;
 
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 2.6rem;
     }
 
     .footer-sub:before{
@@ -2624,6 +2734,7 @@ footer{
 @media (max-width: 1024px) {
     .footer__sub-menu{
         order: 1;
+        gap: 1rem;
     }
 }
 
