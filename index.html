@@ -150,9 +150,19 @@
 
     <div class="discover__img">
         <picture class="discover__img-picture">
-            <source srcset="img/webp/discover.webp" type="image/webp">
-            <img class="discover__img-image" src="img/png/discover.png" alt="discover">
+            <source srcset="img/webp/discover.webp"
+                    type="image/webp"
+                    media="(min-width: 1024px)">
+
+            <source srcset="img/webp/discover-mobile.webp"
+                    type="image/webp"
+                    media="(max-width: 1023px)">
+
+            <img class="discover__img-image"
+                 src="img/png/discover.png"
+                 alt="discover">
         </picture>
+
 
         <div class="discover__content card">
             <div class="discover__section">

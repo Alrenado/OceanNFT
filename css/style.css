@@ -884,7 +884,6 @@ section{
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
 
 
@@ -911,14 +910,20 @@ section{
     display: flex;
     position: relative;
     justify-content: center;
-    padding-top: 1rem;
-    padding-left: 2rem;
+    padding-right: 7rem;
 }
 
 @media (max-width: 1440px) {
-    section .discover__img{
-        padding-top: 4rem;
+    .discover__img{
         padding-left: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .discover__img{
+        padding-top: 9rem;
+        padding-right: 0;
+        width: 100%;
     }
 }
 
@@ -926,16 +931,30 @@ section{
 .discover__img-picture{
     position: relative;
     display: block;
+    width: 100%;
+    max-width: 29rem;
 }
 
+@media (max-width: 1440px) {
+    .discover__img-picture{
+        bottom: 6rem;
+        max-width: 25rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .discover__img-picture{
+
+    }
+}
 
 .discover__img-picture::before{
     content: '';
     position: absolute;
-    top: 25px;
-    right: 10px;
-    bottom: 10px;
-    left: 15px;
+    top: -7px;
+    right: 100px;
+    bottom: 1px;
+    left: 25px;
     z-index: -1;
     background: radial-gradient(
             circle,
@@ -974,7 +993,7 @@ section{
         text-align: left;
         max-width: 550px;
     }
-    .discover__logos{
+    .discover__logos {
         order: 2;
     }
     .discover__img{
@@ -1199,18 +1218,16 @@ section{
     color: var(--gray-header);
 }
 
-.discover__content{
-    min-width: 24rem;
-    margin-left: -20rem;
-
-    margin-top: 75%;
-    height: fit-content;
-
-    position: relative;
-
-    display: flex
-;
+.discover__content{;
+    width: 100%;
+    max-width: 25rem;
+    position: absolute;
+    display: flex;
     flex-direction: row;
+
+    right: 0;
+    bottom: 0;
+
     gap: 4rem;
     clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 25%);
 }
@@ -1222,6 +1239,7 @@ section{
 @media  (max-width: 1024px) {
     .discover__content{
         left: auto;
+        right: auto;
     }
 }
 
@@ -1353,23 +1371,20 @@ section{
 
     width: 100%;
     display: flex;
-    flex-direction: row;
+
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 12rem;
 
+    gap: 3rem;
 }
 
 @media (max-width: 1024px) {
     .discover__logos{
         padding-top: 2.5rem;
-        gap: 2rem;
-        flex: 1 1 30%;
+        gap: 3rem;
     }
 }
-
-
 
 .logos__item--binance{
     max-width: 16rem;
