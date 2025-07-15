@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const burger = document.getElementById("burger");
-    const menu = document.querySelector(".navbar__menu");
+    const menu = document.querySelector(".menu");
     const body = document.body;
 
     burger.addEventListener("click", () => {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Swiper NFT
 
     try {
-        new Swiper(".swiper-topNFT", {
+        new Swiper(".top-nft .swiper", {
             spaceBetween: 30,
             breakpoints: {
                 0: {
@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Tabs
 
-    const tabButton = document.querySelectorAll('.tabs__button');
+    const tabButton = document.querySelectorAll('.button');
 
-    const tabPicture = document.querySelector('.tabs__picture');
+    const tabPicture = document.querySelector('.picture');
     const tabSource = document.querySelector('.tabs__source');
-    const tabImg = document.querySelector('.tabs__img');
+    const tabImg = document.querySelector('.picture__img');
 
     tabButton.forEach(button => {
         button.addEventListener('click', () => {
@@ -110,9 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //  Dropdown
 
-    const dropdown = document.querySelector('.sellers__title-dropdown');
-    const toggleText = document.querySelector('.sellers__title-dropdown-text');
-    const items = document.querySelectorAll('.sellers__title-dropdown-item');
+    const dropdown = document.querySelector('.sellers .dropdown');
+    const toggleText = document.querySelector('.sellers .dropdown .text');
+    const items = document.querySelectorAll('.sellers .dropdown .item');
 
     items.forEach(item => {
         item.addEventListener('click', () => {
@@ -134,16 +134,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // Swiper table
 
     try {
-        new Swiper(".swiper-sellers", {
+        new Swiper(".sellers .swiper", {
             direction: "vertical",
             spaceBetween: 30,
             height: (120 * 4) + (30 * 3),
-            width: 100,
             slidesPerView: 4,
+            initialSlide: 0,
 
             breakpoints: {
                 0: {
-                    height: (90 * 4) + (30 * 3),
+                    slidesPerView: 1,
+                    // You might want to adjust spaceBetween for mobile if needed
+                    spaceBetween: 20,
+                    // rows: 1,
+                    // height: (90 * 4) + (30 * 3),
                 },
                 768: {
                     grid: {
@@ -164,13 +168,14 @@ document.addEventListener("DOMContentLoaded", function () {
             //     disableOnInteraction: false,
             // },
             rewind: true,
-            loopAddBlankSlides: false,
 
             mousewheel: true,
         });
     } catch (e) {
         console.log(e);
     }
+
+
 
 
 // Accordion footer

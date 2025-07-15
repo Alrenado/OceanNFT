@@ -51,45 +51,45 @@
 
 <header class="header">
     <nav class="navbar">
-        <div class="navbar__logo">
-            <svg class="navbar__logo-item">
+        <div class="logo">
+            <svg class="logo-item">
                 <use xlink:href="img/svg/sprite.svg#header-logo"></use>
             </svg>
         </div>
 
-        <ul class="navbar__menu">
-            <li class="navbar__menu-item">
-                <a class="navbar__menu-link" href="#">Market</a>
+        <ul class="menu">
+            <li class="menu__item">
+                <a class="menu__link" href="#">Market</a>
             </li>
 
-            <li class="navbar__menu-item">
-                <a class="navbar__menu-link" href="#">Features</a>
+            <li class="menu__item">
+                <a class="menu__link" href="#">Features</a>
             </li>
 
-            <li class="navbar__menu-item">
-                <a class="navbar__menu-link" href="#">Community</a>
+            <li class="menu__item">
+                <a class="menu__link" href="#">Community</a>
             </li>
 
-            <li class="navbar__menu-item navbar__menu-hidden">
-                <a class="navbar__menu-link" href="#">Cart</a>
+            <li class="menu__item item--hidden">
+                <a class="menu__link" href="#">Cart</a>
             </li>
 
-            <li class="navbar__menu-item navbar__menu-hidden">
-                <a class="navbar__menu-link" href="#">Profile</a>
+            <li class="menu__item item--hidden">
+                <a class="menu__link" href="#">Profile</a>
             </li>
         </ul>
 
-        <div class="navbar__icons">
-            <svg class="navbar__icons-item navbar__icons-cart">
+        <div class="icons">
+            <svg class="item item--cart">
                 <use xlink:href="img/svg/sprite.svg#cart"></use>
             </svg>
 
-            <svg class="navbar__icons-item navbar__icons-profile">
+            <svg class="item item--profile">
                 <use xlink:href="img/svg/sprite.svg#profile"></use>
             </svg>
         </div>
 
-        <button class="navbar__burger" id="burger">
+        <button class="burger" id="burger">
             <span></span>
             <span></span>
             <span></span>
@@ -100,56 +100,56 @@
 <!--discover-->
 
 <section class="discover">
-    <div class="discover__title">
-            <span class="discover__title-main">
-                Discover, <br class="br-mobile"> collect, and<br class="br-desktop">
-                sell  <br class="br-mobile">
+    <div class="section__title">
+            <span class="main">
+                Discover, <br class="br-mobile"> collect, and <br class="br-desktop">
+                sell <br class="br-mobile">
 
-                <span class="discover__title-main discover__title-main--gradient">
+                <span class="main main-gradient">
                     Timeless
                 </span>
                 NFTs
             </span>
 
-        <span class="discover__title-sub">
+        <span class="sub">
                 The world’s first and largest digital marketplace for crypto <br class="br-desktop">
                 collectibles and non-fungible tokens (NFTs)
         </span>
 
-        <div class="discover__form">
-            <button class="discover__form-button" id="title-button">
-                <div class="discover__form-container">
-                    <span class="discover__form-text">Explore</span>
+        <div class="input">
+            <div class="button-wrapper">
+                <button class="button">
+                    <span class="text">Explore</span>
 
-                    <svg class="discover__form-icon">
+                    <svg class="ico">
                         <use xlink:href="img/svg/sprite.svg#arrow"></use>
                     </svg>
-                </div>
-            </button>
+                </button>
+            </div>
 
-            <span class="discover__form-sub">Create NFT’s</span>
+            <span class="label">Create NFT’s</span>
         </div>
 
-        <div class="discover__info">
-            <div class="discover__info-item">
-                <span class="discover__info-value">35m+</span>
-                <span class="discover__info-label">Artwork</span>
+        <div class="counter">
+            <div class="item">
+                <span class="value">35m+</span>
+                <span class="label">Artwork</span>
             </div>
 
-            <div class="discover__info-item">
-                <span class="discover__info-value">18m+</span>
-                <span class="discover__info-label">Auctions</span>
+            <div class="item">
+                <span class="value">18m+</span>
+                <span class="label">Auctions</span>
             </div>
 
-            <div class="discover__info-item">
-                <span class="discover__info-value">500k+</span>
-                <span class="discover__info-label">Artists</span>
+            <div class="item">
+                <span class="value">500k+</span>
+                <span class="label">Artists</span>
             </div>
         </div>
     </div>
 
-    <div class="discover__img">
-        <picture class="discover__img-picture">
+    <div class="profile">
+        <picture class="picture">
             <source srcset="img/webp/discover.webp"
                     type="image/webp"
                     media="(min-width: 1024px)">
@@ -158,97 +158,100 @@
                     type="image/webp"
                     media="(max-width: 1023px)">
 
-            <img class="discover__img-image"
+            <img class="image"
                  src="img/png/discover.png"
                  alt="discover">
         </picture>
 
 
-        <div class="discover__content card">
-            <div class="discover__section">
-                <div class="discover__profile">
-                    <span class="profile__title">3D Abstract Hand</span>
+        <div class="wrapper">
+            <div class="content card">
+                <div class="section">
+                    <div class="author">
+                        <span class="title">3D Abstract Hand</span>
 
-                    <div class="profile__author">
-                        <picture class="author__picture">
-                            <source srcset="img/webp/discover-profile.webp" type="image/webp">
-                            <img class="author__image"
-                                 src="img/png/discover-profile.png"
-                                 alt="discover-profile">
-                        </picture>
+                        <div class="avatar-card">
+                            <picture class="avatar">
+                                <source srcset="img/webp/discover-profile.webp" type="image/webp">
+                                <img class="avatar__image"
+                                     src="img/png/discover-profile.png"
+                                     alt="discover-profile">
+                            </picture>
 
-                        <span class="author__name">@jhonartist</span>
+                            <span class="name">@jhonartist</span>
 
-                        <picture class="author__verified">
-                            <source srcset="img/webp/check.webp" type="image/webp">
-                            <img class="verified__icon"
-                                 src="img/png/check.png"
-                                 alt="check">
-                        </picture>
-                    </div>
-                </div>
-
-                <div class="discover__price">
-                    <span class="price__title">Reserve price</span>
-
-                    <div class="price__container">
-                        <svg class="price__container-logo">
-                            <use xlink:href="img/svg/sprite.svg#logo-white"></use>
-                        </svg>
-
-                        <span class="price__container-main">ETH 9.31</span>
-                        <span class="price__container-sub">($29,8846)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="discover__section">
-                <div class="discover__timer">
-                    <span class="timer__title">Auction Ends in</span>
-
-                    <div class="timer__container timer__container--slim-font">
-                        <div class="timer__container-item">
-                            <span class="timer__container-value">18</span>
-                            <span class="timer__container-sub">Hours</span>
+                            <picture class="verified-picture">
+                                <source srcset="img/webp/check.webp" type="image/webp">
+                                <img class="verified__img"
+                                     src="img/png/check.png"
+                                     alt="check">
+                            </picture>
                         </div>
+                    </div>
 
-                        <div class="timer__container-item">
-                            <span class="timer__container-value">25</span>
-                            <span class="timer__container-sub">Mins</span>
-                        </div>
+                    <div class="price">
+                        <span class="title">Reserve price</span>
 
-                        <div class="timer__container-item">
-                            <span class="timer__container-value">44</span>
-                            <span class="timer__container-sub">Secs</span>
+                        <div class="container">
+                            <svg class="logo">
+                                <use xlink:href="img/svg/sprite.svg#logo-white"></use>
+                            </svg>
+
+                            <span class="main">ETH 9.31</span>
+                            <span class="sub">($29,8846)</span>
                         </div>
                     </div>
                 </div>
-                <div class="discover__img-button button-container">
-                    <button class="img-button__container button" id="img-button">
-                        <span class="img-button__text">Place Bid</span>
+                <div class="section">
+                    <div class="timer">
+                        <span class="title">Auction Ends in</span>
 
-                        <svg class="img-button__icon">
-                            <use xlink:href="img/svg/sprite.svg#arrow"></use>
-                        </svg>
-                    </button>
+                        <div class="container">
+                            <div class="item">
+                                <span class="value">18</span>
+                                <span class="sub">Hours</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="value">25</span>
+                                <span class="sub">Mins</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="value">44</span>
+                                <span class="sub">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-container button-container-preset">
+                        <button class="button button-preset">
+                            <span class="text">Place Bid</span>
+
+                            <svg class="ico">
+                                <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="discover__logos">
-        <svg class="logos__item logos__item--binance">
+    <div class="partners">
+        <svg class="item item--binance">
             <use xlink:href="img/svg/sprite.svg#binance"></use>
         </svg>
 
-        <svg class="logos__item logos__item--ethereum">
+        <svg class="item item--ethereum">
             <use xlink:href="img/svg/sprite.svg#ethereum"></use>
         </svg>
 
-        <svg class="logos__item logos__item--blockchain">
+        <svg class="item item--blockchain">
             <use xlink:href="img/svg/sprite.svg#blockchain"></use>
         </svg>
 
-        <svg class="logos__item logos__item--bitmex">
+        <svg class="item item--bitmex">
             <use xlink:href="img/svg/sprite.svg#bitMEX"></use>
         </svg>
     </div>
@@ -256,69 +259,70 @@
 
 <!--swiper topNFT-->
 
-<section class="swiper-section swiper-section-topNFT">
-    <div class="swiper__title title">
-        <span class="swiper__title-main">Top NFT’s now</span>
+<section class="swiper-section top-nft">
+    <div class="title section__title">
+        <span class="main">Top NFT’s now</span>
 
-        <div class="swiper__title-container">
-            <a class="swiper__title-sub">View all</a>
+        <div class="container">
+            <a class="sub">View all</a>
 
-            <svg class="swiper__title-ico">
+            <svg class="ico">
                 <use xlink:href="img/svg/sprite.svg#arrow"></use>
             </svg>
         </div>
     </div>
-    <div class="swiper swiper-topNFT">
-        <div class="swiper-wrapper swiper-wrapper-topNFT">
-            <div class="swiper-slide swiper-slide-topNFT">
-                <picture class="slide__img">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide ">
+                <picture class="picture">
                     <source srcset="img/webp/slide__img-first.webp"
                             type="image/webp">
 
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/slide__img-first.png"
                          alt="slide__img-first">
                 </picture>
-                <div class="slide__card slide__card-topNFT card">
-                    <div class="slide__section">
-                        <div class="slide__profile">
-                            <span class="swiper__profile-title">Apollo Eth #1289 NFT</span>
 
-                            <div class="swiper__author">
-                                <picture class="swiper__picture">
+                <div class="slide__card card">
+                    <div class="section">
+                        <div class="profile">
+                            <span class="title">Apollo Eth #1289 NFT</span>
+
+                            <div class="author">
+                                <picture class="picture">
                                     <source srcset="img/webp/swiper-first.webp"
                                             type="image/webp">
-                                    <img class="swiper__picture-img"
+                                    <img class="picture-img"
                                          src="img/png/swiper-first.png"
                                          alt="swiper-third">
                                 </picture>
 
-                                <span class="swiper__name">@jhonartist</span>
+                                <span class="name">@jhonartist</span>
 
-                                <picture class="swiper__verified">
+                                <picture class="verified">
                                     <source srcset="img/webp/check.webp"
                                             type="image/webp">
-                                    <img class="swiper__verified-ico"
+                                    <img class="verified-ico"
                                          src="img/png/check.png"
                                          alt="check">
                                 </picture>
                             </div>
                         </div>
 
-                        <div class="slide__price">
-                            <span class="swiper__price-title">Reserve price</span>
-                            <div class="swiper__price-container">
-                                <svg class="swiper__logo">
+                        <div class="price">
+                            <span class="title">Reserve price</span>
+                            <div class="container">
+                                <svg class="logo">
                                     <use xlink:href="img/svg/sprite.svg#logo-white"></use>
                                 </svg>
 
-                                <span class="swiper__main">ETH 9.31</span>
-                                <span class="swiper__sub">($29,8846)</span>
+                                <span class="main">ETH 9.31</span>
+                                <span class="sub">($29,8846)</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="slide__section">
+                    <div class="section">
                         <div class="slide__timer">
                             <span class="slide__timer-tittle ">Auction Ends in</span>
 
@@ -339,8 +343,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide__button-container button-container">
-                            <button class="slide__button button">
+                        <div class="slide__button-container button-container-preset">
+                            <button class="slide__button button-preset">
                                 <span class="slide__button-text">Place Bid</span>
 
                                 <svg class="slide__button-ico">
@@ -352,49 +356,50 @@
                 </div>
             </div>
 
-            <div class="swiper-slide swiper-slide-topNFT">
-                <picture class="slide__img">
+            <div class="swiper-slide ">
+                <picture class="picture">
                     <source srcset="img/webp/slide__img-second.webp"
                             type="image/webp">
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/slide__img-second.png"
                          alt="slide__img-first">
                 </picture>
-                <div class="slide__card slide__card-topNFT card">
-                    <div class="slide__section">
-                        <div class="slide__profile">
-                            <span class="swiper__profile-title">Sassy Bull #1169 Art</span>
 
-                            <div class="swiper__author">
-                                <picture class="swiper__picture">
+                <div class="slide__card card">
+                    <div class="section">
+                        <div class="profile">
+                            <span class="title">Sassy Bull #1169 Art</span>
+
+                            <div class="author">
+                                <picture class="picture">
                                     <source srcset="img/webp/swiper-second.webp"
                                             type="image/webp">
-                                    <img class="swiper__picture-img"
+                                    <img class="picture-img"
                                          src="img/png/swiper-second.png"
                                          alt="swiper-second">
                                 </picture>
 
-                                <span class="swiper__name">@jhonartist</span>
+                                <span class="name">@jhonartist</span>
 
-                                <picture class="swiper__verified">
+                                <picture class="verified">
                                     <source srcset="img/webp/check.webp"
                                             type="image/webp">
-                                    <img class="swiper__verified-ico"
+                                    <img class="verified-ico"
                                          src="img/png/check.png"
                                          alt="check">
                                 </picture>
                             </div>
                         </div>
 
-                        <div class="slide__price">
-                            <span class="swiper__price-title">Reserve price</span>
-                            <div class="swiper__price-container">
-                                <svg class="swiper__logo">
+                        <div class="price">
+                            <span class="title">Reserve price</span>
+                            <div class="container">
+                                <svg class="logo">
                                     <use xlink:href="img/svg/sprite.svg#logo-white"></use>
                                 </svg>
 
-                                <span class="swiper__main">ETH 9.31</span>
-                                <span class="swiper__sub">($29,8846)</span>
+                                <span class="main">ETH 9.31</span>
+                                <span class="sub">($29,8846)</span>
                             </div>
                         </div>
                     </div>
@@ -420,8 +425,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide__button-container button-container">
-                            <button class="slide__button button">
+                        <div class="slide__button-container button-container-preset">
+                            <button class="slide__button button-preset">
                                 <span class="slide__button-text">Place Bid</span>
 
                                 <svg class="slide__button-ico">
@@ -433,54 +438,55 @@
                 </div>
             </div>
 
-            <div class="swiper-slide swiper-slide-topNFT">
-                <picture class="slide__img">
+            <div class="swiper-slide ">
+                <picture class="picture">
                     <source srcset="img/webp/slide__img-third.webp"
                             type="image/webp">
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/slide__img-third.png"
                          alt="slide__img-third">
                 </picture>
-                <div class="slide__card slide__card-topNFT card">
-                    <div class="slide__section">
-                        <div class="slide__profile">
-                            <span class="swiper__profile-title">Satisfying 3D Art</span>
 
-                            <div class="swiper__author">
-                                <picture class="swiper__picture">
-                                    <source srcset="img/webp/swiper-second.webp"
+                <div class="slide__card card">
+                    <div class="section">
+                        <div class="profile">
+                            <span class="title">Satisfying 3D Art</span>
+
+                            <div class="author">
+                                <picture class="picture">
+                                    <source srcset="img/webp/swiper-third.webp"
                                             type="image/webp">
-                                    <img class="swiper__picture-img"
+                                    <img class="picture-img"
                                          src="img/png/swiper-second.png"
                                          alt="swiper-second">
                                 </picture>
 
-                                <span class="swiper__name">@jhonartist</span>
+                                <span class="name">@jhonartist</span>
 
-                                <picture class="swiper__verified">
+                                <picture class="verified">
                                     <source srcset="img/webp/check.webp"
                                             type="image/webp">
-                                    <img class="swiper__verified-ico"
+                                    <img class="verified-ico"
                                          src="img/png/check.png"
                                          alt="check">
                                 </picture>
                             </div>
                         </div>
 
-                        <div class="slide__price">
-                            <span class="swiper__price-title">Reserve price</span>
-                            <div class="swiper__price-container">
-                                <svg class="swiper__logo">
+                        <div class="price">
+                            <span class="title">Reserve price</span>
+                            <div class="container">
+                                <svg class="logo">
                                     <use xlink:href="img/svg/sprite.svg#logo-white"></use>
                                 </svg>
 
-                                <span class="swiper__main">ETH 9.31</span>
-                                <span class="swiper__sub">($29,8846)</span>
+                                <span class="main">ETH 9.31</span>
+                                <span class="sub">($29,8846)</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="slide__section">
+                    <div class="section">
                         <div class="slide__timer">
                             <span class="slide__timer-tittle ">Auction Ends in</span>
 
@@ -501,8 +507,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide__button-container button-container">
-                            <button class="slide__button button">
+                        <div class="slide__button-container button-container-preset">
+                            <button class="slide__button button-preset">
                                 <span class="slide__button-text">Place Bid</span>
 
                                 <svg class="slide__button-ico">
@@ -514,55 +520,56 @@
                 </div>
             </div>
 
-            <div class="swiper-slide swiper-slide-topNFT">
-                <picture class="slide__img">
+            <div class="swiper-slide ">
+                <picture class="picture">
                     <source srcset="img/webp/slide__img-first.webp"
                             type="image/webp">
 
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/slide__img-first.png"
                          alt="slide__img-first">
                 </picture>
-                <div class="slide__card slide__card-topNFT card">
-                    <div class="slide__section">
-                        <div class="slide__profile">
-                            <span class="swiper__profile-title">Apollo Eth #1289 NFT</span>
 
-                            <div class="swiper__author">
-                                <picture class="swiper__picture">
+                <div class="slide__card card">
+                    <div class="section">
+                        <div class="profile">
+                            <span class="title">Apollo Eth #1289 NFT</span>
+
+                            <div class="author">
+                                <picture class="picture">
                                     <source srcset="img/webp/swiper-first.webp"
                                             type="image/webp">
-                                    <img class="swiper__picture-img"
+                                    <img class="picture-img"
                                          src="img/png/swiper-first.png"
                                          alt="swiper-third">
                                 </picture>
 
-                                <span class="swiper__name">@jhonartist</span>
+                                <span class="name">@jhonartist</span>
 
-                                <picture class="swiper__verified">
+                                <picture class="verified">
                                     <source srcset="img/webp/check.webp"
                                             type="image/webp">
-                                    <img class="swiper__verified-ico"
+                                    <img class="verified-ico"
                                          src="img/png/check.png"
                                          alt="check">
                                 </picture>
                             </div>
                         </div>
 
-                        <div class="slide__price">
-                            <span class="swiper__price-title">Reserve price</span>
-                            <div class="swiper__price-container">
-                                <svg class="swiper__logo">
+                        <div class="price">
+                            <span class="title">Reserve price</span>
+                            <div class="container">
+                                <svg class="logo">
                                     <use xlink:href="img/svg/sprite.svg#logo-white"></use>
                                 </svg>
 
-                                <span class="swiper__main">ETH 9.31</span>
-                                <span class="swiper__sub">($29,8846)</span>
+                                <span class="main">ETH 9.31</span>
+                                <span class="sub">($29,8846)</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="slide__section">
+                    <div class="section">
                         <div class="slide__timer">
                             <span class="slide__timer-tittle ">Auction Ends in</span>
 
@@ -583,8 +590,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide__button-container button-container">
-                            <button class="slide__button button">
+                        <div class="slide__button-container button-container-preset">
+                            <button class="slide__button button-preset">
                                 <span class="slide__button-text">Place Bid</span>
 
                                 <svg class="slide__button-ico">
@@ -596,49 +603,50 @@
                 </div>
             </div>
 
-            <div class="swiper-slide swiper-slide-topNFT">
-                <picture class="slide__img">
+            <div class="swiper-slide ">
+                <picture class="picture">
                     <source srcset="img/webp/slide__img-second.webp"
                             type="image/webp">
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/slide__img-second.png"
                          alt="slide__img-first">
                 </picture>
-                <div class="slide__card slide__card-topNFT card">
-                    <div class="slide__section">
-                        <div class="slide__profile">
-                            <span class="swiper__profile-title">Sassy Bull #1169 Art</span>
 
-                            <div class="swiper__author">
-                                <picture class="swiper__picture">
+                <div class="slide__card card">
+                    <div class="section">
+                        <div class="profile">
+                            <span class="title">Sassy Bull #1169 Art</span>
+
+                            <div class="author">
+                                <picture class="picture">
                                     <source srcset="img/webp/swiper-second.webp"
                                             type="image/webp">
-                                    <img class="swiper__picture-img"
+                                    <img class="picture-img"
                                          src="img/png/swiper-second.png"
                                          alt="swiper-second">
                                 </picture>
 
-                                <span class="swiper__name">@jhonartist</span>
+                                <span class="name">@jhonartist</span>
 
-                                <picture class="swiper__verified">
+                                <picture class="verified">
                                     <source srcset="img/webp/check.webp"
                                             type="image/webp">
-                                    <img class="swiper__verified-ico"
+                                    <img class="verified-ico"
                                          src="img/png/check.png"
                                          alt="check">
                                 </picture>
                             </div>
                         </div>
 
-                        <div class="slide__price">
-                            <span class="swiper__price-title">Reserve price</span>
-                            <div class="swiper__price-container">
-                                <svg class="swiper__logo">
+                        <div class="price">
+                            <span class="title">Reserve price</span>
+                            <div class="container">
+                                <svg class="logo">
                                     <use xlink:href="img/svg/sprite.svg#logo-white"></use>
                                 </svg>
 
-                                <span class="swiper__main">ETH 9.31</span>
-                                <span class="swiper__sub">($29,8846)</span>
+                                <span class="main">ETH 9.31</span>
+                                <span class="sub">($29,8846)</span>
                             </div>
                         </div>
                     </div>
@@ -664,8 +672,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide__button-container button-container">
-                            <button class="slide__button button">
+                        <div class="slide__button-container button-container-preset">
+                            <button class="slide__button button-preset">
                                 <span class="slide__button-text">Place Bid</span>
 
                                 <svg class="slide__button-ico">
@@ -677,54 +685,55 @@
                 </div>
             </div>
 
-            <div class="swiper-slide swiper-slide-topNFT">
-                <picture class="slide__img">
+            <div class="swiper-slide ">
+                <picture class="picture">
                     <source srcset="img/webp/slide__img-third.webp"
                             type="image/webp">
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/slide__img-third.png"
                          alt="slide__img-third">
                 </picture>
-                <div class="slide__card slide__card-topNFT card">
-                    <div class="slide__section">
-                        <div class="slide__profile">
-                            <span class="swiper__profile-title">Satisfying 3D Art</span>
 
-                            <div class="swiper__author">
-                                <picture class="swiper__picture">
-                                    <source srcset="img/webp/swiper-second.webp"
+                <div class="slide__card card">
+                    <div class="section">
+                        <div class="profile">
+                            <span class="title">Satisfying 3D Art</span>
+
+                            <div class="author">
+                                <picture class="picture">
+                                    <source srcset="img/webp/swiper-third.webp"
                                             type="image/webp">
-                                    <img class="swiper__picture-img"
+                                    <img class="picture-img"
                                          src="img/png/swiper-second.png"
                                          alt="swiper-second">
                                 </picture>
 
-                                <span class="swiper__name">@jhonartist</span>
+                                <span class="name">@jhonartist</span>
 
-                                <picture class="swiper__verified">
+                                <picture class="verified">
                                     <source srcset="img/webp/check.webp"
                                             type="image/webp">
-                                    <img class="swiper__verified-ico"
+                                    <img class="verified-ico"
                                          src="img/png/check.png"
                                          alt="check">
                                 </picture>
                             </div>
                         </div>
 
-                        <div class="slide__price">
-                            <span class="swiper__price-title">Reserve price</span>
-                            <div class="swiper__price-container">
-                                <svg class="swiper__logo">
+                        <div class="price">
+                            <span class="title">Reserve price</span>
+                            <div class="container">
+                                <svg class="logo">
                                     <use xlink:href="img/svg/sprite.svg#logo-white"></use>
                                 </svg>
 
-                                <span class="swiper__main">ETH 9.31</span>
-                                <span class="swiper__sub">($29,8846)</span>
+                                <span class="main">ETH 9.31</span>
+                                <span class="sub">($29,8846)</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="slide__section">
+                    <div class="section">
                         <div class="slide__timer">
                             <span class="slide__timer-tittle ">Auction Ends in</span>
 
@@ -745,8 +754,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide__button-container button-container">
-                            <button class="slide__button button">
+                        <div class="slide__button-container button-container-preset">
+                            <button class="slide__button button-preset">
                                 <span class="slide__button-text">Place Bid</span>
 
                                 <svg class="slide__button-ico">
@@ -757,13 +766,15 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
-    <div class="container__button-mobile">
-        <button class="button-mobile">
-            <span class="button-mobile-text">Explore</span>
+    <div class="container__button--mobile">
+        <button class="button--mobile">
+            <span class="text">Explore</span>
 
-            <svg class="button-mobile-ico">
+            <svg class="ico">
                 <use xlink:href="img/svg/sprite.svg#arrow"></use>
             </svg>
         </button>
@@ -775,74 +786,75 @@
 
 <section class="tabs">
     <div class="tabs__section">
-        <span class="tabs__title title">
+        <span class="title section__title">
             Explore Collections
         </span>
-        <div class="tabs__container ">
-            <div class="tabs__container-button ">
-                <button class="tabs__button button_transparent" data-src="tabs-first">
-                    <span class="tabs__button-text">Photography</span>
+
+        <div class="container ">
+            <div class="button-container ">
+                <button class="button button_transparent" data-src="tabs-first">
+                    <span class="text">Photography</span>
                 </button>
             </div>
 
-            <div class="tabs__container-button">
-                <button class="tabs__button button_transparent" data-src="tabs-second">
-                    <span class="tabs__button-text">Sports</span>
+            <div class="button-container">
+                <button class="button button_transparent" data-src="tabs-second">
+                    <span class="text">Sports</span>
                 </button>
             </div>
 
-            <div class="tabs__container-button">
-                <button class="tabs__button button_transparent" data-src="tabs-third">
-                    <span class="tabs__button-text">Brands</span>
+            <div class="button-container">
+                <button class="button button_transparent" data-src="tabs-third">
+                    <span class="text">Brands</span>
                 </button>
             </div>
 
-            <div class="tabs__container-button">
-                <button class="tabs__button button_transparent" data-src="tabs-first">
-                    <span class="tabs__button-text">Collectibles</span>
+            <div class="button-container">
+                <button class="button button_transparent" data-src="tabs-first">
+                    <span class="text">Collectibles</span>
                 </button>
             </div>
 
-            <div class="tabs__container-button">
-                <button class="tabs__button button_transparent" data-src="tabs-second">
-                    <span class="tabs__button-text">Art</span>
+            <div class="button-container">
+                <button class="button button_transparent" data-src="tabs-second">
+                    <span class="text">Art</span>
                 </button>
             </div>
 
-            <div class="tabs__container-button">
-                <button class="tabs__button button_transparent" data-src="tabs-third">
-                    <span class="tabs__button-text">Utility</span>
+            <div class="button-container">
+                <button class="button button_transparent" data-src="tabs-third">
+                    <span class="text">Utility</span>
                 </button>
             </div>
 
-            <div class="tabs__container-button">
-                <button class="tabs__button button_transparent" data-src="tabs-first">
-                    <span class="tabs__button-text">Brand</span>
+            <div class="button-container">
+                <button class="button button_transparent" data-src="tabs-first">
+                    <span class="text">Brand</span>
                 </button>
             </div>
 
-            <div class="tabs__container-button">
-                <button class="tabs__button button_transparent" data-src="tabs-second">
-                    <span class="tabs__button-text">Collectibles</span>
+            <div class="button-container">
+                <button class="button button_transparent" data-src="tabs-second">
+                    <span class="text">Collectibles</span>
                 </button>
             </div>
         </div>
 
-        <div class="tabs__sub-container">
-            <a class="tabs__sub">
-                View all
-            </a>
-            <svg class="tabs__sub-ico">
+        <div class="sub-container">
+            <a class="sub">View all</a>
+
+            <svg class="ico">
                 <use xlink:href="img/svg/sprite.svg#arrow"></use>
             </svg>
         </div>
 
     </div>
-    <picture class="tabs__picture">
+
+    <picture class="picture">
         <source srcset="img/webp/tabs-first.webp"
                 type="image/webp"
                 class="tabs__source">
-        <img class="tabs__img"
+        <img class="picture__img"
              src="img/png/slide__img-first.png"
              alt="check">
     </picture>
@@ -851,7 +863,7 @@
 <!--swiper authors-->
 
 <section class="swiper-section swiper-section-authors ">
-    <div class="swiper__title title">
+    <div class="swiper__title section__title">
         <span class="swiper__title-main">Explore Collections</span>
 
         <div class="swiper__title-container">
@@ -869,7 +881,7 @@
                     <source srcset="img/webp/swiper-bg.webp"
                             type="image/webp">
 
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/swiper-bg.png"
                          alt="swiper-bg">
                 </picture>
@@ -878,7 +890,7 @@
                         <source srcset="img/webp/swiper_authors-first.webp"
                                 type="image/webp">
 
-                        <img class="slide__img-picture"
+                        <img class="picture__img"
                              src="img/png/swiper_authors-first.png"
                              alt="swiper_authors-first">
                     </picture>
@@ -909,8 +921,8 @@
                             <span class="authors__counter-sup">Artworks</span>
                         </div>
                     </div>
-                    <div class="authors__button-container button-container">
-                        <button class="authors__button button">
+                    <div class="authors__button-container button-container-preset">
+                        <button class="authors__button button-preset">
                             <span class="slide__button-text">Follow</span>
                         </button>
                     </div>
@@ -922,7 +934,7 @@
                     <source srcset="img/webp/swiper-bg.webp"
                             type="image/webp">
 
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/swiper-bg.png"
                          alt="swiper-bg">
                 </picture>
@@ -931,7 +943,7 @@
                         <source srcset="img/webp/swiper_authors-second.webp"
                                 type="image/webp">
 
-                        <img class="slide__img-picture"
+                        <img class="picture__img"
                              src="img/png/swiper_authors-second.png"
                              alt="swiper_authors-second">
                     </picture>
@@ -962,8 +974,8 @@
                             <span class="authors__counter-sup">Artworks</span>
                         </div>
                     </div>
-                    <div class="authors__button-container button-container">
-                        <button class="authors__button button">
+                    <div class="authors__button-container button-container-preset">
+                        <button class="authors__button button-preset">
                             <span class="slide__button-text">Follow</span>
                         </button>
                     </div>
@@ -975,7 +987,7 @@
                     <source srcset="img/webp/swiper-bg.webp"
                             type="image/webp">
 
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/swiper-bg.png"
                          alt="swiper-bg">
                 </picture>
@@ -984,7 +996,7 @@
                         <source srcset="img/webp/swiper_authors-third.webp"
                                 type="image/webp">
 
-                        <img class="slide__img-picture"
+                        <img class="picture__img"
                              src="img/png/swiper_authors-third.png"
                              alt="swiper_authors-third">
                     </picture>
@@ -1015,8 +1027,8 @@
                             <span class="authors__counter-sup">Artworks</span>
                         </div>
                     </div>
-                    <div class="authors__button-container button-container">
-                        <button class="authors__button button">
+                    <div class="authors__button-container button-container-preset">
+                        <button class="authors__button button-preset">
                             <span class="slide__button-text">Follow</span>
                         </button>
                     </div>
@@ -1028,7 +1040,7 @@
                     <source srcset="img/webp/swiper-bg.webp"
                             type="image/webp">
 
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/swiper-bg.png"
                          alt="swiper-bg">
                 </picture>
@@ -1037,7 +1049,7 @@
                         <source srcset="img/webp/swiper_authors-first.webp"
                                 type="image/webp">
 
-                        <img class="slide__img-picture"
+                        <img class="picture__img"
                              src="img/png/swiper_authors-first.png"
                              alt="swiper_authors-first">
                     </picture>
@@ -1068,8 +1080,8 @@
                             <span class="authors__counter-sup">Artworks</span>
                         </div>
                     </div>
-                    <div class="authors__button-container button-container">
-                        <button class="authors__button button">
+                    <div class="authors__button-container button-container-preset">
+                        <button class="authors__button button-preset">
                             <span class="slide__button-text">Follow</span>
                         </button>
                     </div>
@@ -1081,7 +1093,7 @@
                     <source srcset="img/webp/swiper-bg.webp"
                             type="image/webp">
 
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/swiper-bg.png"
                          alt="swiper-bg">
                 </picture>
@@ -1090,7 +1102,7 @@
                         <source srcset="img/webp/swiper_authors-second.webp"
                                 type="image/webp">
 
-                        <img class="slide__img-picture"
+                        <img class="picture__img"
                              src="img/png/swiper_authors-second.png"
                              alt="swiper_authors-second">
                     </picture>
@@ -1121,8 +1133,8 @@
                             <span class="authors__counter-sup">Artworks</span>
                         </div>
                     </div>
-                    <div class="authors__button-container button-container">
-                        <button class="authors__button button">
+                    <div class="authors__button-container button-container-preset">
+                        <button class="authors__button button-preset">
                             <span class="slide__button-text">Follow</span>
                         </button>
                     </div>
@@ -1134,7 +1146,7 @@
                     <source srcset="img/webp/swiper-bg.webp"
                             type="image/webp">
 
-                    <img class="slide__img-picture"
+                    <img class="picture__img"
                          src="img/png/swiper-bg.png"
                          alt="swiper-bg">
                 </picture>
@@ -1143,7 +1155,7 @@
                         <source srcset="img/webp/swiper_authors-third.webp"
                                 type="image/webp">
 
-                        <img class="slide__img-picture"
+                        <img class="picture__img"
                              src="img/png/swiper_authors-third.png"
                              alt="swiper_authors-third">
                     </picture>
@@ -1174,8 +1186,8 @@
                             <span class="authors__counter-sup">Artworks</span>
                         </div>
                     </div>
-                    <div class="authors__button-container button-container">
-                        <button class="authors__button button">
+                    <div class="authors__button-container button-container-preset">
+                        <button class="authors__button button-preset">
                             <span class="slide__button-text">Follow</span>
                         </button>
                     </div>
@@ -1183,11 +1195,11 @@
             </div>
         </div>
     </div>
-    <div class="container__button-mobile">
-        <button class="button-mobile">
-            <span class="button-mobile-text">Explore</span>
+    <div class="container__button--mobile">
+        <button class="button--mobile">
+            <span class="text">Explore</span>
 
-            <svg class="button-mobile-ico">
+            <svg class="ico">
                 <use xlink:href="img/svg/sprite.svg#arrow"></use>
             </svg>
         </button>
@@ -1197,27 +1209,27 @@
 <!--swiper sellers-->
 
 <section class="sellers">
-    <div class="sellers__title">
-        <div class="sellers__title-main title">
-            <span class="sellers__title-text">Top Sellers this </span>
-            <div class="sellers__title-dropdown">
-                <span class="sellers__title-dropdown-text">Month</span>
+    <div class="title">
+        <div class="main section__title">
+            <span class="text">Top Sellers this </span>
+            <div class="dropdown">
+                <span class="text">Month</span>
 
-                <svg class="sellers__title-dropdown-ico">
+                <svg class="ico">
                     <use xlink:href="img/svg/sprite.svg#dropdown"></use>
                 </svg>
 
-                <div class="sellers__title-dropdown-content ">
-                    <a class="sellers__title-dropdown-item">Day</a>
-                    <a class="sellers__title-dropdown-item">Week</a>
-                    <a class="sellers__title-dropdown-item">Month</a>
-                    <a class="sellers__title-dropdown-item">Year</a>
+                <div class="content ">
+                    <a class="item">Day</a>
+                    <a class="item">Week</a>
+                    <a class="item">Month</a>
+                    <a class="item">Year</a>
                 </div>
             </div>
         </div>
 
-        <div class="sellers__title-sup">
-            <span class="sellers__title-sup-text">
+        <div class="sub">
+            <span class="text">
                 Amet minim mollit non deserunt ullamco est sit <br class="br-mobile"> aliqua dolor do<br
                     class="br-desktop">
                 amet sint. Velit officia consequat <br class="br-mobile"> duis enim minim mollit.
@@ -1225,10 +1237,11 @@
         </div>
     </div>
 
-    <div class="swiper swiper-sellers">
-        <div class="swiper-wrapper wrapper__sellers">
+    <div class="swiper">
+        <div class="swiper-wrapper ">
             <div class="swiper-slide slide__sellers">
                 <span class="sellers__id">1</span>
+
                 <picture class="sellers__picture">
                     <source srcset="img/webp/sellers-first.webp"
                             type="image/webp"
@@ -1898,22 +1911,21 @@
                     <span class="sellers__percent">+468.48%</span>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <div class="container__button-mobile">
-        <button class="button-mobile">
-            <span class="button-mobile-text">Explore</span>
+    <div class="container__button--mobile">
+        <button class="button--mobile">
+            <span class="text">Explore</span>
 
-            <svg class="button-mobile-ico">
+            <svg class="ico">
                 <use xlink:href="img/svg/sprite.svg#arrow"></use>
             </svg>
         </button>
     </div>
 
-    <div class="sellers__button-container button-container">
-        <button class="sellers__button button">
+    <div class="sellers__button-container button-container-preset">
+        <button class="sellers__button button-preset">
             <span class="sellers__button-text">Explore all</span>
         </button>
     </div>
@@ -1974,7 +1986,7 @@
              alt="form">
     </picture>
 
-    <div class="form__wrapper">
+    <div class="button-wrapper">
         <span class="form__title">Subscribe to us</span>
 
         <span class="form__sub">
@@ -1986,8 +1998,8 @@
             <input class="form__form" type="email" name="email" autocomplete="email"
                    placeholder="Your work email address">
 
-            <div class="form__button-container button-container">
-                <button class="form__button button">
+            <div class="button-wrapper button-container-preset">
+                <button class="form__button button-preset">
                     <span class="form__button-text">Subscribe</span>
                 </button>
             </div>
