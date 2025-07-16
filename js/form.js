@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //  Swiper authors
 
     try {
-        new Swiper(".swiper-authors", {
+        new Swiper(".authors .swiper", {
             spaceBetween: 30,
             breakpoints: {
                 0: {
