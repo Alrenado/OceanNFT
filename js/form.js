@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
             spaceBetween: 30,
             breakpoints: {
                 0: {
-                    slidesPerView: 1.1
+                    slidesPerView: 1.1,
+                    height: ((90 * 4)+ (30 * 3))
                 },
                 576: {
                     slidesPerView: 1.5
@@ -32,11 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 3
                 }
             },
-            // autoplay: {
-            //     delay: 1500,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
             loop: true,
+            lazy: true,
             mousewheel: true
         });
     } catch (e) {
@@ -45,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Tabs
 
-    const tabButton = document.querySelectorAll('.button');
+    const tabButton = document.querySelectorAll('.tabs .container .button');
 
-    const tabPicture = document.querySelector('.picture');
-    const tabSource = document.querySelector('.tabs__source');
-    const tabImg = document.querySelector('.picture__img');
+    const tabPicture = document.querySelector('.tabs .picture');
+    const tabSource = document.querySelector('.tabs .tabs__source');
+    const tabImg = document.querySelector('.tabs .picture__img');
 
     tabButton.forEach(button => {
         button.addEventListener('click', () => {
@@ -97,11 +99,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 3
                 }
             },
-            // autoplay: {
-            //     delay: 1500,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
             loop: true,
+            lazy: true,
             mousewheel: true
         });
     } catch (e) {
@@ -134,20 +137,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // Swiper table
 
     try {
-        new Swiper(".sellers .swiper", {
+        let swipe =  new Swiper(".sellers .swiper", {
             direction: "vertical",
             spaceBetween: 30,
             height: (120 * 4) + (30 * 3),
             slidesPerView: 4,
-            initialSlide: 0,
 
             breakpoints: {
                 0: {
-                    slidesPerView: 1,
-                    // You might want to adjust spaceBetween for mobile if needed
-                    spaceBetween: 20,
-                    // rows: 1,
-                    // height: (90 * 4) + (30 * 3),
+                    grid: {
+                        rows: 1,
+                        fill: "row",
+                        height: (90 * 4) + (30 * 3),
+                    },
+
                 },
                 768: {
                     grid: {
@@ -171,9 +174,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
             mousewheel: true,
         });
+
     } catch (e) {
         console.log(e);
     }
+
+    try {
+        let swipe =  new Swiper(".sellers .swiper--mobile", {
+            direction: "vertical",
+            spaceBetween: 30,
+            height: (120 * 4) + (30 * 3),
+            slidesPerView: 4,
+
+            // autoplay: {
+            //     delay: 1500,
+            //     disableOnInteraction: false,
+            // },
+            rewind: true,
+
+            mousewheel: true,
+        });
+
+    } catch (e) {
+        console.log(e);
+    }
+
+
 
 
 
