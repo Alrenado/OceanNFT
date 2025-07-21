@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Burger
 
-
     const burger = document.getElementById("burger");
     const menu = document.querySelector(".menu");
     const body = document.body;
@@ -33,10 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 3
                 }
             },
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 1500,
+            //     disableOnInteraction: false,
+            // },
             loop: true,
             lazy: true,
             mousewheel: true
@@ -99,10 +98,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 3
                 }
             },
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 1500,
+            //     disableOnInteraction: false,
+            // },
             loop: true,
             lazy: true,
             mousewheel: true
@@ -132,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
             dropdown.classList.remove('dropdown-open');
         }
     });
-
 
 // Swiper table
 
