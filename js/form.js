@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 3
                 }
             },
-            // autoplay: {
-            //     delay: 1500,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
             loop: true,
             lazy: true,
             mousewheel: true
@@ -98,10 +98,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 3
                 }
             },
-            // autoplay: {
-            //     delay: 1500,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
             loop: true,
             lazy: true,
             mousewheel: true
@@ -164,10 +164,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             },
 
-            // autoplay: {
-            //     delay: 1500,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
             rewind: true,
 
             mousewheel: true,
@@ -180,14 +180,14 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
         let swipe =  new Swiper(".sellers .swiper--mobile", {
             direction: "vertical",
-            spaceBetween: 30,
-            height: (120 * 4) + (30 * 3),
+            spaceBetween: 25,
+            height: (90 * 4) + (25 * 3),
             slidesPerView: 4,
 
-            // autoplay: {
-            //     delay: 1500,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
             rewind: true,
 
             mousewheel: true,
