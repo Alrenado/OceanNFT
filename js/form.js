@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    const imageObserver = new IntersectionObserver((entries) => {
+
+    })
+
 // Burger
 
     const burger = document.getElementById("burger");
