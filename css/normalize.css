@@ -47,11 +47,13 @@ button::-moz-focus-inner {
 }
 
 a, a:visited {
+    color: white;
     cursor: pointer;
     text-decoration: none;
 }
 
 a:hover {
+    color: white;
     text-decoration: none;
 }
 
