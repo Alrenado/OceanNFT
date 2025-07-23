@@ -415,7 +415,9 @@ section {
             var(--light-pink),
             var(--ocean-blue)) 1;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition:
+            background-color 0.3s ease,
+            background-position 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -473,7 +475,9 @@ section {
     -webkit-clip-path: polygon(16% 0%, 100% 0, 100% 21%, 100% 72%, 84% 100%, 0 100%, 0% 85%, 0 26%);
     clip-path: polygon(16% 0%, 100% 0, 100% 21%, 100% 72%, 84% 100%, 0 100%, 0% 85%, 0 26%);
 
-    transition: 0.5s;
+    transition:
+            background-color 0.3s ease,
+            background-position 0.3s ease;
 }
 
 .button--mobile .text {
@@ -759,7 +763,7 @@ section {
 
 .header .menu__link:hover {
     color: var(--white);
-    transition: all 0.5s ease;
+    transition: color 0.5s ease;
 }
 
 .header .icons {
@@ -770,7 +774,7 @@ section {
 }
 
 .header .icons .item:hover {
-    transition: all 0.5s ease;
+    transition: color 0.5s ease;
 }
 
 .header .icons .item--cart {
@@ -823,7 +827,8 @@ section {
 
 .header .burger:hover span {
     background: var(--white);
-    transition: all 0.5s ease;
+    transition: background-color 0.5s ease,
+                transform 0.5s ease;
 }
 
 .header .burger.open span:nth-child(1) {
@@ -860,7 +865,8 @@ section {
         transform: translateY(-10px);
         opacity: 0;
         pointer-events: none;
-        transition: transform 0.4s ease, opacity 0.4s ease;
+        transition: transform 0.4s ease,
+                    opacity 0.4s ease;
         overflow-y: auto;
     }
 
@@ -1855,7 +1861,7 @@ section {
 
     overflow: hidden;
 
-    transition: all 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
     max-width: 31.3rem;
     width: 100%;
 }
@@ -1872,7 +1878,7 @@ section {
     object-fit: cover;
     user-select: none;
 
-    transition: all 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
 }
 
 /*swiper-authors*/
@@ -2138,7 +2144,7 @@ section {
 
     z-index: 10;
 
-    transition: all 0.3s ease;
+    /*transition: all 0.3s ease;*/
 }
 
 .sellers .title .dropdown-open .content {
@@ -2152,11 +2158,10 @@ section {
     position: relative;
     color: rgba(255, 255, 255, 0.4);
     display: block;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .sellers .dropdown .item:not(:last-child)::after {
-
     content: '';
     position: absolute;
 
@@ -2164,11 +2169,11 @@ section {
     width: 100%;
     height: 0.1rem;
 
-    bottom: -50%;
+    bottom: -100%;
     left: 0;
 
     background-color: rgba(255, 255, 255, 0.4);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .sellers .dropdown .item:hover {
@@ -2874,7 +2879,7 @@ section.form {
     height: 100%;
 
     margin-right: 1.35rem;
-    transition: 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 @media (max-width: 1024px) {
@@ -2893,7 +2898,8 @@ section.form {
     gap: 1rem;
 
     overflow: hidden;
-    transition: 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out,
+                margin-top 0.5s ease-in-out;
 }
 
 @media (max-width: 1024px) {
