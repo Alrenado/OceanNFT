@@ -807,7 +807,11 @@ section {
     width: 1.4rem;
     background: var(--gray-header);
     border-radius: 2px;
-    transition: all 0.5s ease;
+    transition: background 0.5s ease,
+                rotate 0.5s ease,
+                opacity 0.5s ease,
+                translate 0.5s ease;
+
     margin: 0;
 }
 

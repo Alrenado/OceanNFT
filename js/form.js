@@ -1,30 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const imageObserver = new IntersectionObserver((entries) => {
+    const swiperConfigs = {
 
-    })
-
-// Burger
-
-    const burger = document.getElementById("burger");
-    const menu = document.querySelector(".menu");
-    const body = document.body;
-
-    burger.addEventListener("click", () => {
-        burger.classList.toggle("open");
-        menu.classList.toggle("open");
-        body.classList.toggle("no-scroll");
-    });
-
-// Swiper NFT
-
-    try {
-        new Swiper(".top-nft .swiper", {
+        topNft: {
             spaceBetween: 30,
             breakpoints: {
                 0: {
                     slidesPerView: 1.1,
-                    height: ((90 * 4)+ (30 * 3))
+                    height: ((90 * 4) + (30 * 3))
                 },
                 576: {
                     slidesPerView: 1.5
@@ -43,10 +26,117 @@ document.addEventListener("DOMContentLoaded", function () {
             loop: true,
             lazy: true,
             mousewheel: true
-        });
-    } catch (e) {
-        console.log(e);
+        },
+
+        authors: {
+            spaceBetween: 30,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.1
+                },
+                576: {
+                    slidesPerView: 1.5
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                }
+            },
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            lazy: true,
+            mousewheel: true
+        },
+
+        sellers: {
+            direction: "vertical",
+            spaceBetween: 30,
+            height: (120 * 4) + (30 * 3),
+            slidesPerView: 4,
+
+            breakpoints: {
+                0: {
+                    grid: {
+                        rows: 1,
+                        fill: "row",
+                        height: (90 * 4) + (30 * 3),
+                    },
+
+                },
+                768: {
+                    grid: {
+                        rows: 2,
+                        fill: "row",
+                    },
+                },
+                1440: {
+                    grid: {
+                        rows: 3,
+                        fill: "row",
+                    },
+                }
+            },
+
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            rewind: true,
+
+            mousewheel: true,
+        },
+
+        sellersMobile: {
+            direction: "vertical",
+            spaceBetween: 25,
+            height: (90 * 4) + (25 * 3),
+            slidesPerView: 4,
+
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            rewind: true,
+
+            mousewheel: true,
+        }
     }
+
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const id = el.dataset.swiperId;
+                const config = swiperConfigs[id];
+                if (config) {
+                    new Swiper(el, config);
+                    obs.unobserve(el);
+                }
+            }
+        });
+    }, {
+        rootMargin: '100px', // загружаем заранее
+    });
+
+    document.querySelectorAll('.swiper').forEach(el => observer.observe(el));
+
+// Burger
+
+    const burger = document.getElementById("burger");
+    const menu = document.querySelector(".menu");
+    const body = document.body;
+
+    burger.addEventListener("click", () => {
+        burger.classList.toggle("open");
+        menu.classList.toggle("open");
+        body.classList.toggle("no-scroll");
+    });
 
 // Tabs
 
@@ -83,36 +173,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-//  Swiper authors
-
-    try {
-        new Swiper(".authors .swiper", {
-            spaceBetween: 30,
-            breakpoints: {
-                0: {
-                    slidesPerView: 1.1
-                },
-                576: {
-                    slidesPerView: 1.5
-                },
-                768: {
-                    slidesPerView: 2
-                },
-                1024: {
-                    slidesPerView: 3
-                }
-            },
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
-            loop: true,
-            lazy: true,
-            mousewheel: true
-        });
-    } catch (e) {
-        console.log(e);
-    }
 
 //  Dropdown
 
@@ -135,76 +195,6 @@ document.addEventListener("DOMContentLoaded", function () {
             dropdown.classList.remove('dropdown-open');
         }
     });
-
-// Swiper table
-//
-//     try {
-//         let swipe =  new Swiper(".sellers .swiper", {
-//             direction: "vertical",
-//             spaceBetween: 30,
-//             height: (120 * 4) + (30 * 3),
-//             slidesPerView: 4,
-//
-//             breakpoints: {
-//                 0: {
-//                     grid: {
-//                         rows: 1,
-//                         fill: "row",
-//                         height: (90 * 4) + (30 * 3),
-//                     },
-//
-//                 },
-//                 768: {
-//                     grid: {
-//                         rows: 2,
-//                         fill: "row",
-//                     },
-//                 },
-//                 1440: {
-//                     grid: {
-//                         rows: 3,
-//                         fill: "row",
-//                     },
-//                 }
-//             },
-//
-//             autoplay: {
-//                 delay: 1500,
-//                 disableOnInteraction: false,
-//             },
-//             rewind: true,
-//
-//             mousewheel: true,
-//         });
-//
-//     } catch (e) {
-//         console.log(e);
-//     }
-//
-//     try {
-//         let swipe =  new Swiper(".sellers .swiper--mobile", {
-//             direction: "vertical",
-//             spaceBetween: 25,
-//             height: (90 * 4) + (25 * 3),
-//             slidesPerView: 4,
-//
-//             autoplay: {
-//                 delay: 1500,
-//                 disableOnInteraction: false,
-//             },
-//             rewind: true,
-//
-//             mousewheel: true,
-//         });
-//
-//     } catch (e) {
-//         console.log(e);
-//     }
-//
-
-
-
-
 
 // Accordion footer
 

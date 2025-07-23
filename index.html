@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>OceanNFT</title>
-    <link rel="icon" href="img/svg/logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="icon"
+          href="img/svg/logo.svg"
+          type="image/x-icon">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet"
+          href="css/normalize.css">
+
+    <noscript>
+        <link rel="stylesheet"
+              href="css/normalize.css">
+    </noscript>
+
+    <link rel="preload"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+          as="style"
+          onload="this.rel='stylesheet'">
+
+    <link rel="stylesheet"
+          href="css/style.css">
 </head>
 <body>
 
@@ -276,7 +290,7 @@
             </svg>
         </div>
     </div>
-    <div class="swiper">
+    <div class="swiper" data-swiper-id="topNft">
         <div class="swiper-wrapper">
             <div class="swiper-slide ">
                 <picture class="picture">
@@ -898,7 +912,7 @@
             </svg>
         </div>
     </div>
-    <div class="swiper">
+    <div class="swiper" data-swiper-id="authors">
         <div class="swiper-wrapper">
             <div class="swiper-slide card">
                 <picture class="slide__img">
@@ -1322,7 +1336,7 @@
         </div>
     </div>
 
-    <div class="swiper">
+    <div class="swiper" data-swiper-id="sellers">
         <div class="swiper-wrapper ">
             <div class="swiper-slide slide__sellers">
                 <span class="sellers__id">1</span>
@@ -2771,7 +2785,7 @@
         </div>
     </div>
 
-    <div class="container__button--mobile">
+    <div class="container__button--mobile" data-swiper-id="sellersMobile">
         <button class="button--mobile">
             <span class="text">Explore</span>
 
@@ -3031,8 +3045,8 @@
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-<script src="js/form.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script defer src="js/form.js"></script>
 
 </body>
 
