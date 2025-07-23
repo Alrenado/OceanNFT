@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Accordion footer
 
-    let acc = document.querySelectorAll(".accordion");
+    const acc = document.querySelectorAll(".accordion");
 
     acc.forEach(item => {
         item.addEventListener('click', () => {

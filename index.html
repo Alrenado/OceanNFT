@@ -14,16 +14,33 @@
           href="img/svg/logo.svg"
           type="image/x-icon">
 
+
+
     <link rel="stylesheet"
           href="libs/swiper/swiper-bundle.min.css"
           media="print"
           onload="this.media='all'">
 
     <link rel="stylesheet"
-          href="css/normalize.css">
+          href="css/normalize.css"
+          media="print"
+          onload="this.media='all'">
 
     <link rel="stylesheet"
-          href="css/style.css">
+          href="css/style.css"
+          media="print"
+          onload="this.media='all'">
+
+    <noscript>
+        <link rel="stylesheet"
+              href="css/normalize.css">
+
+        <link rel="stylesheet"
+              href="css/style.css">
+
+        <link rel="stylesheet"
+              href="libs/swiper/swiper-bundle.min.css">
+    </noscript>
 </head>
 <body>
 
@@ -177,7 +194,8 @@
             <img class="image"
                  src="img/png/discover.png"
                  alt="discover"
-                 loading="lazy">
+                 loading="lazy"
+                 fetchpriority="high">
         </picture>
 
 
@@ -3089,7 +3107,7 @@
     </div>
 </footer>
 
-<script defer src="libs/swiper/swiper-bundle.min.js"></script>
+<script src="libs/swiper/swiper-bundle.min.js"></script>
 <script src="js/form.js"></script>
 
 </body>
