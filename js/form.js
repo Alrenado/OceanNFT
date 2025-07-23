@@ -137,70 +137,70 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 // Swiper table
-
-    try {
-        let swipe =  new Swiper(".sellers .swiper", {
-            direction: "vertical",
-            spaceBetween: 30,
-            height: (120 * 4) + (30 * 3),
-            slidesPerView: 4,
-
-            breakpoints: {
-                0: {
-                    grid: {
-                        rows: 1,
-                        fill: "row",
-                        height: (90 * 4) + (30 * 3),
-                    },
-
-                },
-                768: {
-                    grid: {
-                        rows: 2,
-                        fill: "row",
-                    },
-                },
-                1440: {
-                    grid: {
-                        rows: 3,
-                        fill: "row",
-                    },
-                }
-            },
-
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
-            rewind: true,
-
-            mousewheel: true,
-        });
-
-    } catch (e) {
-        console.log(e);
-    }
-
-    try {
-        let swipe =  new Swiper(".sellers .swiper--mobile", {
-            direction: "vertical",
-            spaceBetween: 25,
-            height: (90 * 4) + (25 * 3),
-            slidesPerView: 4,
-
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
-            rewind: true,
-
-            mousewheel: true,
-        });
-
-    } catch (e) {
-        console.log(e);
-    }
-
+//
+//     try {
+//         let swipe =  new Swiper(".sellers .swiper", {
+//             direction: "vertical",
+//             spaceBetween: 30,
+//             height: (120 * 4) + (30 * 3),
+//             slidesPerView: 4,
+//
+//             breakpoints: {
+//                 0: {
+//                     grid: {
+//                         rows: 1,
+//                         fill: "row",
+//                         height: (90 * 4) + (30 * 3),
+//                     },
+//
+//                 },
+//                 768: {
+//                     grid: {
+//                         rows: 2,
+//                         fill: "row",
+//                     },
+//                 },
+//                 1440: {
+//                     grid: {
+//                         rows: 3,
+//                         fill: "row",
+//                     },
+//                 }
+//             },
+//
+//             autoplay: {
+//                 delay: 1500,
+//                 disableOnInteraction: false,
+//             },
+//             rewind: true,
+//
+//             mousewheel: true,
+//         });
+//
+//     } catch (e) {
+//         console.log(e);
+//     }
+//
+//     try {
+//         let swipe =  new Swiper(".sellers .swiper--mobile", {
+//             direction: "vertical",
+//             spaceBetween: 25,
+//             height: (90 * 4) + (25 * 3),
+//             slidesPerView: 4,
+//
+//             autoplay: {
+//                 delay: 1500,
+//                 disableOnInteraction: false,
+//             },
+//             rewind: true,
+//
+//             mousewheel: true,
+//         });
+//
+//     } catch (e) {
+//         console.log(e);
+//     }
+//
 
 
 
