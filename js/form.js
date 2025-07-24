@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const swiperConfigs = {
-
         topNft: {
             spaceBetween: 30,
             breakpoints: {
@@ -44,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 3
                 }
             },
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 1500,
+            //     disableOnInteraction: false,
+            // },
             loop: true,
             lazy: true,
             mousewheel: true

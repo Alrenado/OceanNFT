@@ -512,7 +512,7 @@ section {
 }
 
 .authors .container__button--mobile {
-    margin: 2.3rem auto 0 auto;
+    margin: 3rem auto 0 auto;
 }
 
 .clicked {
@@ -1191,7 +1191,7 @@ section {
 .discover .section__title .input .label {
     font-family: Orbitron-Bold-woff, serif;
     font-size: clamp(9.6px, 1.5vw, 19.9px);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.001rem;
     background: linear-gradient(to right, var(--blue-light), var(--pink));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1864,14 +1864,17 @@ section {
 
     overflow: hidden;
 
-    transition: opacity 0.6s ease-in-out;
     max-width: 31.3rem;
     width: 100%;
+    transform: translateX(-2.3rem);
+
+    transition: opacity 0.6s ease-in-out;
 }
 
 @media (max-width: 1024px) {
     .tabs .picture {
         max-width: 14rem;
+        transform: translateX(0);
     }
 }
 
@@ -1955,6 +1958,7 @@ section {
 
 @media (max-width: 1024px) {
     .authors .slide__card {
+        padding: 0 2.5rem 1.7rem 2.5rem;
         margin-top: -5.6rem;
     }
 }
@@ -2051,6 +2055,7 @@ section {
 
 .authors .swiper .button {
     padding: 0.8rem 6.6rem;
+
 }
 
 @media (max-width: 1024px) {
@@ -2059,10 +2064,15 @@ section {
     }
 }
 
+.authors .swiper .button-text {
+    font-family: Rajdhani-SemiBold-woff, serif;
+    font-size: clamp(13.78px, 1.4vw, 19.9px);
+}
+
 /*sellers*/
 
 .sellers {
-    padding-top: 11.7rem;
+    padding-top: 11.6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2231,6 +2241,7 @@ section {
 .sellers .swiper-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -2431,7 +2442,7 @@ section {
 }
 
 .sellers .container__button--mobile {
-    margin-top: 1.8rem;
+    margin-top: 1.4rem;
 }
 
 /*info*/
@@ -2507,7 +2518,7 @@ section {
     .info .container {
         margin-right: 0;
         padding: 2.5rem 2.5rem 1.5rem 2.5rem;
-        transform: translateY(44%);
+        transform: translateY(57%);
         gap: 0.8rem;
     }
 }
@@ -2536,7 +2547,7 @@ section {
     font-family: Inter-ExtraBold-woff, serif;
     font-size: clamp(25.87px, calc(1.52vw + 17.19px), 44.51px);
     line-height: clamp(34.9px, 0.784vw + 31.96px, 44.51px);
-    letter-spacing: 0.09rem;
+    letter-spacing: 0.2rem;
 }
 
 .info .text {
@@ -2574,7 +2585,7 @@ section.form {
 
 @media (max-width: 1024px) {
     section.form {
-        padding-top: 16.6rem;
+        padding-top: 19.1rem;
 
         flex-direction: column;
         justify-content: center;
@@ -2630,6 +2641,7 @@ section.form {
 }
 
 .form .title {
+    letter-spacing: 0.07rem;
     font-family: Orbitron-Bold-woff, serif;
     font-size: clamp(26.27px, calc(1.12vw + 20px), 39.8px);
 }
@@ -2789,6 +2801,7 @@ section.form {
 .footer .main .title {
     color: rgba(217, 219, 225, 1);
     font-family: Inter-Regular-woff, serif;
+    letter-spacing: 0.05rem;
     font-size: 15.48px;
     line-height: 26.5px;
 }
