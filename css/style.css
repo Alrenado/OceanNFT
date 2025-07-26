@@ -200,19 +200,19 @@ body.no-scroll {
 .bg {
     position: absolute;
     inset: 0;
-    z-index: -10;
+    z-index: 0;
     overflow: hidden;
     width: 100%;
     min-height: 100%;
     height: auto;
 }
 
-.bg::after {
+.bg::before {
     content: '';
     position: absolute;
     inset: 0;
     background-color: var(--dark-purple);
-    opacity: 0.9;
+    opacity: 0.97;
     z-index: 1;
     pointer-events: none;
 }
@@ -232,6 +232,8 @@ body.no-scroll {
 }
 
 .bg__glow-container {
+    opacity: 0.4;
+    z-index: 2;
     position: absolute;
     max-width: 100rem;
     margin: 0 auto;
@@ -248,10 +250,11 @@ body.no-scroll {
 }
 
 .bg__glow:nth-child(1) {
-    width: 30vh;
-    height: 30vh;
+    opacity: 0.6;
+    width: 40vh;
+    height: 40vh;
     top: 35rem;
-    left: 2rem;
+    left: -5rem;
 }
 
 @media (max-width: 1024px) {
@@ -264,6 +267,7 @@ body.no-scroll {
 }
 
 .bg__glow:nth-child(2) {
+    opacity: 0.6;
     width: 40vh;
     height: 40vh;
     top: 33rem;
@@ -280,6 +284,7 @@ body.no-scroll {
 }
 
 .bg__glow:nth-child(3) {
+    opacity: 0.6;
     width: 30vh;
     height: 30vh;
     top: 120rem;
@@ -296,6 +301,7 @@ body.no-scroll {
 }
 
 .bg__glow:nth-child(4) {
+    opacity: 0.6;
     width: 30vh;
     height: 30vh;
     top: 120rem;
@@ -312,6 +318,7 @@ body.no-scroll {
 }
 
 .bg__glow:nth-child(5) {
+    opacity: 0.6;
     width: 30vh;
     height: 30vh;
     top: 140rem;
@@ -734,8 +741,17 @@ section {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+
+    gap: 16.5rem;
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        justify-content: space-between;
+        gap: 0;
+    }
 }
 
 .header .logo {
@@ -751,12 +767,12 @@ section {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 4rem;
+    gap: 5.1rem;
 }
 
 .header .menu__link {
     font-family: Orbitron-Bold-woff, Roboto-Regular-woff, serif;
-    font-size: 1.244rem;
+    font-size: 19.9px;
     color: var(--gray-header);
 }
 
@@ -770,6 +786,13 @@ section {
     align-items: center;
     cursor: pointer;
     gap: 3rem;
+    margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+    .header .icons {
+        margin-left: 0;
+    }
 }
 
 .header .icons .item:hover {
@@ -2468,7 +2491,7 @@ section {
     height: 39.3rem;
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 0;
     overflow: hidden;
     width: 100%;
     min-height: 100%;
@@ -2601,7 +2624,7 @@ section.form {
     width: 100%;
 
     inset: 0;
-    z-index: -1;
+    z-index: 0;
     overflow: hidden;
 
 }
