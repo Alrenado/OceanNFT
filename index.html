@@ -32,8 +32,7 @@
 
         <img class="bg__img"
              src="img/webp/bg.webp"
-             alt="background"
-             loading="lazy">
+             alt="background">
     </picture>
 
     <div class="bg__glow-container">
@@ -163,17 +162,20 @@
     </div>
 
     <div class="profile">
-        <picture class="picture">
-            <source srcset="img/webp/discover.webp"
+        <picture class="picture observed-picture">
+            <source srcset=""
                     type="image/webp"
-                    media="(min-width: 1024px)">
+                    media="(min-width: 1024px)"
+                    data-srcset="img/webp/discover.webp">
 
-            <source srcset="img/webp/discover-mobile.webp"
+            <source srcset=""
                     type="image/webp"
-                    media="(max-width: 1023px)">
+                    media="(max-width: 1023px)"
+                    data-srcset="img/webp/discover.webp">
 
             <img class="image"
-                 src="img/png/discover.png"
+                 src=""
+                 data-srcset="img/png/discover.png"
                  alt="discover"
                  loading="lazy"
                  fetchpriority="high">
@@ -910,14 +912,16 @@
 
     </div>
 
-    <picture class="picture">
-        <source srcset="img/webp/tabs-first.webp"
+    <picture class="picture observed-picture">
+        <source srcset=""
+                data-srcset="img/webp/tabs-first.webp"
                 type="image/webp"
                 class="tabs__source">
-        <img class="picture__img"
-             src="img/png/slide__img-first.png"
+
+        <img src=""
+             data-srcset="img/png/tabs-first.png"
              alt="check"
-             loading="lazy">
+             class="picture__img">
     </picture>
 </section>
 
@@ -2847,14 +2851,15 @@
 <!--info-->
 
 <section class="info">
-    <picture class="info__bg">
-        <source srcset="img/webp/info-bg.webp"
+    <picture class="info__bg observed-picture">
+        <source srcset=""
+                data-srcset="img/webp/info-bg.webp"
                 type="image/webp">
 
         <img class="info__bg-img"
-             src="img/png/info-bg.png"
-             alt="info__bg-img"
-             loading="lazy">
+             src=""
+             data-srcset="img/png/info-bg.png"
+             alt="info__bg-img">
     </picture>
 
     <div class="wrapper">
@@ -2887,18 +2892,20 @@
 
 <section class="form">
     <picture class="picture">
-        <source srcset="img/webp/form.webp"
+        <source srcset=""
+                data-srcset="img/webp/form.webp"
                 type="image/webp"
                 media="(min-width: 1024px)">
 
-        <source srcset="img/webp/form-mobile.webp"
+        <source srcset=""
+                data-srcset="img/webp/form-mobile.webp"
                 type="image/webp"
                 media="(max-width: 1023px)">
 
-        <img class="picture-img"
+        <img class="picture-img observed-picture"
              src="img/png/form.png"
-             alt="form"
-             loading="lazy">
+             data-srcset="img/png/form.png"
+             alt="form">
     </picture>
 
     <div class="wrapper">
